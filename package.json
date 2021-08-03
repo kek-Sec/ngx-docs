@@ -24,6 +24,7 @@
     "class-transformer": "^0.4.0",
     "jquery": "^3.6.0",
     "ngx-bootstrap": "^7.0.0",
+    "ngx-bootstrap-multiselect": "^2.1.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",

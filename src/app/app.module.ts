@@ -10,6 +10,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
+//ngx-bootstrap-multiselect
+import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +21,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
     HomeOneComponent
   ],
   imports: [
+    FormsModule,
+    NgxBootstrapMultiselectModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
     FlexLayoutModule,
