@@ -8,15 +8,19 @@
     </div>
 
     <div class="data-container">
-        <div fxFlex="100%" fxFlex.xs="100%" fxFlex.sm="50%" fxLayoutGap="10px" fxLayoutAlign="center center" *ngFor="let p of content">
-            <div class="card border-primary mb-3" style="max-width: 18rem;">
-                <div class="card-header">Header</div>
-                <div class="card-body text-primary">
-                  <h5 class="card-title">Primary card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of content">
+                <div class="card border-primary mb-3">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-primary">
+                        <h5 class="card-title">{{p.Title}}</h5>
+                        <p class="card-text">{{p.Description}}</p>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
+
+
 
     </div>
 </div>

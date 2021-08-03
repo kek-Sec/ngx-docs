@@ -10,5 +10,35 @@
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
     "image": "assets/images/2.jpg"
+  },
+  {
+    "Title": "header 3 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/3.jpg"
+  },
+  {
+    "Title": "header 4 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/4.jpg"
+  },
+  {
+    "Title": "header 5 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/5.jpg"
+  },
+  {
+    "Title": "header 6 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/6.jpg"
+  },
+  {
+    "Title": "header 7 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/7.jpg"
   }
 ]
