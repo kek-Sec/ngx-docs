@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Content_model } from 'src/app/@Models/Content_model';
 import { ParserService } from 'src/app/@Services/parser.service';
 import { IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts } from 'ngx-bootstrap-multiselect';
+import { SearchService } from 'src/app/@Services/search.service';
 
 @Component({
   selector: 'app-home-one',
@@ -33,7 +34,9 @@ export class HomeOneComponent implements OnInit {
     { id: 1, name: 'Search using', isLabel: true },
     { id: 2, name: 'Title', parentId: 1 },
     { id: 3, name: 'Description', parentId: 1 },
-    { id: 4, name: 'Tags', parentId: 1 }
+    { id: 4, name: 'Tags', parentId: 1 },
+    { id: 5, name: 'ID', parentId: 1},
+    { id:6, name: 'Content', parentId: 1}
 ];
 
 // Text configuration
@@ -49,18 +52,21 @@ myTexts: IMultiSelectTexts = {
   allSelected: 'All selected',
 };
 
-  constructor(private parser: ParserService) { }
+  constructor(private parser: ParserService,private search:SearchService) { }
 
   ngOnInit(): void {
     this.content = this.parser.parse();
-
-    
-
   }
+
+
   //for the search input box
   onChangeEvent(event: any){
 
-    console.log(event.target.value);
+    let options = this.optionsModel;
+    let filters = [options.includes(2),options.includes(5),options.includes(6),options.includes(4)];
+    let input = event.target.value;
+    this.content = this.search.search(input,filters,this.content);
+    
 
   }
 }
