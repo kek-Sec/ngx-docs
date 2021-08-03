@@ -57,7 +57,10 @@ myTexts: IMultiSelectTexts = {
     
 
   }
-  onChange() {
-    console.log(this.optionsModel);
+  //for the search input box
+  onChangeEvent(event: any){
+
+    console.log(event.target.value);
+
   }
 }
