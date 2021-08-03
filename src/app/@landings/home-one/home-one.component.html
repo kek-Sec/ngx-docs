@@ -5,7 +5,7 @@
             <input autofocus type="text" class="form-control" aria-label="Large"
                 aria-describedby="inputGroup-sizing-sm">
         </div>
-        <ngx-bootstrap-multiselect [options]="myOptions" [(ngModel)]="optionsModel" (ngModelChange)="onChange()"></ngx-bootstrap-multiselect>
+        <ngx-bootstrap-multiselect [options]="myOptions" [texts]="myTexts" [settings]="mySettings" [(ngModel)]="optionsModel" (ngModelChange)="onChange()"></ngx-bootstrap-multiselect>
     </div>
 
     <div class="data-container">
