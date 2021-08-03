@@ -7,8 +7,17 @@
     position: absolute;
 }
 
-.custom-alert{
+.custom-alert {
     margin-top: 5vh;
     margin-left: 4vh;
     margin-right: 4vh;
+}
+
+.data-container {
+    margin-left: 4vh;
+    margin-right: 4vh;
+    border: 2px dotted #a4a4a4;
+    border-radius: 40px 40px 40px 40px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }

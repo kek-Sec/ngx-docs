@@ -10,6 +10,7 @@ import { ParserService } from 'src/app/@Services/parser.service';
 export class HomeOneComponent implements OnInit {
 
   content: Array<Content_model>;
+  gridColumns = 6;
 
 
   constructor(private parser:ParserService) { }
