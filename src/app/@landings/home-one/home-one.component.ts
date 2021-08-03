@@ -15,14 +15,14 @@ export class HomeOneComponent implements OnInit {
 
   gridColumns = 6;
 
-  optionsModel: number[] = [1,2,3,4,5,6,7,8];
+  optionsModel: number[] = [1,2,3,4];
 
   // Settings configuration
   mySettings: IMultiSelectSettings = {
     enableSearch: false,
-    showCheckAll: true,
+    showCheckAll: false,
     fixedTitle: true,
-    showUncheckAll: true,
+    showUncheckAll: false,
     checkedStyle: 'checkboxes',
     buttonClasses: 'btn btn-default btn-block',
     dynamicTitleMaxItems: 0,
@@ -31,14 +31,10 @@ export class HomeOneComponent implements OnInit {
 
   //options config
   myOptions: IMultiSelectOption[] = [
-    { id: 1, name: 'Car brands', isLabel: true },
-    { id: 2, name: 'Volvo', parentId: 1 },
-    { id: 3, name: 'Honda', parentId: 1 },
-    { id: 4, name: 'BMW', parentId: 1 },
-    { id: 5, name: 'Colors', isLabel: true },
-    { id: 6, name: 'Blue', parentId: 5 },
-    { id: 7, name: 'Red', parentId: 5 },
-    { id: 8, name: 'White', parentId: 5 }
+    { id: 1, name: 'Search using', isLabel: true },
+    { id: 2, name: 'Title', parentId: 1 },
+    { id: 3, name: 'Description', parentId: 1 },
+    { id: 4, name: 'Tags', parentId: 1 }
 ];
 
 // Text configuration
