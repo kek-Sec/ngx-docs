@@ -3,42 +3,49 @@
     "Title": "header 1 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/1.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   },
   {
     "Title": "header 2 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/2.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   },
   {
     "Title": "header 3 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/3.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   },
   {
     "Title": "header 4 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/4.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   },
   {
     "Title": "header 5 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/5.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   },
   {
     "Title": "header 6 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/6.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   },
   {
     "Title": "header 7 title",
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
-    "image": "assets/images/7.jpg"
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   }
 ]

@@ -10,13 +10,20 @@
 
     <div class="data-container">
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
-            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of content">
-                <div class="card border-primary mb-3">
-                    <div class="card-header">Header</div>
+            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of content; let i = index">
+                <div class="card border-primary text-center mb-3">
+                    <div class="card-header">ID [{{i}}]</div>
+                    <img src="{{p.image}}" class="card-img-top" alt="...">
                     <div class="card-body text-primary">
                         <h5 class="card-title">{{p.Title}}</h5>
                         <p class="card-text">{{p.Description}}</p>
                     </div>
+
+                    <ul class="list-group list-group-flush">
+                        <div *ngFor="let item of content[i].items">
+                            <li class="list-group-item">{{item}}</li>
+                        </div>
+                      </ul>
                 </div>
             </div>
         </div>
