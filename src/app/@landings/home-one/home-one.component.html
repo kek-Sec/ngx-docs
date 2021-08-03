@@ -5,12 +5,14 @@
             <input autofocus type="text" class="form-control" aria-label="Large"
                 aria-describedby="inputGroup-sizing-sm">
         </div>
-        <ngx-bootstrap-multiselect [options]="myOptions" [texts]="myTexts" [settings]="mySettings" [(ngModel)]="optionsModel" (ngModelChange)="onChange()"></ngx-bootstrap-multiselect>
+        <ngx-bootstrap-multiselect [options]="myOptions" [texts]="myTexts" [settings]="mySettings"
+            [(ngModel)]="optionsModel" (ngModelChange)="onChange()"></ngx-bootstrap-multiselect>
     </div>
 
     <div class="data-container">
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
-            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let p of content; let i = index">
+            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"
+                *ngFor="let p of content; let i = index">
                 <div class="card border-primary text-center mb-3">
                     <div class="card-header">ID [{{i}}]</div>
                     <img src="{{p.image}}" class="card-img-top" alt="...">
@@ -23,7 +25,7 @@
                         <div *ngFor="let item of content[i].items">
                             <li class="list-group-item">{{item}}</li>
                         </div>
-                      </ul>
+                    </ul>
                 </div>
             </div>
         </div>
