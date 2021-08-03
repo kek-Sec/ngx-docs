@@ -1,19 +1,14 @@
-{
-  "Documentation": {
-    "date-updated": "20-06-1999",
-    "content": {
-      "header-1": {
-        "Title": "header 1 title",
-        "Description": "This is the description of this header...",
-        "text": "This is the text for this header item.....",
-        "image": "assets/images/1.jpg"
-      },
-      "header-2": {
-        "Title": "header 2 title",
-        "Description": "This is the description of this header...",
-        "text": "This is the text for this header item.....",
-        "image": "assets/images/2.jpg"
-      }
-    }
+[
+  {
+    "Title": "header 1 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/1.jpg"
+  },
+  {
+    "Title": "header 2 title",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/2.jpg"
   }
-}
+]

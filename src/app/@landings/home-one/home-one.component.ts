@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Content_model } from 'src/app/@Models/Content_model';
+import { ParserService } from 'src/app/@Services/parser.service';
 
 @Component({
   selector: 'app-home-one',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeOneComponent implements OnInit {
 
-  constructor() { }
+  content: Array<Content_model>;
+
+
+  constructor(private parser:ParserService) { }
 
   ngOnInit(): void {
+    this.content = this.parser.parse();
   }
 
 }
