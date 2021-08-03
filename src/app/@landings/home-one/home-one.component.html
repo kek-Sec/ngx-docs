@@ -1,9 +1,22 @@
 <div class="bg">
-    
+
     <div class="alert alert-secondary custom-alert" role="alert">
         <div class="input-group input-group-lg">
-            <input autofocus type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
-          </div>
-      </div>
+            <input autofocus type="text" class="form-control" aria-label="Large"
+                aria-describedby="inputGroup-sizing-sm">
+        </div>
+    </div>
 
+    <div class="data-container" [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"
+        *ngFor="let p of content">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
 </div>
