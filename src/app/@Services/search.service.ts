@@ -37,7 +37,7 @@ export class SearchService {
       }
 
       //By id
-      if(i.toString().includes(txt) && filters[1])
+      if(i.toString() === (txt) && filters[1])
       {
         to_return.push(dataset[i]);
         continue;
