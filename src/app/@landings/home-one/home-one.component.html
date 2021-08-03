@@ -11,7 +11,7 @@
 
     <div class="data-container">
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
-            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.sm="33%"
+            <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%"
                 *ngFor="let p of content; let i = index">
                 <div class="card border-primary text-center mb-3">
                     <div class="card-header">ID [{{i}}]</div>
