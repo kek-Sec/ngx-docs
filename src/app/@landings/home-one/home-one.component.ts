@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Content_model } from 'src/app/@Models/Content_model';
 import { ParserService } from 'src/app/@Services/parser.service';
 import { IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts } from 'ngx-bootstrap-multiselect';
-import { templateJitUrl } from '@angular/compiler';
 
 @Component({
   selector: 'app-home-one',

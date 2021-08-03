@@ -1,5 +1,4 @@
 <div class="bg">
-
     <div class="alert alert-secondary custom-alert" role="alert">
         <div class="input-group input-group-lg">
             <input autofocus type="text" class="form-control" aria-label="Large"
@@ -8,7 +7,6 @@
         <ngx-bootstrap-multiselect [options]="myOptions" [texts]="myTexts" [settings]="mySettings"
             [(ngModel)]="optionsModel" (ngModelChange)="onChange()"></ngx-bootstrap-multiselect>
     </div>
-
     <div class="data-container">
         <div fxLayout="row wrap" fxLayoutGap="16px grid">
             <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%"
@@ -20,7 +18,6 @@
                         <h5 class="card-title">{{p.Title}}</h5>
                         <p class="card-text">{{p.Description}}</p>
                     </div>
-
                     <ul class="list-group list-group-flush">
                         <div *ngFor="let item of content[i].items">
                             <li class="list-group-item" [innerHTML]="item"></li>
@@ -29,8 +26,5 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </div>
