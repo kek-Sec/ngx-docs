@@ -13,9 +13,11 @@ export class HomeOneComponent implements OnInit {
 
   content: Array<Content_model>;
 
+  to_print: Array<Content_model>;
+
   gridColumns = 6;
 
-  optionsModel: number[] = [1,2,3,4];
+  optionsModel: number[] = [2,3,4,5,6];
 
   // Settings configuration
   mySettings: IMultiSelectSettings = {
@@ -56,6 +58,7 @@ myTexts: IMultiSelectTexts = {
 
   ngOnInit(): void {
     this.content = this.parser.parse();
+    this.to_print = this.content;
   }
 
 
@@ -65,8 +68,8 @@ myTexts: IMultiSelectTexts = {
     let options = this.optionsModel;
     let filters = [options.includes(2),options.includes(5),options.includes(6),options.includes(4)];
     let input = event.target.value;
-    this.content = this.search.search(input,filters,this.content);
-    
+    this.to_print = this.search.search(input,filters,this.content);
+    console.log("Returned" + this.content);
 
   }
 }

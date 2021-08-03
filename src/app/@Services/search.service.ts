@@ -31,6 +31,7 @@ export class SearchService {
       //By  title
       if(dataset[i].Title.toUpperCase().includes(txt) && filters[0])
       {
+        
         to_return.push(dataset[i]);
         continue;
       }
@@ -61,8 +62,8 @@ export class SearchService {
       //By tags
       //to be implemented
    }
-
-    return dataset;
+    
+    return to_return;
   }
 
 }
