@@ -3,6 +3,7 @@ import { Content_model } from 'src/app/@Models/Content_model';
 import { ParserService } from 'src/app/@Services/parser.service';
 import { IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts } from 'ngx-bootstrap-multiselect';
 import { SearchService } from 'src/app/@Services/search.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-one',
@@ -54,13 +55,12 @@ myTexts: IMultiSelectTexts = {
   allSelected: 'All selected',
 };
 
-  constructor(private parser: ParserService,private search:SearchService) { }
+  constructor(private router:Router,private parser: ParserService,private search:SearchService) { }
 
   ngOnInit(): void {
     this.content = this.parser.parse();
     this.to_print = this.content;
   }
-
 
   //for the search input box
   onChangeEvent(event: any){
@@ -69,7 +69,6 @@ myTexts: IMultiSelectTexts = {
     let filters = [options.includes(2),options.includes(5),options.includes(6),options.includes(4)];
     let input = event.target.value;
     this.to_print = this.search.search(input,filters,this.content);
-    console.log("Returned" + this.content);
 
   }
 }
