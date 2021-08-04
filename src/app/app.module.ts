@@ -9,12 +9,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 //ngx-bootstrap-multiselect
 import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
 import { FormsModule } from '@angular/forms';
+import { DetailedPageComponent } from './@core/detailed-page/detailed-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeOneComponent
+    HomeOneComponent,
+    DetailedPageComponent
   ],
   imports: [
     FormsModule,
