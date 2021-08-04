@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '**', component: HomeOneComponent} // This line will remain down from the whole pages component list
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
