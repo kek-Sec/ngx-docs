@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NumberValueAccessor } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Content_model } from 'src/app/@Models/Content_model';
 import { ParserService } from 'src/app/@Services/parser.service';
@@ -12,13 +13,16 @@ export class DetailedPageComponent implements OnInit {
 
   private sub: any;
   selected_entry: Content_model;
-
+  id: number;
   constructor(private route: ActivatedRoute,private parser: ParserService
   ) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe((params) => {
-      this.selected_entry = this.parser.content[params['id']];
+      this.id = +params['id'];
+      this.parser.parse();
+      this.selected_entry = this.parser.content[this.id];
+      console.log(this.id);
     });
   }
 
