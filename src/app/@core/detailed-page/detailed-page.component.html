@@ -1,1 +1,22 @@
-<p>detailed-page works!</p>
+<div class="container">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+        <div [fxFlex]="100%" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%">
+            <div class="card border-primary text-center mb-3">
+                <div class="card-header">ID </div>
+                <img src="{{selected_entry.image}}" class="card-img-top" alt="...">
+                <div class="card-body text-primary">
+                    <h5 class="card-title">{{selected_entry.Title}}</h5>
+                    <p class="card-text">{{selected_entry.Description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <div *ngFor="let item of selected_entry.items">
+                        <li class="list-group-item" [innerHTML]="item"></li>
+                    </div>
+                </ul>
+                <div class="card-footer text-muted">
+                    click for more
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
