@@ -47,5 +47,12 @@
     "text": "This is the text for this header item.....",
     "image": "assets/images/default.png",
     "items": ["1235","1521421"]
+  },
+  {
+    "Title": "Dokimi 123",
+    "Description": "This is the description of this header...",
+    "text": "This is the text for this header item.....",
+    "image": "assets/images/default.png",
+    "items": ["1235","1521421"]
   }
 ]
