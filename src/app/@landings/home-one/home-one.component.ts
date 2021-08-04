@@ -11,6 +11,7 @@ import { multiselect_model } from 'src/app/@Models/MultiSelect_model';
   templateUrl: './home-one.component.html',
   styleUrls: ['./home-one.component.scss']
 })
+
 export class HomeOneComponent implements OnInit {
 
   content: Array<Content_model>;
@@ -40,10 +41,8 @@ export class HomeOneComponent implements OnInit {
     /**
    * Triggered on searhbox input change
    *
-   *
    * @param event - The $event
    * 
-   *
    * @landing
    */
   onChangeEvent(event: any) {

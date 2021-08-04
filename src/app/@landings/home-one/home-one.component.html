@@ -12,15 +12,15 @@
             <div [fxFlex]="(100/gridColumns) + '%'" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%"
                 *ngFor="let p of to_print; let i = index">
                 <div class="card border-primary text-center mb-3">
-                    <div class="card-header">ID [{{i}}]</div>
+                    <div class="card-header">{{p.Title}}</div>
                     <img src="{{p.image}}" class="card-img-top" alt="...">
                     <div class="card-body text-primary">
-                        <h5 class="card-title">{{p.Title}}</h5>
-                        <p class="card-text">{{p.Description}}</p>
+                        <h5 class="card-title">{{p.Description  | slice:0:30}}</h5>
+                        <p class="card-text">{{p.text | slice:0:20 }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
                         <div *ngFor="let item of to_print[i].items">
-                            <li class="list-group-item" [innerHTML]="item"></li>
+                            <li class="list-group-item" [innerHTML]="item.slice(0, 20)"></li>
                         </div>
                     </ul>
                     <div [routerLink]="['/view', i]" class="card-footer text-muted">
