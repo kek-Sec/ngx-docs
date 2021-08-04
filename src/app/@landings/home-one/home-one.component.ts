@@ -4,6 +4,7 @@ import { ParserService } from 'src/app/@Services/parser.service';
 import { IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts } from 'ngx-bootstrap-multiselect';
 import { SearchService } from 'src/app/@Services/search.service';
 import { Router } from '@angular/router';
+import { multiselect_model } from 'src/app/@Models/MultiSelect_model';
 
 @Component({
   selector: 'app-home-one',
@@ -18,44 +19,18 @@ export class HomeOneComponent implements OnInit {
 
   gridColumns = 6;
 
-  optionsModel: number[] = [2,3,4,5,6];
+  optionsModel: number[] = [2, 3, 4, 5, 6];
 
   // Settings configuration
-  mySettings: IMultiSelectSettings = {
-    enableSearch: false,
-    showCheckAll: false,
-    fixedTitle: true,
-    showUncheckAll: false,
-    checkedStyle: 'checkboxes',
-    buttonClasses: 'btn btn-default btn-block',
-    dynamicTitleMaxItems: 0,
-    displayAllSelectedText: false
-  };
+  mySettings: IMultiSelectSettings = multiselect_model.Settings;
 
   //options config
-  myOptions: IMultiSelectOption[] = [
-    { id: 1, name: 'Search using', isLabel: true },
-    { id: 2, name: 'Title', parentId: 1 },
-    { id: 3, name: 'Description', parentId: 1 },
-    { id: 4, name: 'Tags', parentId: 1 },
-    { id: 5, name: 'ID', parentId: 1},
-    { id:6, name: 'Content', parentId: 1}
-];
+  myOptions: IMultiSelectOption[] = multiselect_model.Options;
 
-// Text configuration
-myTexts: IMultiSelectTexts = {
-  checkAll: 'Check all',
-  uncheckAll: 'Uncheck all',
-  checked: 'item selected',
-  checkedPlural: 'items selected',
-  searchPlaceholder: 'Find',
-  searchEmptyResult: 'Nothing found...',
-  searchNoRenderText: 'Type in search box to see results...',
-  defaultTitle: 'Filters',
-  allSelected: 'All selected',
-};
+  // Text configuration
+  myTexts: IMultiSelectTexts = multiselect_model.Texts;
 
-  constructor(private router:Router,private parser: ParserService,private search:SearchService) { }
+  constructor(private router: Router, private parser: ParserService, private search: SearchService) { }
 
   ngOnInit(): void {
     this.content = this.parser.parse();
@@ -63,12 +38,12 @@ myTexts: IMultiSelectTexts = {
   }
 
   //for the search input box
-  onChangeEvent(event: any){
+  onChangeEvent(event: any) {
 
     let options = this.optionsModel;
-    let filters = [options.includes(2),options.includes(5),options.includes(6),options.includes(4)];
+    let filters = [options.includes(2), options.includes(5), options.includes(6), options.includes(4)];
     let input = event.target.value;
-    this.to_print = this.search.search(input,filters,this.content);
+    this.to_print = this.search.search(input, filters, this.content);
 
   }
 }
