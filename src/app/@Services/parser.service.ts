@@ -8,13 +8,25 @@ import { Content_model } from "../@Models/Content_model";
   providedIn: 'root'
 })
 export class ParserService {
+
   DocJson: any = inputJson;
   content: Array<Content_model>;
 
+  /**
+   * Parses the local input.json file
+   *
+   * .
+   *
+   * @returns Content_model array 
+   *
+   * @services
+   */
   parse():Array<Content_model> {
     this.content = plainToClass(Content_model, this.DocJson as []);
     return this.content;
   }
+
+  
   constructor() { }
 
 }

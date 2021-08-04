@@ -37,7 +37,15 @@ export class HomeOneComponent implements OnInit {
     this.to_print = this.content;
   }
 
-  //for the search input box
+    /**
+   * Triggered on searhbox input change
+   *
+   *
+   * @param event - The $event
+   * 
+   *
+   * @landing
+   */
   onChangeEvent(event: any) {
 
     let options = this.optionsModel;

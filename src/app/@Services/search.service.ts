@@ -18,7 +18,20 @@ export class SearchService {
 
   constructor() { }
 
-  //
+  /**
+   * Returns the average of two numbers.
+   *
+   * @remarks
+   * This method is part of the {@link core-library#Statistics | Statistics subsystem}.
+   *
+   * @param text - The text to search for
+   * @param filters - Boolean array according to the aformentioned syntax
+   * @param dataset - Array of Content_model objects containing the objects to search
+   * 
+   * @returns Array including all the matching Content_model objects
+   *
+   * @service
+   */
   search(text:string,filters:boolean[],dataset:Array<Content_model>):Array<Content_model>
   {
 

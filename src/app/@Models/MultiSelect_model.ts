@@ -1,5 +1,14 @@
 import { IMultiSelectOption, IMultiSelectSettings, IMultiSelectTexts } from "ngx-bootstrap-multiselect";
 
+/**
+   * Configuration model for ngx-multiselect
+   *
+   * @remarks
+   * This method is part of the {@link https://www.npmjs.com/package/ngx-bootstrap-multiselect}.
+   *
+   *
+   * @model
+   */
 export class multiselect_model {
 
     public static Settings: IMultiSelectSettings = {
