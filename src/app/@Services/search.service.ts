@@ -31,6 +31,8 @@ export class SearchService {
    * 
    * @returns Array including all the matching Content_model objects
    *
+   * @todo Fix search by tags.
+   * 
    * @service
    */
   search(text: string, filters: boolean[], dataset: Array<Content_model>): Array<Content_model> {
