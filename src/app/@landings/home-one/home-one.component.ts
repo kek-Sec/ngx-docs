@@ -18,7 +18,7 @@ export class HomeOneComponent implements OnInit {
 
   to_print: Array<Content_model>;
 
-  gridColumns = 6;
+  gridColumns = 4;
 
   optionsModel: number[] = [2, 3, 4, 5, 6];
 

@@ -3,6 +3,6 @@ export class Content_model {
     Description: string;
     text: string;
     image: string;
-    items?: string[];
+    items: string[];
     tags?: string[];
 }

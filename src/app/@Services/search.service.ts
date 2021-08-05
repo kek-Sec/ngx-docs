@@ -73,7 +73,13 @@ export class SearchService {
       }
 
       //By tags
-      //to be implemented
+      if(dataset[i].tags == undefined ) {continue;}
+      let tags = dataset[i].tags?.join(" ").toUpperCase();
+      if(tags?.includes(txt) && filters[4])
+      {
+        to_return.push(dataset[i]);
+        continue;
+      }
    }
     
     return to_return;

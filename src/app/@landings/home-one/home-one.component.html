@@ -19,7 +19,7 @@
                         <p class="card-text">{{p.text | slice:0:20 }}</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <div *ngFor="let item of to_print[i].items">
+                        <div *ngFor="let item of to_print[i].items | slice:0:2">
                             <li class="list-group-item" [innerHTML]="item.slice(0, 20)"></li>
                         </div>
                     </ul>
