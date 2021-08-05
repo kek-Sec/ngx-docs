@@ -14,6 +14,9 @@ import { DetailedPageComponent } from './@core/detailed-page/detailed-page.compo
 //ngx-clipboard
 import { ClipboardModule } from 'ngx-clipboard';
 
+//ngx-toastr
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { ClipboardModule } from 'ngx-clipboard';
   ],
   imports: [
     FormsModule,
-    
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
     NgxBootstrapMultiselectModule,
     FlexLayoutModule,
     ClipboardModule,
