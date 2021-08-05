@@ -11,6 +11,9 @@ import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
 import { FormsModule } from '@angular/forms';
 import { DetailedPageComponent } from './@core/detailed-page/detailed-page.component';
 
+//ngx-clipboard
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +23,10 @@ import { DetailedPageComponent } from './@core/detailed-page/detailed-page.compo
   ],
   imports: [
     FormsModule,
+    
     NgxBootstrapMultiselectModule,
     FlexLayoutModule,
+    ClipboardModule,
     BrowserModule,
     AppRoutingModule
   ],
