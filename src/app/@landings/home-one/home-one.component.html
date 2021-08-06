@@ -1,52 +1,45 @@
 <div class="bg">
   <div class="alert alert-secondary custom-alert" role="alert">
     <div class="input-group input-group-lg">
-      <input
-        (change)="onChangeEvent($event)"
-        autofocus
-        type="text"
-        class="form-control"
-        aria-label="Large"
-        aria-describedby="inputGroup-sizing-sm"
-      />
+      <input (change)="onChangeEvent($event)" autofocus type="text" class="form-control" aria-label="Large"
+        aria-describedby="inputGroup-sizing-sm" />
     </div>
-    <ngx-bootstrap-multiselect
-      [options]="myOptions"
-      [texts]="myTexts"
-      [settings]="mySettings"
-      [(ngModel)]="optionsModel"
-    ></ngx-bootstrap-multiselect>
+    <ngx-bootstrap-multiselect [options]="myOptions" [texts]="myTexts" [settings]="mySettings"
+      [(ngModel)]="optionsModel"></ngx-bootstrap-multiselect>
   </div>
   <div class="data-container">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div
-        [fxFlex]="100 / gridColumns + '%'"
-        fxFlex.xs="100%"
-        fxFlex.md="50%"
-        fxFlex.sm="33%"
-        *ngFor="let p of to_print; let i = index"
-      >
+      <div [fxFlex]="100 / gridColumns + '%'" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%"
+        *ngFor="let p of to_print; let i = index">
         <div class="card border-primary text-center mb-3">
-          <div
-            style="font-weight: bold; text-transform: uppercase"
-            class="card-header"
-          >
-            {{ p.Title }}
-          </div>
-          <img src="{{ p.image }}" class="card-img-top" alt="..." />
-          <div class="card-body text-primary">
-            <h5 style="color: #4158d0" class="card-title">
-              {{ p.Description | slice: 0:30 }}...
-            </h5>
-            <p style="color: black" class="card-text">
-              {{ p.text | slice: 0:20 }}...
-            </p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <div *ngFor="let item of to_print[i].items | slice: 0:2">
-              <li class="list-group-item" [innerHTML]="item.slice(0, 20)"></li>
+          <div *ngIf="_settings_item[0].preview_show_title">
+            <div style="font-weight: bold; text-transform: uppercase" class="card-header">
+              {{ p.Title }}
             </div>
-          </ul>
+          </div>
+          <div *ngIf="_settings_item[0].preview_show_picture">
+            <img src="{{ p.image }}" class="card-img-top" alt="..." />
+          </div>
+          <div class="card-body text-primary">
+            <div *ngIf="_settings_item[0].preview_show_description">
+              <h5 style="color: #4158d0" class="card-title">
+                {{ p.Description | slice: 0:30 }}...
+              </h5>
+            </div>
+            <div *ngIf="_settings_item[0].preview_show_text">
+              <p style="color: black" class="card-text">
+                {{ p.text | slice: 0:20 }}...
+              </p>
+            </div>
+          </div>
+
+          <div *ngIf="_settings_item[0].preview_show_items">
+            <ul class="list-group list-group-flush">
+              <div *ngFor="let item of to_print[i].items | slice: 0:2">
+                <li class="list-group-item" [innerHTML]="item.slice(0, 20)"></li>
+              </div>
+            </ul>
+          </div>
           <div [routerLink]="['/view', i]" class="card-footer text-muted">
             click for more
           </div>

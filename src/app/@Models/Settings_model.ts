@@ -2,6 +2,7 @@ export class Settings_model {
   preview_show_picture?: boolean = true;
   preview_show_title?: boolean = true;
   preview_show_description?: boolean = true;
+  preview_show_text?: boolean = true;
   preview_show_items?: boolean = true;
   preview_show_url?: boolean = false;
   preview_show_album?: boolean = false;
