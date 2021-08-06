@@ -14,8 +14,6 @@ export class ParserService {
   /**
    * Parses the local input.json file
    *
-   * .
-   *
    * @returns Content_model array
    *
    * @services
@@ -25,5 +23,5 @@ export class ParserService {
     return this.content;
   }
 
-  constructor() {}
+  constructor() { }
 }

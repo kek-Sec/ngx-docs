@@ -35,11 +35,13 @@
 
           <div *ngIf="_settings_item[0].preview_show_items">
             <ul class="list-group list-group-flush">
-              <div *ngFor="let item of to_print[i].items | slice: 0:2">
-                <li class="list-group-item" [innerHTML]="item.slice(0, 20)"></li>
+              <div *ngFor="let item of to_print[i].items | slice: 0:_settings_item[0].preview_items_count">
+                <li class="list-group-item" [innerHTML]="item.slice(0, _settings_item[0].preview_item_text_length)">
+                </li>
               </div>
             </ul>
           </div>
+
           <div [routerLink]="['/view', i]" class="card-footer text-muted">
             click for more
           </div>

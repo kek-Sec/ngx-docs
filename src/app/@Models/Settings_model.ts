@@ -11,6 +11,7 @@ export class Settings_model {
   //preview settings
   preview_description_text_length?: number = 15;
   preview_text_length?: number = 15;
+  preview_item_text_length?: number = 4;
   preview_items_count?: number = 3;
 
   //flex layout settings
