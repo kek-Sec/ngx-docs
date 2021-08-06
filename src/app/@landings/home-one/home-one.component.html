@@ -23,12 +23,12 @@
           <div class="card-body text-primary">
             <div *ngIf="_settings_item[0].preview_show_description">
               <h5 style="color: #4158d0" class="card-title">
-                {{ p.Description | slice: 0:30 }}...
+                {{ p.Description | slice: 0:_settings_item[0].preview_description_text_length }}...
               </h5>
             </div>
             <div *ngIf="_settings_item[0].preview_show_text">
               <p style="color: black" class="card-text">
-                {{ p.text | slice: 0:20 }}...
+                {{ p.text | slice: 0:_settings_item[0].preview_text_length }}...
               </p>
             </div>
           </div>
