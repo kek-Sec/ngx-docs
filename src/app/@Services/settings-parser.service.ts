@@ -24,5 +24,5 @@ export class SettingsParserService {
     return this.content;
   }
 
-  constructor() {}
+  constructor() { }
 }

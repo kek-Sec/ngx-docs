@@ -8,6 +8,8 @@ import {
 } from 'ngx-bootstrap-multiselect';
 import { SearchService } from 'src/app/@Services/search.service';
 import { multiselect_model } from 'src/app/@Models/MultiSelect_model';
+import { SettingsParserService } from 'src/app/@Services/settings-parser.service';
+import { Settings_model } from 'src/app/@Models/Settings_model';
 
 @Component({
   selector: 'app-home-one',
@@ -15,6 +17,8 @@ import { multiselect_model } from 'src/app/@Models/MultiSelect_model';
   styleUrls: ['./home-one.component.scss'],
 })
 export class HomeOneComponent implements OnInit {
+
+  _settings_item: Array<Settings_model>;  //should be changed to object not array
   content: Array<Content_model>;
 
   to_print: Array<Content_model>;
@@ -34,12 +38,14 @@ export class HomeOneComponent implements OnInit {
 
   constructor(
     private parser: ParserService,
-    private search: SearchService
+    private search: SearchService,
+    private settings: SettingsParserService
   ) { }
 
   ngOnInit(): void {
     this.content = this.parser.parse();
     this.to_print = this.content;
+    this._settings_item = this.settings.parse();
   }
 
   /**
