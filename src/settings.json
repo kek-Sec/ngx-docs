@@ -1,0 +1,15 @@
+[
+    {
+      "preview_show_picture": true,
+      "preview_show_title": true,
+      "preview_show_description": true,
+      "preview_show_items": true,
+      "preview_show_url": false,
+      "preview_show_album": false,
+      "preview_show_tags": false,
+      "preview_description_text_length" : 15,
+      "preview_text_length": 15,
+      "preview_items_count": 3,
+      "preview_number_of_columns": 4
+    }
+]

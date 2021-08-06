@@ -46,6 +46,7 @@ export class HomeOneComponent implements OnInit {
     this.content = this.parser.parse();
     this.to_print = this.content;
     this._settings_item = this.settings.parse();
+    this.gridColumns = this._settings_item[0].preview_number_of_columns as number;
   }
 
   /**
