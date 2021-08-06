@@ -7,7 +7,6 @@ import {
   IMultiSelectTexts,
 } from 'ngx-bootstrap-multiselect';
 import { SearchService } from 'src/app/@Services/search.service';
-import { Router } from '@angular/router';
 import { multiselect_model } from 'src/app/@Models/MultiSelect_model';
 
 @Component({
@@ -34,10 +33,9 @@ export class HomeOneComponent implements OnInit {
   myTexts: IMultiSelectTexts = multiselect_model.Texts;
 
   constructor(
-    private router: Router,
     private parser: ParserService,
     private search: SearchService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.content = this.parser.parse();
