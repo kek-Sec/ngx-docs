@@ -1,27 +1,45 @@
-
 <div>
-    <button type="button" [routerLink]="['/']" class="btn back-button btn-secondary btn-lg">Home</button>
+  <button
+    type="button"
+    [routerLink]="['/']"
+    class="btn back-button btn-secondary btn-lg"
+  >
+    Home
+  </button>
 </div>
 
 <div class="container">
+  <div>
     <div>
-        <div>
-            <div class="card border-primary text-center mb-3">
-                <div style="font-weight: bold; text-transform: uppercase;" class="card-header">{{selected_entry.Title}}</div>
-                <div class="card-body text-primary">
-                    <h5 style="color: #4158d0"  class="card-title">{{selected_entry.Description}}</h5>
-                    <p style="color: black" class="card-text">{{selected_entry.text}}</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <div *ngFor="let item of selected_entry.items">
-                        <li class="list-group-item" [innerHTML]="item"></li>
-                    </div>
-                </ul>
-                <img src="{{selected_entry.image}}" class="card-img-bottom " alt="...">
-                <div (click)="copy()" class="card-footer text-muted">
-                    Copy to clipboard
-                  </div>
-            </div>
+      <div class="card border-primary text-center mb-3">
+        <div
+          style="font-weight: bold; text-transform: uppercase"
+          class="card-header"
+        >
+          {{ selected_entry.Title }}
         </div>
+        <div class="card-body text-primary">
+          <h5 style="color: #4158d0" class="card-title">
+            {{ selected_entry.Description }}
+          </h5>
+          <p style="color: black" class="card-text">
+            {{ selected_entry.text }}
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <div *ngFor="let item of selected_entry.items">
+            <li class="list-group-item" [innerHTML]="item"></li>
+          </div>
+        </ul>
+        <img
+          src="{{ selected_entry.image }}"
+          class="card-img-bottom"
+          alt="..."
+        />
+        <div (click)="copy()" class="card-footer text-muted">
+          Copy to clipboard
+        </div>
+      </div>
     </div>
+  </div>
 </div>

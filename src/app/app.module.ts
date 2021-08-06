@@ -19,11 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeOneComponent,
-    DetailedPageComponent
-  ],
+  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent],
   imports: [
     FormsModule,
     BrowserAnimationsModule, // required animations module
@@ -32,9 +28,9 @@ import { ToastrModule } from 'ngx-toastr';
     FlexLayoutModule,
     ClipboardModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
