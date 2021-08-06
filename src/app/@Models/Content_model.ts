@@ -8,9 +8,5 @@ export class Content_model {
     tags?: string[];
     url?: string;
     album?: string[];
-
-    //properties
-
-    show_picture?: boolean = true;
     
 }
