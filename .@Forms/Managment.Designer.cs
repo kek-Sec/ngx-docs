@@ -74,8 +74,35 @@ namespace ngx_docs_managment_application
             this.input_add_button = new System.Windows.Forms.Button();
             this.input_remove_button = new System.Windows.Forms.Button();
             this.input_edit_button = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.preview_show_picture_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_title_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_description_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_text_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_items_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_url_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_album_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_tags_radioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.preview_description_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.preview_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.preview_item_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.preview_items_count_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.preview_number_of_columns_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.settings_save_button = new System.Windows.Forms.Button();
             this.managment_tabControl.SuspendLayout();
             this.input_tabPage.SuspendLayout();
+            this.settings_tabPage.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -85,6 +112,18 @@ namespace ngx_docs_managment_application
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).BeginInit();
+            this.groupBox11.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_text_length_numericUpDown)).BeginInit();
+            this.groupBox13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_item_text_length_numericUpDown)).BeginInit();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_items_count_numericUpDown)).BeginInit();
+            this.groupBox15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_number_of_columns_numericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -115,6 +154,10 @@ namespace ngx_docs_managment_application
             // 
             // settings_tabPage
             // 
+            this.settings_tabPage.Controls.Add(this.settings_save_button);
+            this.settings_tabPage.Controls.Add(this.groupBox14);
+            this.settings_tabPage.Controls.Add(this.groupBox10);
+            this.settings_tabPage.Controls.Add(this.groupBox9);
             this.settings_tabPage.Location = new System.Drawing.Point(4, 29);
             this.settings_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.settings_tabPage.Name = "settings_tabPage";
@@ -538,6 +581,277 @@ namespace ngx_docs_managment_application
             this.input_edit_button.TabIndex = 12;
             this.input_edit_button.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.preview_show_tags_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_album_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_url_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_items_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_text_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_description_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_title_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_picture_radioButton);
+            this.groupBox9.Location = new System.Drawing.Point(7, 8);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(260, 553);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            // 
+            // preview_show_picture_radioButton
+            // 
+            this.preview_show_picture_radioButton.AutoSize = true;
+            this.preview_show_picture_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_picture_radioButton.Location = new System.Drawing.Point(6, 26);
+            this.preview_show_picture_radioButton.Name = "preview_show_picture_radioButton";
+            this.preview_show_picture_radioButton.Size = new System.Drawing.Size(201, 29);
+            this.preview_show_picture_radioButton.TabIndex = 2;
+            this.preview_show_picture_radioButton.TabStop = true;
+            this.preview_show_picture_radioButton.Text = "preview_show_picture";
+            this.preview_show_picture_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_title_radioButton
+            // 
+            this.preview_show_title_radioButton.AutoSize = true;
+            this.preview_show_title_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_title_radioButton.Location = new System.Drawing.Point(6, 61);
+            this.preview_show_title_radioButton.Name = "preview_show_title_radioButton";
+            this.preview_show_title_radioButton.Size = new System.Drawing.Size(176, 29);
+            this.preview_show_title_radioButton.TabIndex = 3;
+            this.preview_show_title_radioButton.TabStop = true;
+            this.preview_show_title_radioButton.Text = "preview_show_title";
+            this.preview_show_title_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_description_radioButton
+            // 
+            this.preview_show_description_radioButton.AutoSize = true;
+            this.preview_show_description_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_description_radioButton.Location = new System.Drawing.Point(6, 96);
+            this.preview_show_description_radioButton.Name = "preview_show_description_radioButton";
+            this.preview_show_description_radioButton.Size = new System.Drawing.Size(235, 29);
+            this.preview_show_description_radioButton.TabIndex = 4;
+            this.preview_show_description_radioButton.TabStop = true;
+            this.preview_show_description_radioButton.Text = "preview_show_description";
+            this.preview_show_description_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_text_radioButton
+            // 
+            this.preview_show_text_radioButton.AutoSize = true;
+            this.preview_show_text_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_text_radioButton.Location = new System.Drawing.Point(6, 131);
+            this.preview_show_text_radioButton.Name = "preview_show_text_radioButton";
+            this.preview_show_text_radioButton.Size = new System.Drawing.Size(176, 29);
+            this.preview_show_text_radioButton.TabIndex = 5;
+            this.preview_show_text_radioButton.TabStop = true;
+            this.preview_show_text_radioButton.Text = "preview_show_text";
+            this.preview_show_text_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_items_radioButton
+            // 
+            this.preview_show_items_radioButton.AutoSize = true;
+            this.preview_show_items_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_items_radioButton.Location = new System.Drawing.Point(6, 166);
+            this.preview_show_items_radioButton.Name = "preview_show_items_radioButton";
+            this.preview_show_items_radioButton.Size = new System.Drawing.Size(190, 29);
+            this.preview_show_items_radioButton.TabIndex = 6;
+            this.preview_show_items_radioButton.TabStop = true;
+            this.preview_show_items_radioButton.Text = "preview_show_items";
+            this.preview_show_items_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_url_radioButton
+            // 
+            this.preview_show_url_radioButton.AutoSize = true;
+            this.preview_show_url_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_url_radioButton.Location = new System.Drawing.Point(6, 201);
+            this.preview_show_url_radioButton.Name = "preview_show_url_radioButton";
+            this.preview_show_url_radioButton.Size = new System.Drawing.Size(167, 29);
+            this.preview_show_url_radioButton.TabIndex = 7;
+            this.preview_show_url_radioButton.TabStop = true;
+            this.preview_show_url_radioButton.Text = "preview_show_url";
+            this.preview_show_url_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_album_radioButton
+            // 
+            this.preview_show_album_radioButton.AutoSize = true;
+            this.preview_show_album_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_album_radioButton.Location = new System.Drawing.Point(6, 236);
+            this.preview_show_album_radioButton.Name = "preview_show_album_radioButton";
+            this.preview_show_album_radioButton.Size = new System.Drawing.Size(197, 29);
+            this.preview_show_album_radioButton.TabIndex = 8;
+            this.preview_show_album_radioButton.TabStop = true;
+            this.preview_show_album_radioButton.Text = "preview_show_album";
+            this.preview_show_album_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_tags_radioButton
+            // 
+            this.preview_show_tags_radioButton.AutoSize = true;
+            this.preview_show_tags_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_tags_radioButton.Location = new System.Drawing.Point(6, 271);
+            this.preview_show_tags_radioButton.Name = "preview_show_tags_radioButton";
+            this.preview_show_tags_radioButton.Size = new System.Drawing.Size(181, 29);
+            this.preview_show_tags_radioButton.TabIndex = 9;
+            this.preview_show_tags_radioButton.TabStop = true;
+            this.preview_show_tags_radioButton.Text = "preview_show_tags";
+            this.preview_show_tags_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.groupBox15);
+            this.groupBox10.Controls.Add(this.groupBox13);
+            this.groupBox10.Controls.Add(this.groupBox12);
+            this.groupBox10.Controls.Add(this.groupBox11);
+            this.groupBox10.Location = new System.Drawing.Point(273, 8);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(404, 553);
+            this.groupBox10.TabIndex = 1;
+            this.groupBox10.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label10.Location = new System.Drawing.Point(6, 23);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(265, 25);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "preview_description_text_length:";
+            // 
+            // preview_description_text_length_numericUpDown
+            // 
+            this.preview_description_text_length_numericUpDown.Location = new System.Drawing.Point(277, 23);
+            this.preview_description_text_length_numericUpDown.Name = "preview_description_text_length_numericUpDown";
+            this.preview_description_text_length_numericUpDown.Size = new System.Drawing.Size(46, 27);
+            this.preview_description_text_length_numericUpDown.TabIndex = 1;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.preview_description_text_length_numericUpDown);
+            this.groupBox11.Controls.Add(this.label10);
+            this.groupBox11.Location = new System.Drawing.Point(0, 0);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(404, 65);
+            this.groupBox11.TabIndex = 2;
+            this.groupBox11.TabStop = false;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.preview_text_length_numericUpDown);
+            this.groupBox12.Controls.Add(this.label11);
+            this.groupBox12.Location = new System.Drawing.Point(0, 71);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(404, 65);
+            this.groupBox12.TabIndex = 3;
+            this.groupBox12.TabStop = false;
+            // 
+            // preview_text_length_numericUpDown
+            // 
+            this.preview_text_length_numericUpDown.Location = new System.Drawing.Point(277, 23);
+            this.preview_text_length_numericUpDown.Name = "preview_text_length_numericUpDown";
+            this.preview_text_length_numericUpDown.Size = new System.Drawing.Size(46, 27);
+            this.preview_text_length_numericUpDown.TabIndex = 1;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label11.Location = new System.Drawing.Point(6, 23);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(170, 25);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "preview_text_length:";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.preview_item_text_length_numericUpDown);
+            this.groupBox13.Controls.Add(this.label12);
+            this.groupBox13.Location = new System.Drawing.Point(0, 142);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(404, 65);
+            this.groupBox13.TabIndex = 4;
+            this.groupBox13.TabStop = false;
+            // 
+            // preview_item_text_length_numericUpDown
+            // 
+            this.preview_item_text_length_numericUpDown.Location = new System.Drawing.Point(277, 23);
+            this.preview_item_text_length_numericUpDown.Name = "preview_item_text_length_numericUpDown";
+            this.preview_item_text_length_numericUpDown.Size = new System.Drawing.Size(46, 27);
+            this.preview_item_text_length_numericUpDown.TabIndex = 1;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label12.Location = new System.Drawing.Point(6, 23);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(212, 25);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "preview_item_text_length:";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.preview_items_count_numericUpDown);
+            this.groupBox14.Controls.Add(this.label13);
+            this.groupBox14.Location = new System.Drawing.Point(273, 221);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(404, 65);
+            this.groupBox14.TabIndex = 5;
+            this.groupBox14.TabStop = false;
+            // 
+            // preview_items_count_numericUpDown
+            // 
+            this.preview_items_count_numericUpDown.Location = new System.Drawing.Point(277, 23);
+            this.preview_items_count_numericUpDown.Name = "preview_items_count_numericUpDown";
+            this.preview_items_count_numericUpDown.Size = new System.Drawing.Size(46, 27);
+            this.preview_items_count_numericUpDown.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label13.Location = new System.Drawing.Point(6, 23);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(179, 25);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "preview_items_count:";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.preview_number_of_columns_numericUpDown);
+            this.groupBox15.Controls.Add(this.label14);
+            this.groupBox15.Location = new System.Drawing.Point(0, 284);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(404, 65);
+            this.groupBox15.TabIndex = 6;
+            this.groupBox15.TabStop = false;
+            // 
+            // preview_number_of_columns_numericUpDown
+            // 
+            this.preview_number_of_columns_numericUpDown.Location = new System.Drawing.Point(277, 23);
+            this.preview_number_of_columns_numericUpDown.Name = "preview_number_of_columns_numericUpDown";
+            this.preview_number_of_columns_numericUpDown.Size = new System.Drawing.Size(46, 27);
+            this.preview_number_of_columns_numericUpDown.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label14.Location = new System.Drawing.Point(6, 23);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(244, 25);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "preview_number_of_columns:";
+            // 
+            // settings_save_button
+            // 
+            this.settings_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.settings_save_button.Location = new System.Drawing.Point(878, 438);
+            this.settings_save_button.Name = "settings_save_button";
+            this.settings_save_button.Size = new System.Drawing.Size(172, 125);
+            this.settings_save_button.TabIndex = 11;
+            this.settings_save_button.Text = "Save";
+            this.settings_save_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.settings_save_button.UseVisualStyleBackColor = true;
+            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -552,6 +866,7 @@ namespace ngx_docs_managment_application
             this.Load += new System.EventHandler(this.Managment_Load);
             this.managment_tabControl.ResumeLayout(false);
             this.input_tabPage.ResumeLayout(false);
+            this.settings_tabPage.ResumeLayout(false);
             this.dashboard_tabPage.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -567,6 +882,24 @@ namespace ngx_docs_managment_application
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).EndInit();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_text_length_numericUpDown)).EndInit();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_item_text_length_numericUpDown)).EndInit();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_items_count_numericUpDown)).EndInit();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_number_of_columns_numericUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,5 +951,31 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.Button input_remove_button;
         private System.Windows.Forms.Button input_add_button;
         private System.Windows.Forms.Button input_item_add_button;
+        private System.Windows.Forms.Button settings_save_button;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.NumericUpDown preview_items_count_numericUpDown;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.NumericUpDown preview_number_of_columns_numericUpDown;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.NumericUpDown preview_item_text_length_numericUpDown;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.NumericUpDown preview_text_length_numericUpDown;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.NumericUpDown preview_description_text_length_numericUpDown;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.RadioButton preview_show_tags_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_album_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_url_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_items_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_text_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_description_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_title_radioButton;
+        private System.Windows.Forms.RadioButton preview_show_picture_radioButton;
     }
 }
