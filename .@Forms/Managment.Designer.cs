@@ -52,7 +52,6 @@ namespace ngx_docs_managment_application
             this.input_items_listbox = new System.Windows.Forms.ListBox();
             this.input_item_textBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.input_item_add_button = new System.Windows.Forms.Button();
             this.input_item_remove_button = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.input_tags_remove_button = new System.Windows.Forms.Button();
@@ -70,6 +69,11 @@ namespace ngx_docs_managment_application
             this.label8 = new System.Windows.Forms.Label();
             this.input_url_textBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.input_item_add_button = new System.Windows.Forms.Button();
+            this.input_add_button = new System.Windows.Forms.Button();
+            this.input_remove_button = new System.Windows.Forms.Button();
+            this.input_edit_button = new System.Windows.Forms.Button();
             this.managment_tabControl.SuspendLayout();
             this.input_tabPage.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
@@ -80,6 +84,7 @@ namespace ngx_docs_managment_application
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -92,7 +97,7 @@ namespace ngx_docs_managment_application
             this.managment_tabControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.managment_tabControl.Name = "managment_tabControl";
             this.managment_tabControl.SelectedIndex = 0;
-            this.managment_tabControl.Size = new System.Drawing.Size(1065, 541);
+            this.managment_tabControl.Size = new System.Drawing.Size(1065, 604);
             this.managment_tabControl.TabIndex = 0;
             // 
             // input_tabPage
@@ -103,7 +108,7 @@ namespace ngx_docs_managment_application
             this.input_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.input_tabPage.Name = "input_tabPage";
             this.input_tabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.input_tabPage.Size = new System.Drawing.Size(1057, 508);
+            this.input_tabPage.Size = new System.Drawing.Size(1057, 571);
             this.input_tabPage.TabIndex = 0;
             this.input_tabPage.Text = "Input data";
             this.input_tabPage.UseVisualStyleBackColor = true;
@@ -195,18 +200,19 @@ namespace ngx_docs_managment_application
             this.input_listbox.ItemHeight = 20;
             this.input_listbox.Location = new System.Drawing.Point(3, 1);
             this.input_listbox.Name = "input_listbox";
-            this.input_listbox.Size = new System.Drawing.Size(120, 504);
+            this.input_listbox.Size = new System.Drawing.Size(120, 564);
             this.input_listbox.TabIndex = 0;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.groupBox8);
             this.groupBox3.Controls.Add(this.groupBox7);
             this.groupBox3.Controls.Add(this.groupBox6);
             this.groupBox3.Controls.Add(this.groupBox5);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Location = new System.Drawing.Point(129, 0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(928, 505);
+            this.groupBox3.Size = new System.Drawing.Size(928, 565);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
@@ -317,16 +323,6 @@ namespace ngx_docs_managment_application
             this.label5.Size = new System.Drawing.Size(43, 20);
             this.label5.TabIndex = 6;
             this.label5.Text = "input";
-            // 
-            // input_item_add_button
-            // 
-            this.input_item_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_item_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_item_add_button.Location = new System.Drawing.Point(7, 145);
-            this.input_item_add_button.Name = "input_item_add_button";
-            this.input_item_add_button.Size = new System.Drawing.Size(75, 65);
-            this.input_item_add_button.TabIndex = 8;
-            this.input_item_add_button.UseVisualStyleBackColor = true;
             // 
             // input_item_remove_button
             // 
@@ -490,11 +486,62 @@ namespace ngx_docs_managment_application
             this.label9.TabIndex = 8;
             this.label9.Text = "URL";
             // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.input_edit_button);
+            this.groupBox8.Controls.Add(this.input_remove_button);
+            this.groupBox8.Controls.Add(this.input_add_button);
+            this.groupBox8.Location = new System.Drawing.Point(6, 436);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(915, 123);
+            this.groupBox8.TabIndex = 12;
+            this.groupBox8.TabStop = false;
+            // 
+            // input_item_add_button
+            // 
+            this.input_item_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_item_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_item_add_button.Location = new System.Drawing.Point(7, 145);
+            this.input_item_add_button.Name = "input_item_add_button";
+            this.input_item_add_button.Size = new System.Drawing.Size(75, 65);
+            this.input_item_add_button.TabIndex = 8;
+            this.input_item_add_button.UseVisualStyleBackColor = true;
+            // 
+            // input_add_button
+            // 
+            this.input_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_add_button.Location = new System.Drawing.Point(296, 26);
+            this.input_add_button.Name = "input_add_button";
+            this.input_add_button.Size = new System.Drawing.Size(102, 91);
+            this.input_add_button.TabIndex = 10;
+            this.input_add_button.UseVisualStyleBackColor = true;
+            // 
+            // input_remove_button
+            // 
+            this.input_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_remove_button.Location = new System.Drawing.Point(512, 26);
+            this.input_remove_button.Name = "input_remove_button";
+            this.input_remove_button.Size = new System.Drawing.Size(102, 91);
+            this.input_remove_button.TabIndex = 11;
+            this.input_remove_button.UseVisualStyleBackColor = true;
+            // 
+            // input_edit_button
+            // 
+            this.input_edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_edit_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_edit_button.Location = new System.Drawing.Point(404, 26);
+            this.input_edit_button.Name = "input_edit_button";
+            this.input_edit_button.Size = new System.Drawing.Size(102, 91);
+            this.input_edit_button.TabIndex = 12;
+            this.input_edit_button.UseVisualStyleBackColor = true;
+            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 542);
+            this.ClientSize = new System.Drawing.Size(1067, 601);
             this.Controls.Add(this.managment_tabControl);
             this.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -517,6 +564,7 @@ namespace ngx_docs_managment_application
             this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -548,7 +596,6 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.ListBox input_tags_listbox;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button input_item_remove_button;
-        private System.Windows.Forms.Button input_item_add_button;
         private System.Windows.Forms.TextBox input_item_textBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox input_items_listbox;
@@ -564,5 +611,10 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.TextBox input_title_textBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox input_listbox;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button input_edit_button;
+        private System.Windows.Forms.Button input_remove_button;
+        private System.Windows.Forms.Button input_add_button;
+        private System.Windows.Forms.Button input_item_add_button;
     }
 }
