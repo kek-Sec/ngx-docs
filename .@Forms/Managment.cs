@@ -1,4 +1,5 @@
 ﻿using ngx_docs_managment_application._Controllers;
+using ngx_docs_managment_application._Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace ngx_docs_managment_application
         readonly Dashboard_Controller dc = new Dashboard_Controller();
         readonly Settings_Controller sc = new Settings_Controller();
         readonly Input_Controller ic = new Input_Controller();
-
+        readonly SettingsData_Controller sdc = new SettingsData_Controller();
         public Managment()
         {
             InitializeComponent();
