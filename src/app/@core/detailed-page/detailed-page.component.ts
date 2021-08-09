@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NumberValueAccessor } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Content_model } from 'src/app/@Models/Content_model';
 import { ParserService } from 'src/app/@Services/parser.service';
@@ -20,7 +19,7 @@ export class DetailedPageComponent implements OnInit {
     private parser: ParserService,
     private _clipboardService: ClipboardService,
     private toastr: ToastrService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe((params) => {
