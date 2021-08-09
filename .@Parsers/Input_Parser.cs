@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ngx_docs_managment_application._Models;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,15 @@ namespace ngx_docs_managment_application._Forms
         /// </summary>
         /// <param name="filename">The file to parse</param>
         /// <returns>Input model object</returns>
-        public Input_Model parse(string filename)
+        public IList<Input_Model> parse(string filename)
         {
             string json = File.ReadAllText(filename);
-            return JsonConvert.DeserializeObject<Input_Model>(json);
+            JObject o = JObject.Parse(json);
+
+            JArray a = (JArray)o[0];
+
+            IList<Input_Model> ret = a.ToObject<IList<Input_Model>>();
+            return ret;
         }
     }
 }
