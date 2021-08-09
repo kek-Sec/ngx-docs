@@ -1,9 +1,5 @@
 <div>
-  <button
-    type="button"
-    [routerLink]="['/']"
-    class="btn back-button btn-secondary btn-lg"
-  >
+  <button type="button" [routerLink]="['/']" class="btn back-button btn-secondary btn-lg">
     Home
   </button>
 </div>
@@ -12,10 +8,7 @@
   <div>
     <div>
       <div class="card border-primary text-center mb-3">
-        <div
-          style="font-weight: bold; text-transform: uppercase"
-          class="card-header"
-        >
+        <div style="font-weight: bold; text-transform: uppercase" class="card-header">
           {{ selected_entry.Title }}
         </div>
         <div class="card-body text-primary">
@@ -31,11 +24,7 @@
             <li class="list-group-item" [innerHTML]="item"></li>
           </div>
         </ul>
-        <img
-          src="{{ selected_entry.image }}"
-          class="card-img-bottom"
-          alt="..."
-        />
+        <img src="{{ selected_entry.image }}" class="card-img-bottom" alt="..." />
         <div (click)="copy()" class="card-footer text-muted">
           Copy to clipboard
         </div>

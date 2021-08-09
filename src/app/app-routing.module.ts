@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DetailedPageComponent } from './@core/detailed-page/detailed-page.component';
+import { DetailedPageComponent } from './@core/detailed-page-one/detailed-page.component';
+import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
 import { HomeOneComponent } from './@landings/home-one/home-one.component';
 
 const routes: Routes = [
   { path: '', component: HomeOneComponent },
   { path: 'view/undefined', redirectTo: '', pathMatch: 'full' },
-  { path: 'view/:id', component: DetailedPageComponent },
+  { path: 'view/:id', component: DetailedPageTwoComponent },
 
   { path: '**', component: HomeOneComponent }, // This line will remain down from the whole pages component list
 ];
@@ -14,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
