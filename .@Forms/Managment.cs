@@ -17,6 +17,7 @@ namespace ngx_docs_managment_application
         //Initiate controllers
         readonly Dashboard_Controller dc = new Dashboard_Controller();
         readonly Settings_Controller sc = new Settings_Controller();
+        readonly Input_Controller ic = new Input_Controller();
 
         public Managment()
         {
@@ -26,6 +27,7 @@ namespace ngx_docs_managment_application
         private void Managment_Load(object sender, EventArgs e)
         {
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
+            
         }
 
         private void set_project_path_linkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

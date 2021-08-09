@@ -21,10 +21,9 @@ namespace ngx_docs_managment_application._Forms
         public IList<Input_Model> parse(string filename)
         {
             string json = File.ReadAllText(filename);
+            dynamic blogPosts = JArray.Parse(json);
             JObject o = JObject.Parse(json);
-
-            JArray a = (JArray)o[0];
-
+            JArray a = (JArray)o["d"];
             IList<Input_Model> ret = a.ToObject<IList<Input_Model>>();
             return ret;
         }

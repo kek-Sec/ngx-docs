@@ -24,7 +24,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-
+                Console.Write("error -> " + e.Message.ToString());
             }
         }
 

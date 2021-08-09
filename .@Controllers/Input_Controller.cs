@@ -19,10 +19,11 @@ namespace ngx_docs_managment_application._Controllers
 
         public void FillInputListbox(ListBox input_listbox)
         {
-            foreach(Input_Model im in input.input_collection)
+            Console.WriteLine(input.input_collection.Count);
+           /* foreach (Input_Model im in input.input_collection)
             {
                 input_listbox.Items.Add(im.Title);
-            }
+            } */
         }
     }
 }
