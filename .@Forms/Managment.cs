@@ -37,5 +37,16 @@ namespace ngx_docs_managment_application
             sc.SelectProjectPath();
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
         }
+
+        private void input_listbox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var indx = input_listbox.SelectedIndex;
+            if (indx == -1)
+            {
+                return;
+            }
+
+            ic.SetSelectedItem(indx, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_tags_listbox, input_items_listbox, input_album_listbox);
+        }
     }
 }

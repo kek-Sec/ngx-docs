@@ -45,8 +45,16 @@ namespace ngx_docs_managment_application._Controllers
             album.Items.Clear();
 
             foreach (string i in inpt.items) {  items.Items.Add(i); }
-            foreach (string i in inpt.tags) {  tags.Items.Add(i); }
-            foreach (string i in inpt.album) {  album.Items.Add(i); }
+
+            if(inpt.tags is object)
+            {
+                foreach (string i in inpt.tags) { tags.Items.Add(i); }
+            }
+
+            if(inpt.album is object)
+            {
+                foreach (string i in inpt.album) { album.Items.Add(i); }
+            }
 
 
         }
