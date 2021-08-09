@@ -16,7 +16,7 @@
     </ul>
     <hr class="my-4">
     <div *ngIf="has_tags">
-        <p class="Tags">Tags: "aat", "tee" </p>
+        <p class="Tags">Tags: {{pretty_tags}} </p>
         <hr class="my-4">
     </div>
     <div *ngIf="has_url">
@@ -25,6 +25,6 @@
         <hr class="my-4">
     </div>
     <a class="btn btn-info btn-lg" href="#" role="button">Back</a>
-    <a class="btn btn-success copy-btn btn-lg" href="#" role="button">Copy</a>
+    <a class="btn btn-success copy-btn btn-lg" (click)="copy()" href="#" role="button">Copy</a>
 
 </div>

@@ -4,7 +4,9 @@
     "Description": "This is the description of this header...",
     "text": "This is the text for this header item.....",
     "image": "assets/images/default.png",
-    "items": ["1235","1521421"]
+    "items": ["1235","1521421"],
+    "url": "https://test.com",
+    "tags": ["tag1","tag2","tag3"]
   },
   {
     "Title": "header 2 title",
