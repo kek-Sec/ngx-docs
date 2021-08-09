@@ -17,16 +17,30 @@ namespace ngx_docs_managment_application._Controllers
 
         public Input_Service()
         {
+            LoadData();
+        }
+
+
+        public void AddEntry(Input_Model input)
+        {
+            input_collection.Add(input);
+
+        }
+
+        /// <summary>
+        /// Read and parse JSON
+        /// </summary>
+        public void LoadData()
+        {
             try
             {
                 var filepath = settings.getSetting("project_path") + "\\src\\input.json";
                 input_collection = parser.parse(filepath);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.Write("error -> " + e.Message.ToString());
             }
         }
-
     }
 }
