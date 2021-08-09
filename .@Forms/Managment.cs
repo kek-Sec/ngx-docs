@@ -28,6 +28,7 @@ namespace ngx_docs_managment_application
         private void Managment_Load(object sender, EventArgs e)
         {
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
+            ic.FillInputListbox(input_listbox);
             
         }
 
