@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".%40Parsers\Input_Parser.cs" />
     <Compile Include=".%40Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,7 +59,9 @@
     <Compile Include=".%40Forms\Managment.Designer.cs">
       <DependentUpon>Managment.cs</DependentUpon>
     </Compile>
-    <Compile Include=".%40Forms\Settings_Service.cs" />
+    <Compile Include=".%40Parsers\Settings_Parser.cs" />
+    <Compile Include=".%40Services\Settings_Service.cs" />
+    <Compile Include=".%40Parsers\Theming_Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include=".%40Forms\Main.resx">
@@ -89,8 +92,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include=".%40Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
