@@ -39,9 +39,14 @@ namespace ngx_docs_managment_application._Controllers
             picture.Text = inpt.image;
             url.Text = inpt.url;
 
-            foreach(string i in inpt.items) { items.Items.Clear(); items.Items.Add(i); }
-            foreach (string i in inpt.tags) { tags.Items.Clear(); tags.Items.Add(i); }
-            foreach (string i in inpt.album) { album.Items.Clear(); album.Items.Add(i); }
+            //clear listboxes
+            items.Items.Clear();
+            tags.Items.Clear();
+            album.Items.Clear();
+
+            foreach (string i in inpt.items) {  items.Items.Add(i); }
+            foreach (string i in inpt.tags) {  tags.Items.Add(i); }
+            foreach (string i in inpt.album) {  album.Items.Add(i); }
 
 
         }
