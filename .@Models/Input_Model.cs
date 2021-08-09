@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+
 namespace ngx_docs_managment_application._Models
 {
     class Input_Model
@@ -7,9 +9,9 @@ namespace ngx_docs_managment_application._Models
         public string Description { get; set; }
         public string text {get; set;}
         public string image { get; set; }
-        public string[] items { get; set; }
-        public string[] tags { get; set; }
+        public IList<string> items { get; set; }
+        public IList<string> tags { get; set; }
         public string url { get; set; }
-        public string album { get; set; }
+        public IList<string> album { get; set; }
     }
 }
