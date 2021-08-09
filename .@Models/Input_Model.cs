@@ -1,8 +1,11 @@
 ﻿
+using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace ngx_docs_managment_application._Models
 {
+    [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
+
     class Input_Model
     {
         public string Title { get; set; }
