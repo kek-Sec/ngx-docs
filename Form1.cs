@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ngx_docs_managment_application
 {
-    public partial class Form1 : Form
+    public partial class Main_form : Form
     {
-        public Form1()
+        public Main_form()
         {
             InitializeComponent();
         }
