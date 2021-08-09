@@ -5,15 +5,6 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ngx-docs-managment-application", "ngx-docs-managment-application.csproj", "{A9452AFF-D66E-436B-A61A-F29888248F6B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".@Forms", ".@Forms", "{9A022B7F-0D89-47AC-B47B-4EE07F918F7E}"
-	ProjectSection(SolutionItems) = preProject
-		Main.cs = Main.cs
-		Main.Designer.cs = Main.Designer.cs
-		Main.resx = Main.resx
-		Managment.cs = Managment.cs
-		Managment.Designer.cs = Managment.Designer.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
