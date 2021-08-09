@@ -16,7 +16,7 @@ namespace ngx_docs_managment_application._Forms
         {
             try
             {
-                var filepath = settings.getSetting("project_path") + "\\src\\input.json";
+                var filepath = settings.getSetting("project_path") + "\\src\\settings.json";
                 settings_model = parser.parse(filepath);
             }
             catch (Exception e)
