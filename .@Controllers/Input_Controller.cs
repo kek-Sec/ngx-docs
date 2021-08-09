@@ -17,6 +17,16 @@ namespace ngx_docs_managment_application._Controllers
             input = new Input_Service();
         }
 
+        public void SetSelectedItem()
+        {
+
+        }
+
+
+        /// <summary>
+        /// Fills the input tab listbox
+        /// </summary>
+        /// <param name="input_listbox">The input listbox</param>
         public void FillInputListbox(ListBox input_listbox)
         {
             try
