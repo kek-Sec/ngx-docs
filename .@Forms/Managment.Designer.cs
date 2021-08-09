@@ -183,6 +183,7 @@ namespace ngx_docs_managment_application
             this.set_project_path_linkLabel.TabIndex = 2;
             this.set_project_path_linkLabel.TabStop = true;
             this.set_project_path_linkLabel.Text = "Click here to set project directory";
+            this.set_project_path_linkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.set_project_path_linkLabel_LinkClicked);
             // 
             // groupBox2
             // 
