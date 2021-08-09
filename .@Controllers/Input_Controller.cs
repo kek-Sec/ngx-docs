@@ -17,8 +17,32 @@ namespace ngx_docs_managment_application._Controllers
             input = new Input_Service();
         }
 
-        public void SetSelectedItem()
+        /// <summary>
+        /// Updates the data view when the selected entry is changed
+        /// </summary>
+        /// <param name="index">The index for the input array</param>
+        /// <param name="title">Title textbox</param>
+        /// <param name="description">Description textbox</param>
+        /// <param name="text">Text textbox</param>
+        /// <param name="picture">Picture textbox</param>
+        /// <param name="url">Url textbox</param>
+        /// <param name="tags">Tags listbox</param>
+        /// <param name="items">Items listbox</param>
+        /// <param name="album">Album listbox</param>
+        public void SetSelectedItem(int index,TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url,ListBox tags,ListBox items,ListBox album)
         {
+            Input_Model inpt = input.input_collection[index];
+
+            title.Text = inpt.Title;
+            description.Text = inpt.Description;
+            text.Text = inpt.text;
+            picture.Text = inpt.image;
+            url.Text = inpt.url;
+
+            foreach(string i in inpt.items) { items.Items.Clear(); items.Items.Add(i); }
+            foreach (string i in inpt.tags) { tags.Items.Clear(); tags.Items.Add(i); }
+            foreach (string i in inpt.album) { album.Items.Clear(); album.Items.Add(i); }
+
 
         }
 
