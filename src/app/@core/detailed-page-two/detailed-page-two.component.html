@@ -1,17 +1,30 @@
 <div class="alert alert-info" role="alert">
-    <h1 class="display-4 text-center">This is the title</h1>
-    <h4 class="description text-center">the description...</h4>
+    <h1 class="display-4 text-center"> {{ selected_entry.Title }}
+    </h1>
+    <h4 class="description text-center"> {{ selected_entry.Description }}
+    </h4>
     <hr class="my-4">
-    <img src="assets/images/default.png" class="rounded mx-auto d-block" alt="Entry image">
+    <img src="{{ selected_entry.image }}" class="img-fluid" style="margin-left: 2vh;" alt="Entry image">
     <hr class="my-4">
-    <p class="lead text-center">This is a simple text unit, a simple jumbotron-style component for calling extra
-        attention to
-        featured content or information.</p>
+    <p class="lead text-center"> {{ selected_entry.text }}
+    </p>
     <hr class="my-4">
-    <!--centered ul for items-->
+    <ul class="list-group">
+        <div *ngFor="let item of selected_entry.items">
+            <li class="list-group-item list-group-item-warning" style="margin-bottom: 1vh;" [innerHTML]="item"></li>
+        </div>
+    </ul>
     <hr class="my-4">
-
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div *ngIf="has_tags">
+        <p class="Tags">Tags: "aat", "tee" </p>
+        <hr class="my-4">
+    </div>
+    <div *ngIf="has_url">
+        <hr class="my-4">
+        <p class="Tags">Url: {{selected_entry.url }}</p>
+        <hr class="my-4">
+    </div>
+    <a class="btn btn-info btn-lg" href="#" role="button">Back</a>
+    <a class="btn btn-success copy-btn btn-lg" href="#" role="button">Copy</a>
 
 </div>

@@ -14,6 +14,9 @@ export class DetailedPageTwoComponent implements OnInit {
 
   private sub: any;
 
+  has_url: boolean;
+  has_tags: boolean;
+
   selected_entry: Content_model;
   id: number;
   constructor(
@@ -30,6 +33,9 @@ export class DetailedPageTwoComponent implements OnInit {
       this.parser.parse();
       this.selected_entry = this.parser.content[this.id];
       console.log(this.id);
+
+      this.has_url = this.selected_entry.url != undefined;
+      this.has_tags = this.selected_entry.tags != undefined;
     });
   }
 
