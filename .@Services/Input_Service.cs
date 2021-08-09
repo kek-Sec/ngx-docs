@@ -15,7 +15,7 @@ namespace ngx_docs_managment_application._Controllers
 
         public IList<Input_Model> input_collection;
 
-        Input_Service()
+        public Input_Service()
         {
             try
             {
