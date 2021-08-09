@@ -6,7 +6,7 @@ namespace ngx_docs_managment_application._Forms
     {
 
         /// <summary>
-        /// Changes the keys folder directory setting
+        /// Changes the project folder directory setting
         /// </summary>
         public void LoadKeysFolder()
         {
@@ -16,8 +16,8 @@ namespace ngx_docs_managment_application._Forms
 
                 if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                 {
-                    UpdateSetting("keys_folder_path", fbd.SelectedPath);
-                    MessageBox.Show("Successfully saved", "Keys directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateSetting("project_path", fbd.SelectedPath);
+                    MessageBox.Show("Successfully saved", "Project directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
