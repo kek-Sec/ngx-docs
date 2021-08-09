@@ -50,7 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include=".%40Controllers\Dashboard_Controller.cs" />
-    <Compile Include=".%40Controllers\Dashboard_Service.cs" />
+    <Compile Include=".%40Services\Dashboard_Service.cs" />
     <Compile Include=".%40Controllers\Input_Controller.cs" />
     <Compile Include=".%40Controllers\MainForm_Controller.cs" />
     <Compile Include=".%40Controllers\Settings_Controller.cs" />

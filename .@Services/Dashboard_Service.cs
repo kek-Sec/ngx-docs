@@ -10,7 +10,7 @@ namespace ngx_docs_managment_application._Controllers
 {
     class Dashboard_Service
     {
-        Settings_Service settings = new Settings_Service();
+        readonly Settings_Service settings = new Settings_Service();
 
 
         /// <summary>
