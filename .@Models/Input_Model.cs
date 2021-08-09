@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace ngx_docs_managment_application._Models
 {
     class Input_Model
     {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string text {get; set;}
+        public string image { get; set; }
+        public string[] items { get; set; }
+        public string[] tags { get; set; }
+        public string url { get; set; }
+        public string album { get; set; }
     }
 }
