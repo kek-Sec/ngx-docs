@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include=".%40Models\Input_Model.cs" />
+    <Compile Include=".%40Models\Settings_Model.cs" />
+    <Compile Include=".%40Models\Theming_Model.cs" />
     <Compile Include=".%40Parsers\Input_Parser.cs" />
     <Compile Include=".%40Forms\Main.cs">
       <SubType>Form</SubType>
