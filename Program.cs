@@ -16,7 +16,7 @@ namespace ngx_docs_managment_application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main_form());
+            Application.Run(new Managment());
         }
     }
 }

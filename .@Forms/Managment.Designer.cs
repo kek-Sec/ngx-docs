@@ -119,7 +119,7 @@ namespace ngx_docs_managment_application
             this.settings_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.settings_tabPage.Name = "settings_tabPage";
             this.settings_tabPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.settings_tabPage.Size = new System.Drawing.Size(832, 508);
+            this.settings_tabPage.Size = new System.Drawing.Size(1057, 571);
             this.settings_tabPage.TabIndex = 1;
             this.settings_tabPage.Text = "Settings data";
             this.settings_tabPage.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@ namespace ngx_docs_managment_application
             this.theming_tabPage.Location = new System.Drawing.Point(4, 29);
             this.theming_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.theming_tabPage.Name = "theming_tabPage";
-            this.theming_tabPage.Size = new System.Drawing.Size(832, 508);
+            this.theming_tabPage.Size = new System.Drawing.Size(1057, 571);
             this.theming_tabPage.TabIndex = 2;
             this.theming_tabPage.Text = "Theming";
             this.theming_tabPage.UseVisualStyleBackColor = true;
@@ -139,7 +139,7 @@ namespace ngx_docs_managment_application
             this.dashboard_tabPage.Controls.Add(this.groupBox2);
             this.dashboard_tabPage.Location = new System.Drawing.Point(4, 29);
             this.dashboard_tabPage.Name = "dashboard_tabPage";
-            this.dashboard_tabPage.Size = new System.Drawing.Size(832, 508);
+            this.dashboard_tabPage.Size = new System.Drawing.Size(1057, 571);
             this.dashboard_tabPage.TabIndex = 3;
             this.dashboard_tabPage.Text = "Dashboard";
             this.dashboard_tabPage.UseVisualStyleBackColor = true;
@@ -150,7 +150,7 @@ namespace ngx_docs_managment_application
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(234, 59);
+            this.groupBox1.Size = new System.Drawing.Size(283, 59);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -168,7 +168,7 @@ namespace ngx_docs_managment_application
             // 
             this.dashboard_project_path_status_label.AutoSize = true;
             this.dashboard_project_path_status_label.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.dashboard_project_path_status_label.Location = new System.Drawing.Point(130, 23);
+            this.dashboard_project_path_status_label.Location = new System.Drawing.Point(125, 23);
             this.dashboard_project_path_status_label.Name = "dashboard_project_path_status_label";
             this.dashboard_project_path_status_label.Size = new System.Drawing.Size(102, 25);
             this.dashboard_project_path_status_label.TabIndex = 1;
@@ -190,7 +190,7 @@ namespace ngx_docs_managment_application
             this.groupBox2.Controls.Add(this.set_project_path_linkLabel);
             this.groupBox2.Location = new System.Drawing.Point(7, -3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(233, 100);
+            this.groupBox2.Size = new System.Drawing.Size(283, 100);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -548,6 +548,7 @@ namespace ngx_docs_managment_application
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Managment";
             this.Text = "Managment";
+            this.Load += new System.EventHandler(this.Managment_Load);
             this.managment_tabControl.ResumeLayout(false);
             this.input_tabPage.ResumeLayout(false);
             this.dashboard_tabPage.ResumeLayout(false);
