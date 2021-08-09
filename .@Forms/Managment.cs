@@ -25,6 +25,10 @@ namespace ngx_docs_managment_application
             InitializeComponent();
         }
 
+        /*
+         * ENTRY POINT FOR MANAGMENT FORM
+        **********************************
+         */
         private void Managment_Load(object sender, EventArgs e)
         {
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);

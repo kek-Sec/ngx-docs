@@ -100,6 +100,14 @@ namespace ngx_docs_managment_application
             this.preview_show_title_radioButton = new System.Windows.Forms.RadioButton();
             this.preview_show_picture_radioButton = new System.Windows.Forms.RadioButton();
             this.theming_tabPage = new System.Windows.Forms.TabPage();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.home_one_radioButton = new System.Windows.Forms.RadioButton();
+            this.home_two_radioButton = new System.Windows.Forms.RadioButton();
+            this.home_three_radioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.detailed_page_three_radioButton = new System.Windows.Forms.RadioButton();
+            this.detailed_page_two_radioButton = new System.Windows.Forms.RadioButton();
+            this.detailed_page_one_radioButton = new System.Windows.Forms.RadioButton();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -124,6 +132,9 @@ namespace ngx_docs_managment_application
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).BeginInit();
             this.groupBox9.SuspendLayout();
+            this.theming_tabPage.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox17.SuspendLayout();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -845,6 +856,8 @@ namespace ngx_docs_managment_application
             // 
             // theming_tabPage
             // 
+            this.theming_tabPage.Controls.Add(this.groupBox17);
+            this.theming_tabPage.Controls.Add(this.groupBox16);
             this.theming_tabPage.Location = new System.Drawing.Point(4, 29);
             this.theming_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.theming_tabPage.Name = "theming_tabPage";
@@ -852,6 +865,102 @@ namespace ngx_docs_managment_application
             this.theming_tabPage.TabIndex = 2;
             this.theming_tabPage.Text = "Theming";
             this.theming_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.home_three_radioButton);
+            this.groupBox16.Controls.Add(this.home_two_radioButton);
+            this.groupBox16.Controls.Add(this.home_one_radioButton);
+            this.groupBox16.Location = new System.Drawing.Point(3, 3);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(145, 558);
+            this.groupBox16.TabIndex = 0;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Index page";
+            // 
+            // home_one_radioButton
+            // 
+            this.home_one_radioButton.AutoSize = true;
+            this.home_one_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.home_one_radioButton.Location = new System.Drawing.Point(6, 42);
+            this.home_one_radioButton.Name = "home_one_radioButton";
+            this.home_one_radioButton.Size = new System.Drawing.Size(106, 29);
+            this.home_one_radioButton.TabIndex = 0;
+            this.home_one_radioButton.TabStop = true;
+            this.home_one_radioButton.Text = "Home - 1";
+            this.home_one_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // home_two_radioButton
+            // 
+            this.home_two_radioButton.AutoSize = true;
+            this.home_two_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.home_two_radioButton.Location = new System.Drawing.Point(6, 77);
+            this.home_two_radioButton.Name = "home_two_radioButton";
+            this.home_two_radioButton.Size = new System.Drawing.Size(106, 29);
+            this.home_two_radioButton.TabIndex = 1;
+            this.home_two_radioButton.TabStop = true;
+            this.home_two_radioButton.Text = "Home - 2";
+            this.home_two_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // home_three_radioButton
+            // 
+            this.home_three_radioButton.AutoSize = true;
+            this.home_three_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.home_three_radioButton.Location = new System.Drawing.Point(6, 112);
+            this.home_three_radioButton.Name = "home_three_radioButton";
+            this.home_three_radioButton.Size = new System.Drawing.Size(106, 29);
+            this.home_three_radioButton.TabIndex = 2;
+            this.home_three_radioButton.TabStop = true;
+            this.home_three_radioButton.Text = "Home - 3";
+            this.home_three_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.detailed_page_three_radioButton);
+            this.groupBox17.Controls.Add(this.detailed_page_two_radioButton);
+            this.groupBox17.Controls.Add(this.detailed_page_one_radioButton);
+            this.groupBox17.Location = new System.Drawing.Point(154, 3);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(145, 558);
+            this.groupBox17.TabIndex = 3;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Detailed page";
+            // 
+            // detailed_page_three_radioButton
+            // 
+            this.detailed_page_three_radioButton.AutoSize = true;
+            this.detailed_page_three_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_page_three_radioButton.Location = new System.Drawing.Point(6, 112);
+            this.detailed_page_three_radioButton.Name = "detailed_page_three_radioButton";
+            this.detailed_page_three_radioButton.Size = new System.Drawing.Size(95, 29);
+            this.detailed_page_three_radioButton.TabIndex = 2;
+            this.detailed_page_three_radioButton.TabStop = true;
+            this.detailed_page_three_radioButton.Text = "Page - 3";
+            this.detailed_page_three_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // detailed_page_two_radioButton
+            // 
+            this.detailed_page_two_radioButton.AutoSize = true;
+            this.detailed_page_two_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_page_two_radioButton.Location = new System.Drawing.Point(6, 77);
+            this.detailed_page_two_radioButton.Name = "detailed_page_two_radioButton";
+            this.detailed_page_two_radioButton.Size = new System.Drawing.Size(95, 29);
+            this.detailed_page_two_radioButton.TabIndex = 1;
+            this.detailed_page_two_radioButton.TabStop = true;
+            this.detailed_page_two_radioButton.Text = "Page - 2";
+            this.detailed_page_two_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // detailed_page_one_radioButton
+            // 
+            this.detailed_page_one_radioButton.AutoSize = true;
+            this.detailed_page_one_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_page_one_radioButton.Location = new System.Drawing.Point(6, 42);
+            this.detailed_page_one_radioButton.Name = "detailed_page_one_radioButton";
+            this.detailed_page_one_radioButton.Size = new System.Drawing.Size(95, 29);
+            this.detailed_page_one_radioButton.TabIndex = 0;
+            this.detailed_page_one_radioButton.TabStop = true;
+            this.detailed_page_one_radioButton.Text = "Page - 1";
+            this.detailed_page_one_radioButton.UseVisualStyleBackColor = true;
             // 
             // Managment
             // 
@@ -901,6 +1010,11 @@ namespace ngx_docs_managment_application
             ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
+            this.theming_tabPage.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -978,5 +1092,13 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.RadioButton preview_show_description_radioButton;
         private System.Windows.Forms.RadioButton preview_show_title_radioButton;
         private System.Windows.Forms.RadioButton preview_show_picture_radioButton;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.RadioButton detailed_page_three_radioButton;
+        private System.Windows.Forms.RadioButton detailed_page_two_radioButton;
+        private System.Windows.Forms.RadioButton detailed_page_one_radioButton;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.RadioButton home_three_radioButton;
+        private System.Windows.Forms.RadioButton home_two_radioButton;
+        private System.Windows.Forms.RadioButton home_one_radioButton;
     }
 }
