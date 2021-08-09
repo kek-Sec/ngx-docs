@@ -8,5 +8,6 @@ namespace ngx_docs_managment_application._Controllers
 {
     class Dashboard_Controller
     {
+        
     }
 }
