@@ -9,7 +9,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 //ngx-bootstrap-multiselect
 import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
 import { FormsModule } from '@angular/forms';
-import { DetailedPageComponent } from './@core/detailed-page/detailed-page.component';
+import { DetailedPageComponent } from './@core/detailed-page-one/detailed-page.component';
+import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
+
 
 //ngx-clipboard
 import { ClipboardModule } from 'ngx-clipboard';
@@ -17,7 +19,6 @@ import { ClipboardModule } from 'ngx-clipboard';
 //ngx-toastr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
 
 @NgModule({
   declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent],
@@ -34,4 +35,4 @@ import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-pag
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
