@@ -37,6 +37,7 @@ namespace ngx_docs_managment_application._Controllers
         public void AddDataToListBox(ListBox lbx,TextBox inp)
         {
             lbx.Items.Add(inp.Text);
+            inp.Clear();
         }
 
         /// <summary>
