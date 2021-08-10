@@ -1,4 +1,5 @@
 ﻿using ngx_docs_managment_application._Models;
+using ngx_docs_managment_application._Serializers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace ngx_docs_managment_application._Forms
     {
         Settings_Service settings = new Settings_Service();
         Settings_Parser parser = new Settings_Parser();
+        Settings_Serializer serializer = new Settings_Serializer();
         public IList<Settings_Model> settings_model;
 
         public SettingsData_Service()
@@ -26,9 +28,14 @@ namespace ngx_docs_managment_application._Forms
             }
         }
 
+        /// <summary>
+        /// Used to save settings file
+        /// </summary>
+        /// <param name="sm">The current settings model</param>
         public void Save(Settings_Model sm)
         {
-
+            settings_model[0] = sm;
+            serializer.Serialize(settings_model);
         }
     }
 }
