@@ -52,5 +52,15 @@ namespace ngx_docs_managment_application
 
             ic.SetSelectedItem(indx, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_tags_listbox, input_items_listbox, input_album_listbox);
         }
+
+        private void input_item_add_button_Click(object sender, EventArgs e)
+        {
+            ic.AddDataToListBox(input_items_listbox, input_item_textBox);
+        }
+
+        private void input_item_remove_button_Click(object sender, EventArgs e)
+        {
+            ic.RemoveDataFromListBox(input_items_listbox, input_items_listbox.SelectedIndex);
+        }
     }
 }
