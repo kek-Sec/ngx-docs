@@ -19,6 +19,27 @@ namespace ngx_docs_managment_application._Controllers
         }
 
         /// <summary>
+        /// Helper function for removing data from listboxes
+        /// </summary>
+        /// <param name="lbx">The listbox</param>
+        /// <param name="index">The item index</param>
+        public void RemoveDataFromListBox(ListBox lbx,int index)
+        {
+            if(index < 0) { return; }
+            lbx.Items.RemoveAt(index);
+        }
+
+        /// <summary>
+        /// Helper function for adding data to listboxes
+        /// </summary>
+        /// <param name="lbx">The listbox</param>
+        /// <param name="inp">The input textbox</param>
+        public void AddDataToListBox(ListBox lbx,TextBox inp)
+        {
+            lbx.Items.Add(inp.Text);
+        }
+
+        /// <summary>
         /// Middleware for updating an entry in input.json
         /// </summary>
         /// <param name="index">The index of the item</param>
