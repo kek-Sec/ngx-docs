@@ -1,20 +1,25 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ngx_docs_managment_application._Models;
-using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ngx_docs_managment_application._Forms
 {
     class Settings_Parser
     {
-        public Settings_Model parse(string filename)
+        /// <summary>
+        /// Parse given json and map it to a settings model
+        /// </summary>
+        /// <param name="filename">The file to parse</param>
+        /// <returns>Settings model object</returns>
+        public IList<Settings_Model> parse(string filename)
         {
             string json = File.ReadAllText(filename);
-            Settings_Model ret = JsonConvert.DeserializeObject<Settings_Model>(json);
+            JArray input_arr = JArray.Parse(json);
+
+            IList<Settings_Model> ret = input_arr.ToObject<IList<Settings_Model>>();
+
             return ret;
         }
     }
