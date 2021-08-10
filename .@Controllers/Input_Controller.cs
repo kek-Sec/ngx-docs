@@ -19,6 +19,49 @@ namespace ngx_docs_managment_application._Controllers
         }
 
         /// <summary>
+        /// Middleware for updating an entry in input.json
+        /// </summary>
+        /// <param name="index">The index of the item</param>
+        /// <param name="title">Title textbox</param>
+        /// <param name="description">Description textbox</param>
+        /// <param name="text">Text textbox</param>
+        /// <param name="picture">Picture textbox</param>
+        /// <param name="url">Url textbox</param>
+        /// <param name="tags">Tags listbox</param>
+        /// <param name="items">Items listbox</param>
+        /// <param name="album">Album listbox</param>
+        public void UpdateEntry(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
+        {
+            bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
+            if (!validate_input) { MessageBox.Show("Fields missing"); return; }
+
+            Input_Model new_entry = new Input_Model();
+            new_entry.Title = title.Text;
+            new_entry.Description = description.Text;
+            new_entry.text = text.Text;
+            new_entry.image = picture.Text;
+
+            //optional fields
+            if (url.Text.Length > 0) { new_entry.url = url.Text; }
+            if (tags.Items.Count > 0) { foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
+            if (album.Items.Count > 0) { foreach (string s in album.Items) { new_entry.album.Add(s); } }
+
+            //call service
+            input.UpdateEntry(index, new_entry);
+            return;
+        }
+
+        /// <summary>
+        /// Middleware function to delete an entry
+        /// </summary>
+        /// <param name="index">The index of the item to delete</param>
+        public void DeleteEntry(int index)
+        {
+            if(index == -1) { return; }
+            input.DeleteEntry(index);
+        }
+
+        /// <summary>
         /// Middleware function for Adding an entry to input.json
         /// </summary>
         /// <param name="title">Title textbox</param>
