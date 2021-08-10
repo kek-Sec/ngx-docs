@@ -24,6 +24,19 @@ namespace ngx_docs_managment_application._Controllers
         }
 
         /// <summary>
+        /// Update entry at given index
+        /// </summary>
+        /// <param name="index">The index of the entry to update</param>
+        /// <param name="input">The entry model to add</param>
+        public void UpdateEntry(int index,Input_Model input)
+        {
+            input_collection[index] = input;
+            var filepath = settings.getSetting("project_path") + "\\src\\input2.json";
+            var json = serializer.Serialize(input_collection);
+            File.WriteAllText(filepath, json);
+        }
+
+        /// <summary>
         /// Delete entry from input.json
         /// </summary>
         /// <param name="index">The index of the entry to delete</param>
