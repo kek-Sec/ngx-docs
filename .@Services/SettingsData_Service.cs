@@ -25,5 +25,10 @@ namespace ngx_docs_managment_application._Forms
                 Console.Write("error -> " + e.Message.ToString());
             }
         }
+
+        public void Save(Settings_Model sm)
+        {
+
+        }
     }
 }
