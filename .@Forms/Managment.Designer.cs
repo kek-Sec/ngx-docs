@@ -598,6 +598,7 @@ namespace ngx_docs_managment_application
             this.settings_save_button.Text = "Save";
             this.settings_save_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.settings_save_button.UseVisualStyleBackColor = true;
+            this.settings_save_button.Click += new System.EventHandler(this.settings_save_button_Click);
             // 
             // groupBox14
             // 
