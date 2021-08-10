@@ -81,6 +81,7 @@
     <Compile Include=".%40Parsers\Settings_Parser.cs" />
     <Compile Include=".%40Services\Settings_Service.cs" />
     <Compile Include=".%40Parsers\Theming_Parser.cs" />
+    <Compile Include=".%40Services\Validator_Service.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include=".%40Forms\Main.resx">
