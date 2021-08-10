@@ -1,4 +1,5 @@
 ﻿using ngx_docs_managment_application._Models;
+using ngx_docs_managment_application._Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,39 @@ namespace ngx_docs_managment_application._Controllers
     class Input_Controller
     {
         Input_Service input;
-
+        Validator_Service validator = new Validator_Service();
         public Input_Controller()
         {
             input = new Input_Service();
+        }
+
+        /// <summary>
+        /// Middleware function for Adding an entry to input.json
+        /// </summary>
+        /// <param name="title">Title textbox</param>
+        /// <param name="description">Description textbox</param>
+        /// <param name="text">Text textbox</param>
+        /// <param name="picture">Picture textbox</param>
+        /// <param name="url">Url textbox</param>
+        /// <param name="tags">Tags listbox</param>
+        /// <param name="items">Items listbox</param>
+        /// <param name="album">Album listbox</param>
+        public void AddEntry(TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
+        {
+            bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
+            if(!validate_input) { MessageBox.Show("Fields missing"); return; }
+            Input_Model new_entry = new Input_Model();
+            new_entry.Title = title.Text;
+            new_entry.Description = description.Text;
+            new_entry.text = text.Text;
+            new_entry.image = picture.Text;
+
+            //optional fields
+            if(url.Text.Length > 0) { new_entry.url = url.Text; }
+            if(tags.Items.Count > 0) { foreach(string s in tags.Items) { new_entry.tags.Add(s); } }
+            if (album.Items.Count > 0) { foreach (string s in album.Items) { new_entry.album.Add(s); } }
+
+            return;
         }
 
         /// <summary>
