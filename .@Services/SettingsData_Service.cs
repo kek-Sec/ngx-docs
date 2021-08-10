@@ -11,7 +11,8 @@ namespace ngx_docs_managment_application._Forms
     {
         Settings_Service settings = new Settings_Service();
         Settings_Parser parser = new Settings_Parser();
-        Settings_Model settings_model = new Settings_Model();
+        IList<Settings_Model> settings_model;
+
         public SettingsData_Service()
         {
             try
