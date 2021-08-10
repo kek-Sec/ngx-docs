@@ -23,6 +23,17 @@ namespace ngx_docs_managment_application._Controllers
             LoadData();
         }
 
+        /// <summary>
+        /// Delete entry from input.json
+        /// </summary>
+        /// <param name="index">The index of the entry to delete</param>
+        public void DeleteEntry(int index)
+        {
+            input_collection.RemoveAt(index);
+            var filepath = settings.getSetting("project_path") + "\\src\\input2.json";
+            var json = serializer.Serialize(input_collection);
+            File.WriteAllText(filepath, json);
+        }
 
         /// <summary>
         /// Add entry to input.json
