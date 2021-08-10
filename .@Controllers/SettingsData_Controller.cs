@@ -27,7 +27,7 @@ namespace ngx_docs_managment_application._Forms
         /// <param name="item_length"></param>
         /// <param name="items_count"></param>
         /// <param name="column_count"></param>
-        public void UpdateSettingsDataView(RadioButton show_picture,RadioButton show_title,RadioButton show_description,RadioButton show_text,RadioButton show_items,RadioButton show_url,RadioButton show_album,RadioButton show_tags,NumericUpDown description_length,NumericUpDown text_length,NumericUpDown item_length,NumericUpDown items_count,NumericUpDown column_count)
+        public void UpdateSettingsDataView(CheckBox show_picture,CheckBox show_title,CheckBox show_description,CheckBox show_text,CheckBox show_items,CheckBox show_url,CheckBox show_album,CheckBox show_tags,NumericUpDown description_length,NumericUpDown text_length,NumericUpDown item_length,NumericUpDown items_count,NumericUpDown column_count)
         {
             var setting = ss.settings_model[0];
 
@@ -48,7 +48,7 @@ namespace ngx_docs_managment_application._Forms
         }
 
 
-        public void SaveSettings(RadioButton show_picture, RadioButton show_title, RadioButton show_description, RadioButton show_text, RadioButton show_items, RadioButton show_url, RadioButton show_album, RadioButton show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
+        public void SaveSettings(CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
         {
 
         }

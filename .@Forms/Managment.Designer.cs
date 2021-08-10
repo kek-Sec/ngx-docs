@@ -91,14 +91,6 @@ namespace ngx_docs_managment_application
             this.preview_description_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.preview_show_tags_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_album_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_url_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_items_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_text_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_description_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_title_radioButton = new System.Windows.Forms.RadioButton();
-            this.preview_show_picture_radioButton = new System.Windows.Forms.RadioButton();
             this.theming_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.detailed_page_three_radioButton = new System.Windows.Forms.RadioButton();
@@ -108,6 +100,14 @@ namespace ngx_docs_managment_application
             this.home_three_radioButton = new System.Windows.Forms.RadioButton();
             this.home_two_radioButton = new System.Windows.Forms.RadioButton();
             this.home_one_radioButton = new System.Windows.Forms.RadioButton();
+            this.preview_show_picture_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_title_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_description_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_text_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_items_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_url_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_album_checkBox = new System.Windows.Forms.CheckBox();
+            this.preview_show_tags_checkBox = new System.Windows.Forms.CheckBox();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -749,115 +749,19 @@ namespace ngx_docs_managment_application
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.preview_show_tags_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_album_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_url_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_items_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_text_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_description_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_title_radioButton);
-            this.groupBox9.Controls.Add(this.preview_show_picture_radioButton);
+            this.groupBox9.Controls.Add(this.preview_show_tags_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_album_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_url_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_items_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_text_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_description_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_title_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_picture_checkBox);
             this.groupBox9.Location = new System.Drawing.Point(7, 8);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(260, 553);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
-            // 
-            // preview_show_tags_radioButton
-            // 
-            this.preview_show_tags_radioButton.AutoSize = true;
-            this.preview_show_tags_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_tags_radioButton.Location = new System.Drawing.Point(6, 271);
-            this.preview_show_tags_radioButton.Name = "preview_show_tags_radioButton";
-            this.preview_show_tags_radioButton.Size = new System.Drawing.Size(181, 29);
-            this.preview_show_tags_radioButton.TabIndex = 9;
-            this.preview_show_tags_radioButton.TabStop = true;
-            this.preview_show_tags_radioButton.Text = "preview_show_tags";
-            this.preview_show_tags_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_album_radioButton
-            // 
-            this.preview_show_album_radioButton.AutoSize = true;
-            this.preview_show_album_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_album_radioButton.Location = new System.Drawing.Point(6, 236);
-            this.preview_show_album_radioButton.Name = "preview_show_album_radioButton";
-            this.preview_show_album_radioButton.Size = new System.Drawing.Size(197, 29);
-            this.preview_show_album_radioButton.TabIndex = 8;
-            this.preview_show_album_radioButton.TabStop = true;
-            this.preview_show_album_radioButton.Text = "preview_show_album";
-            this.preview_show_album_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_url_radioButton
-            // 
-            this.preview_show_url_radioButton.AutoSize = true;
-            this.preview_show_url_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_url_radioButton.Location = new System.Drawing.Point(6, 201);
-            this.preview_show_url_radioButton.Name = "preview_show_url_radioButton";
-            this.preview_show_url_radioButton.Size = new System.Drawing.Size(167, 29);
-            this.preview_show_url_radioButton.TabIndex = 7;
-            this.preview_show_url_radioButton.TabStop = true;
-            this.preview_show_url_radioButton.Text = "preview_show_url";
-            this.preview_show_url_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_items_radioButton
-            // 
-            this.preview_show_items_radioButton.AutoSize = true;
-            this.preview_show_items_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_items_radioButton.Location = new System.Drawing.Point(6, 166);
-            this.preview_show_items_radioButton.Name = "preview_show_items_radioButton";
-            this.preview_show_items_radioButton.Size = new System.Drawing.Size(190, 29);
-            this.preview_show_items_radioButton.TabIndex = 6;
-            this.preview_show_items_radioButton.TabStop = true;
-            this.preview_show_items_radioButton.Text = "preview_show_items";
-            this.preview_show_items_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_text_radioButton
-            // 
-            this.preview_show_text_radioButton.AutoSize = true;
-            this.preview_show_text_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_text_radioButton.Location = new System.Drawing.Point(6, 131);
-            this.preview_show_text_radioButton.Name = "preview_show_text_radioButton";
-            this.preview_show_text_radioButton.Size = new System.Drawing.Size(176, 29);
-            this.preview_show_text_radioButton.TabIndex = 5;
-            this.preview_show_text_radioButton.TabStop = true;
-            this.preview_show_text_radioButton.Text = "preview_show_text";
-            this.preview_show_text_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_description_radioButton
-            // 
-            this.preview_show_description_radioButton.AutoSize = true;
-            this.preview_show_description_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_description_radioButton.Location = new System.Drawing.Point(6, 96);
-            this.preview_show_description_radioButton.Name = "preview_show_description_radioButton";
-            this.preview_show_description_radioButton.Size = new System.Drawing.Size(235, 29);
-            this.preview_show_description_radioButton.TabIndex = 4;
-            this.preview_show_description_radioButton.TabStop = true;
-            this.preview_show_description_radioButton.Text = "preview_show_description";
-            this.preview_show_description_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_title_radioButton
-            // 
-            this.preview_show_title_radioButton.AutoSize = true;
-            this.preview_show_title_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_title_radioButton.Location = new System.Drawing.Point(6, 61);
-            this.preview_show_title_radioButton.Name = "preview_show_title_radioButton";
-            this.preview_show_title_radioButton.Size = new System.Drawing.Size(176, 29);
-            this.preview_show_title_radioButton.TabIndex = 3;
-            this.preview_show_title_radioButton.TabStop = true;
-            this.preview_show_title_radioButton.Text = "preview_show_title";
-            this.preview_show_title_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // preview_show_picture_radioButton
-            // 
-            this.preview_show_picture_radioButton.AutoSize = true;
-            this.preview_show_picture_radioButton.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_picture_radioButton.Location = new System.Drawing.Point(6, 26);
-            this.preview_show_picture_radioButton.Name = "preview_show_picture_radioButton";
-            this.preview_show_picture_radioButton.Size = new System.Drawing.Size(201, 29);
-            this.preview_show_picture_radioButton.TabIndex = 2;
-            this.preview_show_picture_radioButton.TabStop = true;
-            this.preview_show_picture_radioButton.Text = "preview_show_picture";
-            this.preview_show_picture_radioButton.UseVisualStyleBackColor = true;
             // 
             // theming_tabPage
             // 
@@ -966,6 +870,94 @@ namespace ngx_docs_managment_application
             this.home_one_radioButton.TabStop = true;
             this.home_one_radioButton.Text = "Home - 1";
             this.home_one_radioButton.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_picture_checkBox
+            // 
+            this.preview_show_picture_checkBox.AutoSize = true;
+            this.preview_show_picture_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_picture_checkBox.Location = new System.Drawing.Point(6, 20);
+            this.preview_show_picture_checkBox.Name = "preview_show_picture_checkBox";
+            this.preview_show_picture_checkBox.Size = new System.Drawing.Size(202, 29);
+            this.preview_show_picture_checkBox.TabIndex = 10;
+            this.preview_show_picture_checkBox.Text = "preview_show_picture";
+            this.preview_show_picture_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_title_checkBox
+            // 
+            this.preview_show_title_checkBox.AutoSize = true;
+            this.preview_show_title_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_title_checkBox.Location = new System.Drawing.Point(6, 55);
+            this.preview_show_title_checkBox.Name = "preview_show_title_checkBox";
+            this.preview_show_title_checkBox.Size = new System.Drawing.Size(177, 29);
+            this.preview_show_title_checkBox.TabIndex = 11;
+            this.preview_show_title_checkBox.Text = "preview_show_title";
+            this.preview_show_title_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_description_checkBox
+            // 
+            this.preview_show_description_checkBox.AutoSize = true;
+            this.preview_show_description_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_description_checkBox.Location = new System.Drawing.Point(6, 90);
+            this.preview_show_description_checkBox.Name = "preview_show_description_checkBox";
+            this.preview_show_description_checkBox.Size = new System.Drawing.Size(236, 29);
+            this.preview_show_description_checkBox.TabIndex = 12;
+            this.preview_show_description_checkBox.Text = "preview_show_description";
+            this.preview_show_description_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_text_checkBox
+            // 
+            this.preview_show_text_checkBox.AutoSize = true;
+            this.preview_show_text_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_text_checkBox.Location = new System.Drawing.Point(6, 125);
+            this.preview_show_text_checkBox.Name = "preview_show_text_checkBox";
+            this.preview_show_text_checkBox.Size = new System.Drawing.Size(177, 29);
+            this.preview_show_text_checkBox.TabIndex = 13;
+            this.preview_show_text_checkBox.Text = "preview_show_text";
+            this.preview_show_text_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_items_checkBox
+            // 
+            this.preview_show_items_checkBox.AutoSize = true;
+            this.preview_show_items_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_items_checkBox.Location = new System.Drawing.Point(6, 160);
+            this.preview_show_items_checkBox.Name = "preview_show_items_checkBox";
+            this.preview_show_items_checkBox.Size = new System.Drawing.Size(191, 29);
+            this.preview_show_items_checkBox.TabIndex = 14;
+            this.preview_show_items_checkBox.Text = "preview_show_items";
+            this.preview_show_items_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_url_checkBox
+            // 
+            this.preview_show_url_checkBox.AutoSize = true;
+            this.preview_show_url_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_url_checkBox.Location = new System.Drawing.Point(6, 195);
+            this.preview_show_url_checkBox.Name = "preview_show_url_checkBox";
+            this.preview_show_url_checkBox.Size = new System.Drawing.Size(168, 29);
+            this.preview_show_url_checkBox.TabIndex = 15;
+            this.preview_show_url_checkBox.Text = "preview_show_url";
+            this.preview_show_url_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_album_checkBox
+            // 
+            this.preview_show_album_checkBox.AutoSize = true;
+            this.preview_show_album_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_album_checkBox.Location = new System.Drawing.Point(6, 230);
+            this.preview_show_album_checkBox.Name = "preview_show_album_checkBox";
+            this.preview_show_album_checkBox.Size = new System.Drawing.Size(198, 29);
+            this.preview_show_album_checkBox.TabIndex = 16;
+            this.preview_show_album_checkBox.Text = "preview_show_album";
+            this.preview_show_album_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // preview_show_tags_checkBox
+            // 
+            this.preview_show_tags_checkBox.AutoSize = true;
+            this.preview_show_tags_checkBox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_tags_checkBox.Location = new System.Drawing.Point(6, 265);
+            this.preview_show_tags_checkBox.Name = "preview_show_tags_checkBox";
+            this.preview_show_tags_checkBox.Size = new System.Drawing.Size(182, 29);
+            this.preview_show_tags_checkBox.TabIndex = 17;
+            this.preview_show_tags_checkBox.Text = "preview_show_tags";
+            this.preview_show_tags_checkBox.UseVisualStyleBackColor = true;
             // 
             // Managment
             // 
@@ -1089,14 +1081,6 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.NumericUpDown preview_description_text_length_numericUpDown;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.RadioButton preview_show_tags_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_album_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_url_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_items_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_text_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_description_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_title_radioButton;
-        private System.Windows.Forms.RadioButton preview_show_picture_radioButton;
         private System.Windows.Forms.GroupBox groupBox17;
         private System.Windows.Forms.RadioButton detailed_page_three_radioButton;
         private System.Windows.Forms.RadioButton detailed_page_two_radioButton;
@@ -1105,5 +1089,13 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.RadioButton home_three_radioButton;
         private System.Windows.Forms.RadioButton home_two_radioButton;
         private System.Windows.Forms.RadioButton home_one_radioButton;
+        private System.Windows.Forms.CheckBox preview_show_tags_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_album_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_url_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_items_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_text_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_description_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_title_checkBox;
+        private System.Windows.Forms.CheckBox preview_show_picture_checkBox;
     }
 }
