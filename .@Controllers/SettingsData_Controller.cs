@@ -32,6 +32,19 @@ namespace ngx_docs_managment_application._Forms
             var setting = ss.settings_model[0];
 
             show_picture.Checked = setting.preview_show_picture;
+            show_title.Checked = setting.preview_show_title;
+            show_description.Checked = setting.preview_show_description;
+            show_text.Checked = setting.preview_show_text;
+            show_items.Checked = setting.preview_show_items;
+            show_url.Checked = setting.preview_show_url;
+            show_tags.Checked = setting.preview_show_tags;
+            show_album.Checked = setting.preview_show_album;
+
+            text_length.Value = setting.preview_text_length;
+            item_length.Value = setting.preview_item_text_length;
+            items_count.Value = setting.preview_items_count;
+            description_length.Value = setting.preview_description_text_length;
+            column_count.Value = setting.preview_number_of_columns;
         }
     }
 }
