@@ -24,6 +24,10 @@ namespace ngx_docs_managment_application._Controllers
         }
 
 
+        /// <summary>
+        /// Add entry to input.json
+        /// </summary>
+        /// <param name="input">The entry model to add</param>
         public void AddEntry(Input_Model input)
         {
             input_collection.Add(input);
