@@ -33,6 +33,7 @@ namespace ngx_docs_managment_application
         {
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
             ic.FillInputListbox(input_listbox);
+            sdc.UpdateSettingsDataView(preview_show_picture_radioButton, preview_show_title_radioButton, preview_show_description_radioButton, preview_show_text_radioButton, preview_show_items_radioButton, preview_show_url_radioButton, preview_show_album_radioButton, preview_show_tags_radioButton, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
             
         }
 

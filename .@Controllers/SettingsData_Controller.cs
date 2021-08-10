@@ -46,5 +46,11 @@ namespace ngx_docs_managment_application._Forms
             description_length.Value = setting.preview_description_text_length;
             column_count.Value = setting.preview_number_of_columns;
         }
+
+
+        public void SaveSettings(RadioButton show_picture, RadioButton show_title, RadioButton show_description, RadioButton show_text, RadioButton show_items, RadioButton show_url, RadioButton show_album, RadioButton show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
+        {
+
+        }
     }
 }
