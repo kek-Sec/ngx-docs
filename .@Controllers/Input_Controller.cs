@@ -96,6 +96,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="album">Album listbox</param>
         public void AddEntry(TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
+            if(!ConfirmAction("Add entry")) { return; }
             bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
             if(!validate_input) { MessageBox.Show("Fields missing"); return; }
             Input_Model new_entry = new Input_Model();
@@ -173,5 +174,9 @@ namespace ngx_docs_managment_application._Controllers
                 Console.WriteLine(e.Message);
             }
         }
+
+        private bool ConfirmAction(string title) => (MessageBox.Show("Confirm action", title,
+   MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+   MessageBoxDefaultButton.Button1) == DialogResult.Yes);
     }
 }
