@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ngx_docs_managment_application._Forms;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace ngx_docs_managment_application._Controllers
     class Dashboard_Controller
     {
         Dashboard_Service ds = new Dashboard_Service();
+        Settings_Service settings = new Settings_Service();
 
         /// <summary>
         /// Updates the label that states the status of the project folder directory
@@ -26,10 +28,11 @@ namespace ngx_docs_managment_application._Controllers
                 return;
             }
 
-            //not ok
-            status.ForeColor = Color.MediumVioletRed;
-            status.Text = "Not Verified!";
-            return;
+           while(!ds.VerifyProjectFolder())
+            {
+                MessageBox.Show("Project folder not found!");
+                settings.LoadKeysFolder();
+            }
         }
 
     }
