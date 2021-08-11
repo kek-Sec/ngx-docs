@@ -9,7 +9,7 @@ namespace ngx_docs_managment_application._Controllers
     class Input_Controller
     {
         Input_Service input;
-        Validator_Service validator = new Validator_Service();
+        readonly Validator_Service validator = new Validator_Service();
         public Input_Controller()
         {
             input = new Input_Service();
