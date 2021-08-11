@@ -21,14 +21,14 @@ namespace ngx_docs_managment_application._Controllers
         public void UpdateProjectFolderLabel(Label status)
         {
             bool ok = ds.VerifyProjectFolder();
-            if(ok)
+            if (ok)
             {
                 status.ForeColor = Color.LightSeaGreen;
                 status.Text = "Verified!";
                 return;
             }
 
-           while(!ds.VerifyProjectFolder())
+            while (!ds.VerifyProjectFolder())
             {
                 MessageBox.Show("Project folder not found!");
                 settings.LoadKeysFolder();

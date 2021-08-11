@@ -22,7 +22,7 @@ namespace ngx_docs_managment_application._Controllers
         {
             this.input = new Input_Service();
             input_lbx.Items.Clear();
-            foreach(Input_Model s in input.input_collection)
+            foreach (Input_Model s in input.input_collection)
             {
                 input_lbx.Items.Add(s.Title);
             }
@@ -33,9 +33,9 @@ namespace ngx_docs_managment_application._Controllers
         /// </summary>
         /// <param name="lbx">The listbox</param>
         /// <param name="index">The item index</param>
-        public void RemoveDataFromListBox(ListBox lbx,int index)
+        public void RemoveDataFromListBox(ListBox lbx, int index)
         {
-            if(index < 0) { return; }
+            if (index < 0) { return; }
             lbx.Items.RemoveAt(index);
         }
 
@@ -44,7 +44,7 @@ namespace ngx_docs_managment_application._Controllers
         /// </summary>
         /// <param name="lbx">The listbox</param>
         /// <param name="inp">The input textbox</param>
-        public void AddDataToListBox(ListBox lbx,TextBox inp)
+        public void AddDataToListBox(ListBox lbx, TextBox inp)
         {
             lbx.Items.Add(inp.Text);
             inp.Clear();
@@ -93,7 +93,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="index">The index of the item to delete</param>
         public void DeleteEntry(int index)
         {
-            if(index == -1) { return; }
+            if (index == -1) { return; }
             if (!ConfirmAction("Delete entry")) { return; }
             input.DeleteEntry(index);
         }
@@ -111,9 +111,9 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="album">Album listbox</param>
         public void AddEntry(TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
-            if(!ConfirmAction("Add entry")) { return; }
+            if (!ConfirmAction("Add entry")) { return; }
             bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
-            if(!validate_input) { MessageBox.Show("Fields missing"); return; }
+            if (!validate_input) { MessageBox.Show("Fields missing"); return; }
             Input_Model new_entry = new Input_Model();
             new_entry.Title = title.Text;
             new_entry.Description = description.Text;
@@ -124,7 +124,7 @@ namespace ngx_docs_managment_application._Controllers
 
             //optional fields
             if (url.Text.Length > 0) { new_entry.url = url.Text; }
-            if(tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach(string s in tags.Items) { new_entry.tags.Add(s); } }
+            if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
             if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
 
             input.AddEntry(new_entry);
@@ -144,7 +144,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="tags">Tags listbox</param>
         /// <param name="items">Items listbox</param>
         /// <param name="album">Album listbox</param>
-        public void SetSelectedItem(int index,TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url,ListBox tags,ListBox items,ListBox album)
+        public void SetSelectedItem(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
             Input_Model inpt = input.input_collection[index];
 
@@ -159,14 +159,14 @@ namespace ngx_docs_managment_application._Controllers
             tags.Items.Clear();
             album.Items.Clear();
 
-            foreach (string i in inpt.items) {  items.Items.Add(i); }
+            foreach (string i in inpt.items) { items.Items.Add(i); }
 
-            if(inpt.tags is object)
+            if (inpt.tags is object)
             {
                 foreach (string i in inpt.tags) { tags.Items.Add(i); }
             }
 
-            if(inpt.album is object)
+            if (inpt.album is object)
             {
                 foreach (string i in inpt.album) { album.Items.Add(i); }
             }
@@ -188,7 +188,7 @@ namespace ngx_docs_managment_application._Controllers
                     input_listbox.Items.Add(im.Title);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }

@@ -21,9 +21,9 @@ namespace ngx_docs_managment_application._Controllers
         {
             string folder_path = settings.getSetting("project_path");
 
-            if(string.IsNullOrEmpty(folder_path)) { return false; }
+            if (string.IsNullOrEmpty(folder_path)) { return false; }
 
-            if(string.IsNullOrWhiteSpace(folder_path)) { return false; }
+            if (string.IsNullOrWhiteSpace(folder_path)) { return false; }
 
             if (!Directory.Exists(folder_path)) { return false; }
 

@@ -25,7 +25,7 @@ namespace ngx_docs_managment_application._Controllers
         /// </summary>
         /// <param name="index">The index of the entry to update</param>
         /// <param name="input">The entry model to add</param>
-        public void UpdateEntry(int index,Input_Model input)
+        public void UpdateEntry(int index, Input_Model input)
         {
             input_collection[index] = input;
             var filepath = settings.getSetting("project_path") + "\\src\\input.json";
