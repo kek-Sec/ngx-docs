@@ -990,7 +990,7 @@ namespace ngx_docs_managment_application
             this.input_refresh_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
             this.input_refresh_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.input_refresh_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_refresh_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_refresh_button.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.input_refresh_button.Location = new System.Drawing.Point(97, 1);
             this.input_refresh_button.Name = "input_refresh_button";
             this.input_refresh_button.Size = new System.Drawing.Size(26, 27);
