@@ -25,6 +25,17 @@ namespace ngx_docs_managment_application
             InitializeComponent();
         }
 
+        void ClearAllText(Control con)
+        {
+            foreach (Control c in con.Controls)
+            {
+                if (c is TextBox)
+                    ((TextBox)c).Clear();
+                else
+                    ClearAllText(c);
+            }
+        }
+
         /*
          * ENTRY POINT FOR MANAGMENT FORM
         **********************************
@@ -50,7 +61,7 @@ namespace ngx_docs_managment_application
             {
                 return;
             }
-
+            
             ic.SetSelectedItem(indx, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_tags_listbox, input_items_listbox, input_album_listbox);
         }
 
