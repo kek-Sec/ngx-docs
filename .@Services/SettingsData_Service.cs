@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ngx_docs_managment_application._Forms
 {
@@ -39,6 +40,8 @@ namespace ngx_docs_managment_application._Forms
             string filepath = settings.getSetting("project_path") + "\\src\\settings2.json";
             var json = serializer.Serialize(settings_model);
             File.WriteAllText(filepath, json);
+
+            MessageBox.Show("Saved settings...");
 
         }
     }
