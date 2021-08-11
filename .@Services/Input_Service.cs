@@ -28,7 +28,7 @@ namespace ngx_docs_managment_application._Controllers
         public void UpdateEntry(int index,Input_Model input)
         {
             input_collection[index] = input;
-            var filepath = settings.getSetting("project_path") + "\\src\\input2.json";
+            var filepath = settings.getSetting("project_path") + "\\src\\input.json";
             var json = serializer.Serialize(input_collection);
             File.WriteAllText(filepath, json);
         }
@@ -40,7 +40,7 @@ namespace ngx_docs_managment_application._Controllers
         public void DeleteEntry(int index)
         {
             input_collection.RemoveAt(index);
-            var filepath = settings.getSetting("project_path") + "\\src\\input2.json";
+            var filepath = settings.getSetting("project_path") + "\\src\\input.json";
             var json = serializer.Serialize(input_collection);
             File.WriteAllText(filepath, json);
         }
@@ -52,7 +52,7 @@ namespace ngx_docs_managment_application._Controllers
         public void AddEntry(Input_Model input)
         {
             input_collection.Add(input);
-            var filepath = settings.getSetting("project_path") + "\\src\\input2.json";
+            var filepath = settings.getSetting("project_path") + "\\src\\input.json";
             var json = serializer.Serialize(input_collection);
             File.WriteAllText(filepath, json);
 
