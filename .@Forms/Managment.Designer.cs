@@ -39,7 +39,6 @@ namespace ngx_docs_managment_application
             this.input_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.input_save_button = new System.Windows.Forms.Button();
             this.input_edit_button = new System.Windows.Forms.Button();
             this.input_remove_button = new System.Windows.Forms.Button();
             this.input_add_button = new System.Windows.Forms.Button();
@@ -240,7 +239,6 @@ namespace ngx_docs_managment_application
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.input_save_button);
             this.groupBox8.Controls.Add(this.input_edit_button);
             this.groupBox8.Controls.Add(this.input_remove_button);
             this.groupBox8.Controls.Add(this.input_add_button);
@@ -249,18 +247,6 @@ namespace ngx_docs_managment_application
             this.groupBox8.Size = new System.Drawing.Size(915, 123);
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
-            // 
-            // input_save_button
-            // 
-            this.input_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
-            this.input_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_save_button.Location = new System.Drawing.Point(571, 26);
-            this.input_save_button.Name = "input_save_button";
-            this.input_save_button.Size = new System.Drawing.Size(102, 91);
-            this.input_save_button.TabIndex = 13;
-            this.input_save_button.UseVisualStyleBackColor = true;
             // 
             // input_edit_button
             // 
@@ -273,6 +259,7 @@ namespace ngx_docs_managment_application
             this.input_edit_button.Size = new System.Drawing.Size(102, 91);
             this.input_edit_button.TabIndex = 12;
             this.input_edit_button.UseVisualStyleBackColor = true;
+            this.input_edit_button.Click += new System.EventHandler(this.input_edit_button_Click);
             // 
             // input_remove_button
             // 
@@ -285,6 +272,7 @@ namespace ngx_docs_managment_application
             this.input_remove_button.Size = new System.Drawing.Size(102, 91);
             this.input_remove_button.TabIndex = 11;
             this.input_remove_button.UseVisualStyleBackColor = true;
+            this.input_remove_button.Click += new System.EventHandler(this.input_remove_button_Click);
             // 
             // input_add_button
             // 
@@ -297,6 +285,7 @@ namespace ngx_docs_managment_application
             this.input_add_button.Size = new System.Drawing.Size(102, 91);
             this.input_add_button.TabIndex = 10;
             this.input_add_button.UseVisualStyleBackColor = true;
+            this.input_add_button.Click += new System.EventHandler(this.input_add_button_Click);
             // 
             // groupBox7
             // 
@@ -1132,6 +1121,5 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.CheckBox preview_show_description_checkBox;
         private System.Windows.Forms.CheckBox preview_show_title_checkBox;
         private System.Windows.Forms.CheckBox preview_show_picture_checkBox;
-        private System.Windows.Forms.Button input_save_button;
     }
 }
