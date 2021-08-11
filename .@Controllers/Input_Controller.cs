@@ -46,6 +46,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="inp">The input textbox</param>
         public void AddDataToListBox(ListBox lbx, TextBox inp)
         {
+            if(inp.Text == string.Empty) { return; }
             lbx.Items.Add(inp.Text);
             inp.Clear();
         }
@@ -129,6 +130,8 @@ namespace ngx_docs_managment_application._Controllers
 
             input.AddEntry(new_entry);
 
+            //reset fields
+            picture.Text = "assets/images/default.PNG";
             items.Items.Clear();
             album.Items.Clear();
             tags.Items.Clear();
