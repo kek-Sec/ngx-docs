@@ -99,7 +99,7 @@ namespace ngx_docs_managment_application
             this.preview_show_description_checkBox = new System.Windows.Forms.CheckBox();
             this.preview_show_title_checkBox = new System.Windows.Forms.CheckBox();
             this.preview_show_picture_checkBox = new System.Windows.Forms.CheckBox();
-            this.theming_tabPage = new System.Windows.Forms.TabPage();
+            this.generator_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
             this.detailed_page_three_radioButton = new System.Windows.Forms.RadioButton();
             this.detailed_page_two_radioButton = new System.Windows.Forms.RadioButton();
@@ -133,7 +133,7 @@ namespace ngx_docs_managment_application
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).BeginInit();
             this.groupBox9.SuspendLayout();
-            this.theming_tabPage.SuspendLayout();
+            this.generator_tabPage.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.SuspendLayout();
@@ -143,7 +143,7 @@ namespace ngx_docs_managment_application
             this.managment_tabControl.Controls.Add(this.dashboard_tabPage);
             this.managment_tabControl.Controls.Add(this.input_tabPage);
             this.managment_tabControl.Controls.Add(this.settings_tabPage);
-            this.managment_tabControl.Controls.Add(this.theming_tabPage);
+            this.managment_tabControl.Controls.Add(this.generator_tabPage);
             this.managment_tabControl.Location = new System.Drawing.Point(1, -1);
             this.managment_tabControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.managment_tabControl.Name = "managment_tabControl";
@@ -853,17 +853,17 @@ namespace ngx_docs_managment_application
             this.preview_show_picture_checkBox.Text = "preview_show_picture";
             this.preview_show_picture_checkBox.UseVisualStyleBackColor = true;
             // 
-            // theming_tabPage
+            // generator_tabPage
             // 
-            this.theming_tabPage.Controls.Add(this.groupBox17);
-            this.theming_tabPage.Controls.Add(this.groupBox16);
-            this.theming_tabPage.Location = new System.Drawing.Point(4, 29);
-            this.theming_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.theming_tabPage.Name = "theming_tabPage";
-            this.theming_tabPage.Size = new System.Drawing.Size(1057, 571);
-            this.theming_tabPage.TabIndex = 2;
-            this.theming_tabPage.Text = "Theming";
-            this.theming_tabPage.UseVisualStyleBackColor = true;
+            this.generator_tabPage.Controls.Add(this.groupBox17);
+            this.generator_tabPage.Controls.Add(this.groupBox16);
+            this.generator_tabPage.Location = new System.Drawing.Point(4, 29);
+            this.generator_tabPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.generator_tabPage.Name = "generator_tabPage";
+            this.generator_tabPage.Size = new System.Drawing.Size(1057, 571);
+            this.generator_tabPage.TabIndex = 2;
+            this.generator_tabPage.Text = "Generate";
+            this.generator_tabPage.UseVisualStyleBackColor = true;
             // 
             // groupBox17
             // 
@@ -1019,7 +1019,7 @@ namespace ngx_docs_managment_application
             ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.theming_tabPage.ResumeLayout(false);
+            this.generator_tabPage.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             this.groupBox17.PerformLayout();
             this.groupBox16.ResumeLayout(false);
@@ -1034,7 +1034,7 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.TabPage dashboard_tabPage;
         private System.Windows.Forms.TabPage input_tabPage;
         private System.Windows.Forms.TabPage settings_tabPage;
-        private System.Windows.Forms.TabPage theming_tabPage;
+        private System.Windows.Forms.TabPage generator_tabPage;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label dashboard_project_path_status_label;
