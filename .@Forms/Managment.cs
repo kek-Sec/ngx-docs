@@ -80,5 +80,25 @@ namespace ngx_docs_managment_application
             sdc.SaveSettings(preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
 
         }
+
+        private void input_tags_add_button_Click(object sender, EventArgs e)
+        {
+            ic.AddDataToListBox(input_tags_listbox, input_tags_textbox);
+        }
+
+        private void input_tags_remove_button_Click(object sender, EventArgs e)
+        {
+            ic.RemoveDataFromListBox(input_tags_listbox, input_tags_listbox.SelectedIndex);
+        }
+
+        private void input_album_add_button_Click(object sender, EventArgs e)
+        {
+            ic.AddDataToListBox(input_album_listbox, input_album_textbox);
+        }
+
+        private void input_album_remove_button_Click(object sender, EventArgs e)
+        {
+            ic.RemoveDataFromListBox(input_album_listbox, input_album_listbox.SelectedIndex);
+        }
     }
 }

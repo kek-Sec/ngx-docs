@@ -39,16 +39,20 @@ namespace ngx_docs_managment_application
             this.input_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.input_save_button = new System.Windows.Forms.Button();
+            this.input_edit_button = new System.Windows.Forms.Button();
+            this.input_remove_button = new System.Windows.Forms.Button();
+            this.input_add_button = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.input_album_remove_button = new System.Windows.Forms.Button();
             this.input_album_add_button = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.input_album_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.input_album_listbox = new System.Windows.Forms.ListBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.input_tags_remove_button = new System.Windows.Forms.Button();
             this.input_tags_add_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.input_tags_textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.input_tags_listbox = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -105,10 +109,6 @@ namespace ngx_docs_managment_application
             this.home_three_radioButton = new System.Windows.Forms.RadioButton();
             this.home_two_radioButton = new System.Windows.Forms.RadioButton();
             this.home_one_radioButton = new System.Windows.Forms.RadioButton();
-            this.input_save_button = new System.Windows.Forms.Button();
-            this.input_edit_button = new System.Windows.Forms.Button();
-            this.input_remove_button = new System.Windows.Forms.Button();
-            this.input_add_button = new System.Windows.Forms.Button();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -250,11 +250,59 @@ namespace ngx_docs_managment_application
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             // 
+            // input_save_button
+            // 
+            this.input_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
+            this.input_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_save_button.Location = new System.Drawing.Point(571, 26);
+            this.input_save_button.Name = "input_save_button";
+            this.input_save_button.Size = new System.Drawing.Size(102, 91);
+            this.input_save_button.TabIndex = 13;
+            this.input_save_button.UseVisualStyleBackColor = true;
+            // 
+            // input_edit_button
+            // 
+            this.input_edit_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.edit_1;
+            this.input_edit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_edit_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_edit_button.Location = new System.Drawing.Point(355, 26);
+            this.input_edit_button.Name = "input_edit_button";
+            this.input_edit_button.Size = new System.Drawing.Size(102, 91);
+            this.input_edit_button.TabIndex = 12;
+            this.input_edit_button.UseVisualStyleBackColor = true;
+            // 
+            // input_remove_button
+            // 
+            this.input_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
+            this.input_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_remove_button.Location = new System.Drawing.Point(463, 26);
+            this.input_remove_button.Name = "input_remove_button";
+            this.input_remove_button.Size = new System.Drawing.Size(102, 91);
+            this.input_remove_button.TabIndex = 11;
+            this.input_remove_button.UseVisualStyleBackColor = true;
+            // 
+            // input_add_button
+            // 
+            this.input_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
+            this.input_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_add_button.Location = new System.Drawing.Point(247, 26);
+            this.input_add_button.Name = "input_add_button";
+            this.input_add_button.Size = new System.Drawing.Size(102, 91);
+            this.input_add_button.TabIndex = 10;
+            this.input_add_button.UseVisualStyleBackColor = true;
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.input_album_remove_button);
             this.groupBox7.Controls.Add(this.input_album_add_button);
-            this.groupBox7.Controls.Add(this.textBox2);
+            this.groupBox7.Controls.Add(this.input_album_textbox);
             this.groupBox7.Controls.Add(this.label7);
             this.groupBox7.Controls.Add(this.input_album_listbox);
             this.groupBox7.Location = new System.Drawing.Point(698, 8);
@@ -275,6 +323,7 @@ namespace ngx_docs_managment_application
             this.input_album_remove_button.Size = new System.Drawing.Size(75, 65);
             this.input_album_remove_button.TabIndex = 9;
             this.input_album_remove_button.UseVisualStyleBackColor = true;
+            this.input_album_remove_button.Click += new System.EventHandler(this.input_album_remove_button_Click);
             // 
             // input_album_add_button
             // 
@@ -287,14 +336,15 @@ namespace ngx_docs_managment_application
             this.input_album_add_button.Size = new System.Drawing.Size(75, 65);
             this.input_album_add_button.TabIndex = 8;
             this.input_album_add_button.UseVisualStyleBackColor = true;
+            this.input_album_add_button.Click += new System.EventHandler(this.input_album_add_button_Click);
             // 
-            // textBox2
+            // input_album_textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(6, 47);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 94);
-            this.textBox2.TabIndex = 7;
+            this.input_album_textbox.Location = new System.Drawing.Point(6, 47);
+            this.input_album_textbox.Multiline = true;
+            this.input_album_textbox.Name = "input_album_textbox";
+            this.input_album_textbox.Size = new System.Drawing.Size(211, 94);
+            this.input_album_textbox.TabIndex = 7;
             // 
             // label7
             // 
@@ -318,7 +368,7 @@ namespace ngx_docs_managment_application
             // 
             this.groupBox6.Controls.Add(this.input_tags_remove_button);
             this.groupBox6.Controls.Add(this.input_tags_add_button);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.input_tags_textbox);
             this.groupBox6.Controls.Add(this.label6);
             this.groupBox6.Controls.Add(this.input_tags_listbox);
             this.groupBox6.Location = new System.Drawing.Point(469, 8);
@@ -339,6 +389,7 @@ namespace ngx_docs_managment_application
             this.input_tags_remove_button.Size = new System.Drawing.Size(75, 65);
             this.input_tags_remove_button.TabIndex = 9;
             this.input_tags_remove_button.UseVisualStyleBackColor = true;
+            this.input_tags_remove_button.Click += new System.EventHandler(this.input_tags_remove_button_Click);
             // 
             // input_tags_add_button
             // 
@@ -351,14 +402,15 @@ namespace ngx_docs_managment_application
             this.input_tags_add_button.Size = new System.Drawing.Size(75, 65);
             this.input_tags_add_button.TabIndex = 8;
             this.input_tags_add_button.UseVisualStyleBackColor = true;
+            this.input_tags_add_button.Click += new System.EventHandler(this.input_tags_add_button_Click);
             // 
-            // textBox1
+            // input_tags_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 47);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 94);
-            this.textBox1.TabIndex = 7;
+            this.input_tags_textbox.Location = new System.Drawing.Point(6, 47);
+            this.input_tags_textbox.Multiline = true;
+            this.input_tags_textbox.Name = "input_tags_textbox";
+            this.input_tags_textbox.Size = new System.Drawing.Size(211, 94);
+            this.input_tags_textbox.TabIndex = 7;
             // 
             // label6
             // 
@@ -942,54 +994,6 @@ namespace ngx_docs_managment_application
             this.home_one_radioButton.Text = "Home - 1";
             this.home_one_radioButton.UseVisualStyleBackColor = true;
             // 
-            // input_save_button
-            // 
-            this.input_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
-            this.input_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_save_button.Location = new System.Drawing.Point(571, 26);
-            this.input_save_button.Name = "input_save_button";
-            this.input_save_button.Size = new System.Drawing.Size(102, 91);
-            this.input_save_button.TabIndex = 13;
-            this.input_save_button.UseVisualStyleBackColor = true;
-            // 
-            // input_edit_button
-            // 
-            this.input_edit_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.edit_1;
-            this.input_edit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_edit_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_edit_button.Location = new System.Drawing.Point(355, 26);
-            this.input_edit_button.Name = "input_edit_button";
-            this.input_edit_button.Size = new System.Drawing.Size(102, 91);
-            this.input_edit_button.TabIndex = 12;
-            this.input_edit_button.UseVisualStyleBackColor = true;
-            // 
-            // input_remove_button
-            // 
-            this.input_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
-            this.input_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_remove_button.Location = new System.Drawing.Point(463, 26);
-            this.input_remove_button.Name = "input_remove_button";
-            this.input_remove_button.Size = new System.Drawing.Size(102, 91);
-            this.input_remove_button.TabIndex = 11;
-            this.input_remove_button.UseVisualStyleBackColor = true;
-            // 
-            // input_add_button
-            // 
-            this.input_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
-            this.input_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_add_button.Location = new System.Drawing.Point(247, 26);
-            this.input_add_button.Name = "input_add_button";
-            this.input_add_button.Size = new System.Drawing.Size(102, 91);
-            this.input_add_button.TabIndex = 10;
-            this.input_add_button.UseVisualStyleBackColor = true;
-            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1063,13 +1067,13 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Button input_album_remove_button;
         private System.Windows.Forms.Button input_album_add_button;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox input_album_textbox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ListBox input_album_listbox;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button input_tags_remove_button;
         private System.Windows.Forms.Button input_tags_add_button;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox input_tags_textbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox input_tags_listbox;
         private System.Windows.Forms.GroupBox groupBox5;
