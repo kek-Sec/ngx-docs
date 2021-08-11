@@ -3,9 +3,6 @@ using ngx_docs_managment_application._Serializers;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ngx_docs_managment_application._Forms
@@ -37,7 +34,7 @@ namespace ngx_docs_managment_application._Forms
         public void Save(Settings_Model sm)
         {
             settings_model[0] = sm;
-            string filepath = settings.getSetting("project_path") + "\\src\\settings2.json";
+            string filepath = settings.getSetting("project_path") + "\\src\\settings.json";
             var json = serializer.Serialize(settings_model);
             File.WriteAllText(filepath, json);
 
