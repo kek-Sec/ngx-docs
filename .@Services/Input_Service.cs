@@ -4,9 +4,6 @@ using ngx_docs_managment_application._Serializers;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ngx_docs_managment_application._Controllers
 {
