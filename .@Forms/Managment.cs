@@ -115,5 +115,10 @@ namespace ngx_docs_managment_application
         {
             ic.DeleteEntry(input_listbox.SelectedIndex);
         }
+
+        private void input_refresh_button_Click(object sender, EventArgs e)
+        {
+            ic.UpdateInput(input_listbox);
+        }
     }
 }

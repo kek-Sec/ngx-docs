@@ -19,6 +19,19 @@ namespace ngx_docs_managment_application._Controllers
         }
 
         /// <summary>
+        /// Function to update input listbox
+        /// </summary>
+        public void UpdateInput(ListBox input_lbx)
+        {
+            this.input = new Input_Service();
+            input_lbx.Items.Clear();
+            foreach(Input_Model s in input.input_collection)
+            {
+                input_lbx.Items.Add(s.Title);
+            }
+        }
+
+        /// <summary>
         /// Helper function for removing data from listboxes
         /// </summary>
         /// <param name="lbx">The listbox</param>
