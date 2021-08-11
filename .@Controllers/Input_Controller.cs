@@ -120,12 +120,12 @@ namespace ngx_docs_managment_application._Controllers
             new_entry.text = text.Text;
             new_entry.image = picture.Text;
 
-            foreach (string s in items.Items) { new_entry.items.Add(s); }
+            foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
 
             //optional fields
             if (url.Text.Length > 0) { new_entry.url = url.Text; }
-            if(tags.Items.Count > 0) { foreach(string s in tags.Items) { new_entry.tags.Add(s); } }
-            if (album.Items.Count > 0) { foreach (string s in album.Items) { new_entry.album.Add(s); } }
+            if(tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach(string s in tags.Items) { new_entry.tags.Add(s); } }
+            if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
 
             input.AddEntry(new_entry);
 
