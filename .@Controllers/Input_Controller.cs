@@ -129,6 +129,9 @@ namespace ngx_docs_managment_application._Controllers
 
             input.AddEntry(new_entry);
 
+            items.Items.Clear();
+            album.Items.Clear();
+            tags.Items.Clear();
             return;
         }
 
