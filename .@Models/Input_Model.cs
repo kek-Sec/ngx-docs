@@ -15,5 +15,12 @@ namespace ngx_docs_managment_application._Models
         public IList<string> tags { get; set; }
         public string url { get; set; }
         public IList<string> album { get; set; }
+
+        public Input_Model()
+        {
+            items = new List<string>();
+            tags = new List<string>();
+            album = new List<string>();
+        }
     }
 }
