@@ -54,6 +54,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="album">Album listbox</param>
         public void UpdateEntry(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
+            if (!ConfirmAction("Update entry")) { return; }
             bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
             if (!validate_input) { MessageBox.Show("Fields missing"); return; }
 
@@ -80,6 +81,7 @@ namespace ngx_docs_managment_application._Controllers
         public void DeleteEntry(int index)
         {
             if(index == -1) { return; }
+            if (!ConfirmAction("Delete entry")) { return; }
             input.DeleteEntry(index);
         }
 
