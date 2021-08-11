@@ -250,11 +250,11 @@ namespace ngx_docs_managment_application
             // 
             // input_edit_button
             // 
-            this.input_edit_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.edit_1;
+            this.input_edit_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
             this.input_edit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.input_edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.input_edit_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_edit_button.Location = new System.Drawing.Point(355, 26);
+            this.input_edit_button.Location = new System.Drawing.Point(420, 26);
             this.input_edit_button.Name = "input_edit_button";
             this.input_edit_button.Size = new System.Drawing.Size(102, 91);
             this.input_edit_button.TabIndex = 12;
@@ -267,7 +267,7 @@ namespace ngx_docs_managment_application
             this.input_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.input_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.input_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_remove_button.Location = new System.Drawing.Point(463, 26);
+            this.input_remove_button.Location = new System.Drawing.Point(528, 26);
             this.input_remove_button.Name = "input_remove_button";
             this.input_remove_button.Size = new System.Drawing.Size(102, 91);
             this.input_remove_button.TabIndex = 11;
@@ -280,7 +280,7 @@ namespace ngx_docs_managment_application
             this.input_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.input_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.input_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_add_button.Location = new System.Drawing.Point(247, 26);
+            this.input_add_button.Location = new System.Drawing.Point(312, 26);
             this.input_add_button.Name = "input_add_button";
             this.input_add_button.Size = new System.Drawing.Size(102, 91);
             this.input_add_button.TabIndex = 10;
