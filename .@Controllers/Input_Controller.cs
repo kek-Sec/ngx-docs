@@ -20,11 +20,19 @@ namespace ngx_docs_managment_application._Controllers
         /// </summary>
         public void UpdateInput(ListBox input_lbx)
         {
-            this.input = new Input_Service();
-            input_lbx.Items.Clear();
-            foreach (Input_Model s in input.input_collection)
+            try
             {
-                input_lbx.Items.Add(s.Title);
+                this.input = new Input_Service();
+                input_lbx.Items.Clear();
+                foreach (Input_Model s in input.input_collection)
+                {
+                    input_lbx.Items.Add(s.Title);
+                }
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                return;
             }
         }
 
@@ -35,8 +43,15 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="index">The item index</param>
         public void RemoveDataFromListBox(ListBox lbx, int index)
         {
-            if (index < 0) { return; }
-            lbx.Items.RemoveAt(index);
+            try
+            {
+                if (index < 0) { return; }
+                lbx.Items.RemoveAt(index);
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+            }
         }
 
         /// <summary>
@@ -46,9 +61,16 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="inp">The input textbox</param>
         public void AddDataToListBox(ListBox lbx, TextBox inp)
         {
-            if(inp.Text == string.Empty) { return; }
-            lbx.Items.Add(inp.Text);
-            inp.Clear();
+            try
+            {
+                if (inp.Text == string.Empty) { return; }
+                lbx.Items.Add(inp.Text);
+                inp.Clear();
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+            }
         }
 
         /// <summary>
@@ -65,27 +87,35 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="album">Album listbox</param>
         public void UpdateEntry(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
-            if (!ConfirmAction("Update entry")) { return; }
-            bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
-            if (!validate_input) { MessageBox.Show("Fields missing"); return; }
+            try
+            {
+                if (!ConfirmAction("Update entry")) { return; }
+                bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
+                if (!validate_input) { MessageBox.Show("Fields missing"); return; }
 
-            Input_Model new_entry = new Input_Model();
-            new_entry.Title = title.Text;
-            new_entry.Description = description.Text;
-            new_entry.text = text.Text;
-            new_entry.image = picture.Text;
+                Input_Model new_entry = new Input_Model();
+                new_entry.Title = title.Text;
+                new_entry.Description = description.Text;
+                new_entry.text = text.Text;
+                new_entry.image = picture.Text;
 
-            foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
+                foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
 
-            //optional fields
-            if (url.Text.Length > 0) { new_entry.url = url.Text; }
-            if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
-            if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
+                //optional fields
+                if (url.Text.Length > 0) { new_entry.url = url.Text; }
+                if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
+                if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
 
 
-            //call service
-            input.UpdateEntry(index, new_entry);
-            return;
+                //call service
+                input.UpdateEntry(index, new_entry);
+                return;
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+            }
+           
         }
 
         /// <summary>
@@ -112,32 +142,39 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="album">Album listbox</param>
         public void AddEntry(TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
-            if (!ConfirmAction("Add entry")) { return; }
-            bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
-            if (!validate_input) { MessageBox.Show("Fields missing"); return; }
-            Input_Model new_entry = new Input_Model();
-            new_entry.Title = title.Text;
-            new_entry.Description = description.Text;
-            new_entry.text = text.Text;
-            new_entry.image = picture.Text;
+            try
+            {
+                if (!ConfirmAction("Add entry")) { return; }
+                bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
+                if (!validate_input) { MessageBox.Show("Fields missing"); return; }
+                Input_Model new_entry = new Input_Model();
+                new_entry.Title = title.Text;
+                new_entry.Description = description.Text;
+                new_entry.text = text.Text;
+                new_entry.image = picture.Text;
 
-            foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
+                foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
 
-            //optional fields
-            if (url.Text.Length > 0) { new_entry.url = url.Text; }
-            if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
-            if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
+                //optional fields
+                if (url.Text.Length > 0) { new_entry.url = url.Text; }
+                if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
+                if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
 
-            input.AddEntry(new_entry);
+                input.AddEntry(new_entry);
 
-            //reset fields
-            picture.Text = "assets/images/default.PNG";
-            items.Items.Clear();
-            album.Items.Clear();
-            tags.Items.Clear();
-            text.Text = "";
-            description.Text = "";
-            return;
+                //reset fields
+                picture.Text = "assets/images/default.PNG";
+                items.Items.Clear();
+                album.Items.Clear();
+                tags.Items.Clear();
+                text.Text = "";
+                description.Text = "";
+                return;
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+            }
         }
 
         /// <summary>
@@ -154,31 +191,38 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="album">Album listbox</param>
         public void SetSelectedItem(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
-            Input_Model inpt = input.input_collection[index];
-
-            title.Text = inpt.Title;
-            description.Text = inpt.Description;
-            text.Text = inpt.text;
-            picture.Text = inpt.image;
-            url.Text = inpt.url;
-
-            //clear listboxes
-            items.Items.Clear();
-            tags.Items.Clear();
-            album.Items.Clear();
-
-            foreach (string i in inpt.items) { items.Items.Add(i); }
-
-            if (inpt.tags is object)
+            try
             {
-                foreach (string i in inpt.tags) { tags.Items.Add(i); }
-            }
+                Input_Model inpt = input.input_collection[index];
 
-            if (inpt.album is object)
+                title.Text = inpt.Title;
+                description.Text = inpt.Description;
+                text.Text = inpt.text;
+                picture.Text = inpt.image;
+                url.Text = inpt.url;
+
+                //clear listboxes
+                items.Items.Clear();
+                tags.Items.Clear();
+                album.Items.Clear();
+
+                foreach (string i in inpt.items) { items.Items.Add(i); }
+
+                if (inpt.tags is object)
+                {
+                    foreach (string i in inpt.tags) { tags.Items.Add(i); }
+                }
+
+                if (inpt.album is object)
+                {
+                    foreach (string i in inpt.album) { album.Items.Add(i); }
+                }
+
+            }
+            catch(Exception e)
             {
-                foreach (string i in inpt.album) { album.Items.Add(i); }
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
             }
-
 
         }
 
@@ -198,7 +242,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
             }
         }
 

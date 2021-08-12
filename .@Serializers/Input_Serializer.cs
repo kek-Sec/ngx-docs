@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using ngx_docs_managment_application._Models;
+using ngx_docs_managment_application._Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace ngx_docs_managment_application._Serializers
             }
             catch(Exception e)
             {
+                Logger_Service.Add("INPUT_SERIALIZER",e.Message);
                 return null;
             }
         }
