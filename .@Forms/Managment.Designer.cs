@@ -115,6 +115,9 @@ namespace ngx_docs_managment_application
             this.images_favicon_textBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -144,6 +147,7 @@ namespace ngx_docs_managment_application
             this.groupBox16.SuspendLayout();
             this.images_tabPage.SuspendLayout();
             this.groupBox18.SuspendLayout();
+            this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -621,6 +625,7 @@ namespace ngx_docs_managment_application
             // 
             // settings_tabPage
             // 
+            this.settings_tabPage.Controls.Add(this.groupBox19);
             this.settings_tabPage.Controls.Add(this.settings_save_button);
             this.settings_tabPage.Controls.Add(this.groupBox14);
             this.settings_tabPage.Controls.Add(this.groupBox10);
@@ -1063,6 +1068,34 @@ namespace ngx_docs_managment_application
             this.label16.TabIndex = 2;
             this.label16.Text = "Images folder";
             // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.textBox2);
+            this.groupBox19.Controls.Add(this.label17);
+            this.groupBox19.Location = new System.Drawing.Point(683, 8);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(367, 349);
+            this.groupBox19.TabIndex = 12;
+            this.groupBox19.TabStop = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label17.Location = new System.Drawing.Point(7, 20);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(103, 25);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Project Title";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.textBox2.Location = new System.Drawing.Point(12, 55);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(349, 31);
+            this.textBox2.TabIndex = 1;
+            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1119,6 +1152,8 @@ namespace ngx_docs_managment_application
             this.images_tabPage.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1211,5 +1246,8 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox images_favicon_textBox;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label17;
     }
 }
