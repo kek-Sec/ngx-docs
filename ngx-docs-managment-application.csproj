@@ -51,17 +51,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include=".%40Controllers\Dashboard_Controller.cs" />
+    <Compile Include=".%40Controllers\Images_Controller.cs" />
     <Compile Include=".%40Controllers\SettingsData_Controller.cs" />
     <Compile Include=".%40Serializers\Input_Serializer.cs" />
     <Compile Include=".%40Serializers\Settings_Serializer.cs" />
     <Compile Include=".%40Serializers\Theming_Serializer.cs" />
+    <Compile Include=".%40Services\Generator_Service.cs" />
+    <Compile Include=".%40Services\Images_Service.cs" />
     <Compile Include=".%40Services\SettingsData_Service.cs" />
     <Compile Include=".%40Services\Input_Service.cs" />
     <Compile Include=".%40Services\Dashboard_Service.cs" />
     <Compile Include=".%40Controllers\Input_Controller.cs" />
     <Compile Include=".%40Controllers\MainForm_Controller.cs" />
     <Compile Include=".%40Controllers\Settings_Controller.cs" />
-    <Compile Include=".%40Controllers\Theming_Controller.cs" />
+    <Compile Include=".%40Controllers\Geneator_Controller.cs" />
     <Compile Include=".%40Models\Input_Model.cs" />
     <Compile Include=".%40Models\Settings_Model.cs" />
     <Compile Include=".%40Models\Theming_Model.cs" />
@@ -140,9 +143,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\folder-14.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\diploma.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\like.png" />
