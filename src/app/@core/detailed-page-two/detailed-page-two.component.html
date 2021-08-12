@@ -1,6 +1,6 @@
 <div class="alert alert-info" role="alert">
-    <h1 class="display-4 text-center"> {{ selected_entry.Title }}
-    </h1>
+    <h2 class="display-4 text-center"> {{ selected_entry.Title }}
+    </h2>
     <h4 class="description text-center"> {{ selected_entry.Description }}
     </h4>
     <hr class="my-4">
@@ -24,7 +24,7 @@
         <p class="Tags">Url: {{selected_entry.url }}</p>
         <hr class="my-4">
     </div>
-    <a class="btn btn-info btn-lg" href="#" role="button">Back</a>
+    <a class="btn btn-info back-btn btn-lg" href="#" role="button">Back</a>
     <a class="btn btn-success copy-btn btn-lg" (click)="copy()" href="#" role="button">Copy</a>
 
 </div>
