@@ -135,6 +135,8 @@ namespace ngx_docs_managment_application._Controllers
             items.Items.Clear();
             album.Items.Clear();
             tags.Items.Clear();
+            text.Text = "";
+            description.Text = "";
             return;
         }
 
