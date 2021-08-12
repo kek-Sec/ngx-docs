@@ -1,8 +1,57 @@
 <div class="bg">
-    <div class="input-group input-group-lg">
-        <input autofocus type="text" class="form-control text-center" aria-label="Large" />
-    </div>
-</div>
+    <div class="search-box">
+        <div class="input-group input-group-lg">
+            <input (change)="onChangeEvent($event)" autofocus type="text" class="form-control text-center"
+                aria-label="Large" />
+        </div>
 
-<div class="data-container">
+        <ngx-bootstrap-multiselect class="filter-select" [options]="myOptions" [texts]="myTexts" [settings]="mySettings"
+            [(ngModel)]="optionsModel"></ngx-bootstrap-multiselect>
+    </div>
+
+
+    <div class="data-container">
+        <div fxLayout="row wrap" fxLayoutGap="16px grid">
+            <div [fxFlex]="100 / gridColumns + '%'" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%"
+                *ngFor="let p of to_print; let i = index">
+                <div class="card border-primary text-center mb-3">
+                    <div *ngIf="_settings_item[0].preview_show_title">
+                        <div style="font-weight: bold; text-transform: uppercase" class="card-header">
+                            {{ p.Title }}
+                        </div>
+                    </div>
+                    <div *ngIf="_settings_item[0].preview_show_picture">
+                        <img src="{{ p.image }}" class="card-img-top" alt="..." />
+                    </div>
+                    <div class="card-body text-primary">
+                        <div *ngIf="_settings_item[0].preview_show_description">
+                            <h5 style="color: #4158d0" class="card-title">
+                                {{ p.Description | slice: 0:_settings_item[0].preview_description_text_length }}...
+                            </h5>
+                        </div>
+                        <div *ngIf="_settings_item[0].preview_show_text">
+                            <p style="color: black" class="card-text">
+                                {{ p.text | slice: 0:_settings_item[0].preview_text_length }}...
+                            </p>
+                        </div>
+                    </div>
+
+                    <div *ngIf="_settings_item[0].preview_show_items">
+                        <ul class="list-group list-group-flush">
+                            <div
+                                *ngFor="let item of to_print[i].items | slice: 0:_settings_item[0].preview_items_count">
+                                <li class="list-group-item"
+                                    [innerHTML]="item.slice(0, _settings_item[0].preview_item_text_length)">
+                                </li>
+                            </div>
+                        </ul>
+                    </div>
+
+                    <div class="card-footer text-muted">
+                        <button [routerLink]="['/view', i]" type="button" class="btn btn-light">Click for more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
