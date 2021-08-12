@@ -33,12 +33,19 @@ namespace ngx_docs_managment_application._Forms
         /// <param name="sm">The current settings model</param>
         public void Save(Settings_Model sm)
         {
-            settings_model[0] = sm;
-            string filepath = settings.getSetting("project_path") + "\\src\\settings.json";
-            var json = serializer.Serialize(settings_model);
-            File.WriteAllText(filepath, json);
+            try
+            {
+                settings_model[0] = sm;
+                string filepath = settings.getSetting("project_path") + "\\src\\settings.json";
+                var json = serializer.Serialize(settings_model);
+                File.WriteAllText(filepath, json);
 
-            MessageBox.Show("Saved settings...");
+                MessageBox.Show("Saved settings...");
+            }
+            catch(Exception e)
+            {
+                return;
+            }
 
         }
     }

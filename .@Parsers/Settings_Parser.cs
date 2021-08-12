@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ngx_docs_managment_application._Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -15,12 +16,19 @@ namespace ngx_docs_managment_application._Forms
         /// <returns>Settings model object</returns>
         public IList<Settings_Model> parse(string filename)
         {
-            string json = File.ReadAllText(filename);
-            JArray input_arr = JArray.Parse(json);
+            try
+            {
+                string json = File.ReadAllText(filename);
+                JArray input_arr = JArray.Parse(json);
 
-            IList<Settings_Model> ret = input_arr.ToObject<IList<Settings_Model>>();
+                IList<Settings_Model> ret = input_arr.ToObject<IList<Settings_Model>>();
 
-            return ret;
+                return ret;
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
         }
     }
 }

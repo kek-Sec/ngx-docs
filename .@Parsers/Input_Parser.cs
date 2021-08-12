@@ -20,12 +20,19 @@ namespace ngx_docs_managment_application._Forms
         /// <returns>Input model object</returns>
         public IList<Input_Model> parse(string filename)
         {
-            string json = File.ReadAllText(filename);
-            JArray input_arr = JArray.Parse(json);
+            try
+            {
+                string json = File.ReadAllText(filename);
+                JArray input_arr = JArray.Parse(json);
 
-            IList<Input_Model> ret = input_arr.ToObject<IList<Input_Model>>();
+                IList<Input_Model> ret = input_arr.ToObject<IList<Input_Model>>();
 
-            return ret;
+                return ret;
+            }catch(Exception e)
+            {
+                return null;
+            }
+
         }
     }
 }

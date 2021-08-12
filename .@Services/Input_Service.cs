@@ -27,10 +27,18 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="input">The entry model to add</param>
         public void UpdateEntry(int index, Input_Model input)
         {
-            input_collection[index] = input;
-            var filepath = settings.getSetting("project_path") + "\\src\\input.json";
-            var json = serializer.Serialize(input_collection);
-            File.WriteAllText(filepath, json);
+            try
+            {
+                input_collection[index] = input;
+                var filepath = settings.getSetting("project_path") + "\\src\\input.json";
+                var json = serializer.Serialize(input_collection);
+                File.WriteAllText(filepath, json);
+            }
+            catch(Exception e)
+            {
+                return;
+            }
+
         }
 
         /// <summary>
@@ -39,10 +47,17 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="index">The index of the entry to delete</param>
         public void DeleteEntry(int index)
         {
-            input_collection.RemoveAt(index);
-            var filepath = settings.getSetting("project_path") + "\\src\\input.json";
-            var json = serializer.Serialize(input_collection);
-            File.WriteAllText(filepath, json);
+            try
+            {
+                input_collection.RemoveAt(index);
+                var filepath = settings.getSetting("project_path") + "\\src\\input.json";
+                var json = serializer.Serialize(input_collection);
+                File.WriteAllText(filepath, json);
+            }
+            catch(Exception e)
+            {
+
+            }
         }
 
         /// <summary>
@@ -51,11 +66,17 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="input">The entry model to add</param>
         public void AddEntry(Input_Model input)
         {
-            input_collection.Add(input);
-            var filepath = settings.getSetting("project_path") + "\\src\\input.json";
-            var json = serializer.Serialize(input_collection);
-            File.WriteAllText(filepath, json);
+            try
+            {
+                input_collection.Add(input);
+                var filepath = settings.getSetting("project_path") + "\\src\\input.json";
+                var json = serializer.Serialize(input_collection);
+                File.WriteAllText(filepath, json);
+            }
+            catch(Exception e)
+            {
 
+            }
         }
 
         /// <summary>
