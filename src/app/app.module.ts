@@ -20,9 +20,10 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeTwoComponent } from './@landings/home-two/home-two.component';
+import { AlbumPageComponent } from './@core/album-page/album-page.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent],
+  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent],
   imports: [
     FormsModule,
     BrowserAnimationsModule, // required animations module
