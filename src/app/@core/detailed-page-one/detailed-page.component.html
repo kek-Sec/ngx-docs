@@ -25,6 +25,24 @@
           </div>
         </ul>
         <img src="{{ selected_entry.image }}" class="card-img-bottom" alt="..." />
+        <hr class="my-4">
+        <div *ngIf="has_tags">
+          <p class="Tags">Tags: {{pretty_tags}} </p>
+          <hr class="my-4">
+        </div>
+        <div *ngIf="has_url">
+          <hr class="my-4">
+          <p class="Tags">Url: {{selected_entry.url }}</p>
+          <hr class="my-4">
+        </div>
+
+        <div *ngIf="has_album">
+          <hr class="my-4">
+          <button type="button" [routerLink]="['/album', id]"
+            class="show_album btn btn-lg btn-success  mx-auto d-block">Show
+            album</button>
+          <hr class="my-4">
+        </div>
         <div (click)="copy()" class="card-footer text-muted">
           Copy to clipboard
         </div>
