@@ -125,6 +125,9 @@ namespace ngx_docs_managment_application
             this.serve_button = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
             this.generator_logger_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -157,6 +160,7 @@ namespace ngx_docs_managment_application
             this.groupBox19.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox21.SuspendLayout();
+            this.groupBox22.SuspendLayout();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -175,6 +179,7 @@ namespace ngx_docs_managment_application
             // 
             // dashboard_tabPage
             // 
+            this.dashboard_tabPage.Controls.Add(this.groupBox22);
             this.dashboard_tabPage.Controls.Add(this.groupBox2);
             this.dashboard_tabPage.Location = new System.Drawing.Point(4, 29);
             this.dashboard_tabPage.Name = "dashboard_tabPage";
@@ -1181,6 +1186,39 @@ namespace ngx_docs_managment_application
             this.generator_logger_richTextBox.TabIndex = 0;
             this.generator_logger_richTextBox.Text = "";
             // 
+            // groupBox22
+            // 
+            this.groupBox22.Controls.Add(this.button2);
+            this.groupBox22.Controls.Add(this.button1);
+            this.groupBox22.Location = new System.Drawing.Point(3, 401);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(1051, 167);
+            this.groupBox22.TabIndex = 4;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Helpers";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(6, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 122);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Generate sample input.json";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(155, 39);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(143, 122);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Generate sample settings.json";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1241,6 +1279,7 @@ namespace ngx_docs_managment_application
             this.groupBox19.PerformLayout();
             this.groupBox20.ResumeLayout(false);
             this.groupBox21.ResumeLayout(false);
+            this.groupBox22.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1343,5 +1382,8 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.Button verify_button;
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.RichTextBox generator_logger_richTextBox;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
