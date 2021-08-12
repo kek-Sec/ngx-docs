@@ -58,6 +58,7 @@
     <Compile Include=".%40Serializers\Theming_Serializer.cs" />
     <Compile Include=".%40Services\Generator_Service.cs" />
     <Compile Include=".%40Services\Images_Service.cs" />
+    <Compile Include=".%40Services\Logger_Service.cs" />
     <Compile Include=".%40Services\SettingsData_Service.cs" />
     <Compile Include=".%40Services\Input_Service.cs" />
     <Compile Include=".%40Services\Dashboard_Service.cs" />
