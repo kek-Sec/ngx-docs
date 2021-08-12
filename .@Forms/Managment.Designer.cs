@@ -37,17 +37,27 @@ namespace ngx_docs_managment_application
             this.label1 = new System.Windows.Forms.Label();
             this.set_project_path_linkLabel = new System.Windows.Forms.LinkLabel();
             this.input_tabPage = new System.Windows.Forms.TabPage();
+            this.input_refresh_button = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.input_edit_button = new System.Windows.Forms.Button();
+            this.input_remove_button = new System.Windows.Forms.Button();
+            this.input_add_button = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.input_album_remove_button = new System.Windows.Forms.Button();
+            this.input_album_add_button = new System.Windows.Forms.Button();
             this.input_album_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.input_album_listbox = new System.Windows.Forms.ListBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.input_tags_remove_button = new System.Windows.Forms.Button();
+            this.input_tags_add_button = new System.Windows.Forms.Button();
             this.input_tags_textbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.input_tags_listbox = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.input_item_remove_button = new System.Windows.Forms.Button();
+            this.input_item_add_button = new System.Windows.Forms.Button();
             this.input_item_textBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.input_items_listbox = new System.Windows.Forms.ListBox();
@@ -64,6 +74,7 @@ namespace ngx_docs_managment_application
             this.label2 = new System.Windows.Forms.Label();
             this.input_listbox = new System.Windows.Forms.ListBox();
             this.settings_tabPage = new System.Windows.Forms.TabPage();
+            this.settings_save_button = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.preview_items_count_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label13 = new System.Windows.Forms.Label();
@@ -98,17 +109,12 @@ namespace ngx_docs_managment_application
             this.home_three_radioButton = new System.Windows.Forms.RadioButton();
             this.home_two_radioButton = new System.Windows.Forms.RadioButton();
             this.home_one_radioButton = new System.Windows.Forms.RadioButton();
-            this.input_edit_button = new System.Windows.Forms.Button();
-            this.input_remove_button = new System.Windows.Forms.Button();
-            this.input_add_button = new System.Windows.Forms.Button();
-            this.input_album_remove_button = new System.Windows.Forms.Button();
-            this.input_album_add_button = new System.Windows.Forms.Button();
-            this.input_tags_remove_button = new System.Windows.Forms.Button();
-            this.input_tags_add_button = new System.Windows.Forms.Button();
-            this.input_item_remove_button = new System.Windows.Forms.Button();
-            this.input_item_add_button = new System.Windows.Forms.Button();
-            this.settings_save_button = new System.Windows.Forms.Button();
-            this.input_refresh_button = new System.Windows.Forms.Button();
+            this.images_tabPage = new System.Windows.Forms.TabPage();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.images_favicon_textBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -136,6 +142,8 @@ namespace ngx_docs_managment_application
             this.generator_tabPage.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
+            this.images_tabPage.SuspendLayout();
+            this.groupBox18.SuspendLayout();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -143,6 +151,7 @@ namespace ngx_docs_managment_application
             this.managment_tabControl.Controls.Add(this.dashboard_tabPage);
             this.managment_tabControl.Controls.Add(this.input_tabPage);
             this.managment_tabControl.Controls.Add(this.settings_tabPage);
+            this.managment_tabControl.Controls.Add(this.images_tabPage);
             this.managment_tabControl.Controls.Add(this.generator_tabPage);
             this.managment_tabControl.Location = new System.Drawing.Point(1, -1);
             this.managment_tabControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -226,6 +235,19 @@ namespace ngx_docs_managment_application
             this.input_tabPage.Text = "Input data";
             this.input_tabPage.UseVisualStyleBackColor = true;
             // 
+            // input_refresh_button
+            // 
+            this.input_refresh_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
+            this.input_refresh_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_refresh_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_refresh_button.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.input_refresh_button.Location = new System.Drawing.Point(97, 1);
+            this.input_refresh_button.Name = "input_refresh_button";
+            this.input_refresh_button.Size = new System.Drawing.Size(26, 27);
+            this.input_refresh_button.TabIndex = 13;
+            this.input_refresh_button.UseVisualStyleBackColor = true;
+            this.input_refresh_button.Click += new System.EventHandler(this.input_refresh_button_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.groupBox8);
@@ -250,6 +272,45 @@ namespace ngx_docs_managment_application
             this.groupBox8.TabIndex = 12;
             this.groupBox8.TabStop = false;
             // 
+            // input_edit_button
+            // 
+            this.input_edit_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
+            this.input_edit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_edit_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_edit_button.Location = new System.Drawing.Point(420, 26);
+            this.input_edit_button.Name = "input_edit_button";
+            this.input_edit_button.Size = new System.Drawing.Size(102, 91);
+            this.input_edit_button.TabIndex = 12;
+            this.input_edit_button.UseVisualStyleBackColor = true;
+            this.input_edit_button.Click += new System.EventHandler(this.input_edit_button_Click);
+            // 
+            // input_remove_button
+            // 
+            this.input_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
+            this.input_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_remove_button.Location = new System.Drawing.Point(528, 26);
+            this.input_remove_button.Name = "input_remove_button";
+            this.input_remove_button.Size = new System.Drawing.Size(102, 91);
+            this.input_remove_button.TabIndex = 11;
+            this.input_remove_button.UseVisualStyleBackColor = true;
+            this.input_remove_button.Click += new System.EventHandler(this.input_remove_button_Click);
+            // 
+            // input_add_button
+            // 
+            this.input_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
+            this.input_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_add_button.Location = new System.Drawing.Point(312, 26);
+            this.input_add_button.Name = "input_add_button";
+            this.input_add_button.Size = new System.Drawing.Size(102, 91);
+            this.input_add_button.TabIndex = 10;
+            this.input_add_button.UseVisualStyleBackColor = true;
+            this.input_add_button.Click += new System.EventHandler(this.input_add_button_Click);
+            // 
             // groupBox7
             // 
             this.groupBox7.Controls.Add(this.input_album_remove_button);
@@ -263,6 +324,32 @@ namespace ngx_docs_managment_application
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Album";
+            // 
+            // input_album_remove_button
+            // 
+            this.input_album_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
+            this.input_album_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_album_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_album_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_album_remove_button.Location = new System.Drawing.Point(142, 145);
+            this.input_album_remove_button.Name = "input_album_remove_button";
+            this.input_album_remove_button.Size = new System.Drawing.Size(75, 65);
+            this.input_album_remove_button.TabIndex = 9;
+            this.input_album_remove_button.UseVisualStyleBackColor = true;
+            this.input_album_remove_button.Click += new System.EventHandler(this.input_album_remove_button_Click);
+            // 
+            // input_album_add_button
+            // 
+            this.input_album_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
+            this.input_album_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_album_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_album_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_album_add_button.Location = new System.Drawing.Point(7, 145);
+            this.input_album_add_button.Name = "input_album_add_button";
+            this.input_album_add_button.Size = new System.Drawing.Size(75, 65);
+            this.input_album_add_button.TabIndex = 8;
+            this.input_album_add_button.UseVisualStyleBackColor = true;
+            this.input_album_add_button.Click += new System.EventHandler(this.input_album_add_button_Click);
             // 
             // input_album_textbox
             // 
@@ -304,6 +391,32 @@ namespace ngx_docs_managment_application
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Tags";
             // 
+            // input_tags_remove_button
+            // 
+            this.input_tags_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
+            this.input_tags_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_tags_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_tags_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_tags_remove_button.Location = new System.Drawing.Point(142, 145);
+            this.input_tags_remove_button.Name = "input_tags_remove_button";
+            this.input_tags_remove_button.Size = new System.Drawing.Size(75, 65);
+            this.input_tags_remove_button.TabIndex = 9;
+            this.input_tags_remove_button.UseVisualStyleBackColor = true;
+            this.input_tags_remove_button.Click += new System.EventHandler(this.input_tags_remove_button_Click);
+            // 
+            // input_tags_add_button
+            // 
+            this.input_tags_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
+            this.input_tags_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_tags_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_tags_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_tags_add_button.Location = new System.Drawing.Point(7, 145);
+            this.input_tags_add_button.Name = "input_tags_add_button";
+            this.input_tags_add_button.Size = new System.Drawing.Size(75, 65);
+            this.input_tags_add_button.TabIndex = 8;
+            this.input_tags_add_button.UseVisualStyleBackColor = true;
+            this.input_tags_add_button.Click += new System.EventHandler(this.input_tags_add_button_Click);
+            // 
             // input_tags_textbox
             // 
             this.input_tags_textbox.Location = new System.Drawing.Point(6, 47);
@@ -343,6 +456,32 @@ namespace ngx_docs_managment_application
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Items";
+            // 
+            // input_item_remove_button
+            // 
+            this.input_item_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
+            this.input_item_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_item_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_item_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_item_remove_button.Location = new System.Drawing.Point(142, 145);
+            this.input_item_remove_button.Name = "input_item_remove_button";
+            this.input_item_remove_button.Size = new System.Drawing.Size(75, 65);
+            this.input_item_remove_button.TabIndex = 9;
+            this.input_item_remove_button.UseVisualStyleBackColor = true;
+            this.input_item_remove_button.Click += new System.EventHandler(this.input_item_remove_button_Click);
+            // 
+            // input_item_add_button
+            // 
+            this.input_item_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
+            this.input_item_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_item_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_item_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_item_add_button.Location = new System.Drawing.Point(7, 145);
+            this.input_item_add_button.Name = "input_item_add_button";
+            this.input_item_add_button.Size = new System.Drawing.Size(75, 65);
+            this.input_item_add_button.TabIndex = 8;
+            this.input_item_add_button.UseVisualStyleBackColor = true;
+            this.input_item_add_button.Click += new System.EventHandler(this.input_item_add_button_Click);
             // 
             // input_item_textBox
             // 
@@ -494,6 +633,20 @@ namespace ngx_docs_managment_application
             this.settings_tabPage.TabIndex = 1;
             this.settings_tabPage.Text = "Settings data";
             this.settings_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // settings_save_button
+            // 
+            this.settings_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
+            this.settings_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.settings_save_button.Location = new System.Drawing.Point(878, 411);
+            this.settings_save_button.Name = "settings_save_button";
+            this.settings_save_button.Size = new System.Drawing.Size(172, 152);
+            this.settings_save_button.TabIndex = 11;
+            this.settings_save_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.settings_save_button.UseVisualStyleBackColor = true;
+            this.settings_save_button.Click += new System.EventHandler(this.settings_save_button_Click);
             // 
             // groupBox14
             // 
@@ -854,149 +1007,61 @@ namespace ngx_docs_managment_application
             this.home_one_radioButton.Text = "Home - 1";
             this.home_one_radioButton.UseVisualStyleBackColor = true;
             // 
-            // input_edit_button
+            // images_tabPage
             // 
-            this.input_edit_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
-            this.input_edit_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_edit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_edit_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_edit_button.Location = new System.Drawing.Point(420, 26);
-            this.input_edit_button.Name = "input_edit_button";
-            this.input_edit_button.Size = new System.Drawing.Size(102, 91);
-            this.input_edit_button.TabIndex = 12;
-            this.input_edit_button.UseVisualStyleBackColor = true;
-            this.input_edit_button.Click += new System.EventHandler(this.input_edit_button_Click);
+            this.images_tabPage.Controls.Add(this.groupBox18);
+            this.images_tabPage.Location = new System.Drawing.Point(4, 29);
+            this.images_tabPage.Name = "images_tabPage";
+            this.images_tabPage.Size = new System.Drawing.Size(1057, 571);
+            this.images_tabPage.TabIndex = 4;
+            this.images_tabPage.Text = "Images";
+            this.images_tabPage.UseVisualStyleBackColor = true;
             // 
-            // input_remove_button
+            // groupBox18
             // 
-            this.input_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
-            this.input_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_remove_button.Location = new System.Drawing.Point(528, 26);
-            this.input_remove_button.Name = "input_remove_button";
-            this.input_remove_button.Size = new System.Drawing.Size(102, 91);
-            this.input_remove_button.TabIndex = 11;
-            this.input_remove_button.UseVisualStyleBackColor = true;
-            this.input_remove_button.Click += new System.EventHandler(this.input_remove_button_Click);
+            this.groupBox18.Controls.Add(this.textBox1);
+            this.groupBox18.Controls.Add(this.label16);
+            this.groupBox18.Controls.Add(this.images_favicon_textBox);
+            this.groupBox18.Controls.Add(this.label15);
+            this.groupBox18.Location = new System.Drawing.Point(3, 3);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(509, 162);
+            this.groupBox18.TabIndex = 0;
+            this.groupBox18.TabStop = false;
             // 
-            // input_add_button
+            // label15
             // 
-            this.input_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
-            this.input_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_add_button.Location = new System.Drawing.Point(312, 26);
-            this.input_add_button.Name = "input_add_button";
-            this.input_add_button.Size = new System.Drawing.Size(102, 91);
-            this.input_add_button.TabIndex = 10;
-            this.input_add_button.UseVisualStyleBackColor = true;
-            this.input_add_button.Click += new System.EventHandler(this.input_add_button_Click);
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label15.Location = new System.Drawing.Point(6, 23);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(71, 25);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Favicon";
             // 
-            // input_album_remove_button
+            // images_favicon_textBox
             // 
-            this.input_album_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
-            this.input_album_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_album_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_album_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_album_remove_button.Location = new System.Drawing.Point(142, 145);
-            this.input_album_remove_button.Name = "input_album_remove_button";
-            this.input_album_remove_button.Size = new System.Drawing.Size(75, 65);
-            this.input_album_remove_button.TabIndex = 9;
-            this.input_album_remove_button.UseVisualStyleBackColor = true;
-            this.input_album_remove_button.Click += new System.EventHandler(this.input_album_remove_button_Click);
+            this.images_favicon_textBox.Location = new System.Drawing.Point(11, 52);
+            this.images_favicon_textBox.Name = "images_favicon_textBox";
+            this.images_favicon_textBox.Size = new System.Drawing.Size(492, 27);
+            this.images_favicon_textBox.TabIndex = 1;
             // 
-            // input_album_add_button
+            // textBox1
             // 
-            this.input_album_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
-            this.input_album_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_album_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_album_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_album_add_button.Location = new System.Drawing.Point(7, 145);
-            this.input_album_add_button.Name = "input_album_add_button";
-            this.input_album_add_button.Size = new System.Drawing.Size(75, 65);
-            this.input_album_add_button.TabIndex = 8;
-            this.input_album_add_button.UseVisualStyleBackColor = true;
-            this.input_album_add_button.Click += new System.EventHandler(this.input_album_add_button_Click);
+            this.textBox1.Location = new System.Drawing.Point(11, 125);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(492, 27);
+            this.textBox1.TabIndex = 3;
             // 
-            // input_tags_remove_button
+            // label16
             // 
-            this.input_tags_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
-            this.input_tags_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_tags_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_tags_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_tags_remove_button.Location = new System.Drawing.Point(142, 145);
-            this.input_tags_remove_button.Name = "input_tags_remove_button";
-            this.input_tags_remove_button.Size = new System.Drawing.Size(75, 65);
-            this.input_tags_remove_button.TabIndex = 9;
-            this.input_tags_remove_button.UseVisualStyleBackColor = true;
-            this.input_tags_remove_button.Click += new System.EventHandler(this.input_tags_remove_button_Click);
-            // 
-            // input_tags_add_button
-            // 
-            this.input_tags_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
-            this.input_tags_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_tags_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_tags_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_tags_add_button.Location = new System.Drawing.Point(7, 145);
-            this.input_tags_add_button.Name = "input_tags_add_button";
-            this.input_tags_add_button.Size = new System.Drawing.Size(75, 65);
-            this.input_tags_add_button.TabIndex = 8;
-            this.input_tags_add_button.UseVisualStyleBackColor = true;
-            this.input_tags_add_button.Click += new System.EventHandler(this.input_tags_add_button_Click);
-            // 
-            // input_item_remove_button
-            // 
-            this.input_item_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
-            this.input_item_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_item_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_item_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_item_remove_button.Location = new System.Drawing.Point(142, 145);
-            this.input_item_remove_button.Name = "input_item_remove_button";
-            this.input_item_remove_button.Size = new System.Drawing.Size(75, 65);
-            this.input_item_remove_button.TabIndex = 9;
-            this.input_item_remove_button.UseVisualStyleBackColor = true;
-            this.input_item_remove_button.Click += new System.EventHandler(this.input_item_remove_button_Click);
-            // 
-            // input_item_add_button
-            // 
-            this.input_item_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
-            this.input_item_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_item_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_item_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_item_add_button.Location = new System.Drawing.Point(7, 145);
-            this.input_item_add_button.Name = "input_item_add_button";
-            this.input_item_add_button.Size = new System.Drawing.Size(75, 65);
-            this.input_item_add_button.TabIndex = 8;
-            this.input_item_add_button.UseVisualStyleBackColor = true;
-            this.input_item_add_button.Click += new System.EventHandler(this.input_item_add_button_Click);
-            // 
-            // settings_save_button
-            // 
-            this.settings_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
-            this.settings_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settings_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settings_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.settings_save_button.Location = new System.Drawing.Point(878, 411);
-            this.settings_save_button.Name = "settings_save_button";
-            this.settings_save_button.Size = new System.Drawing.Size(172, 152);
-            this.settings_save_button.TabIndex = 11;
-            this.settings_save_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.settings_save_button.UseVisualStyleBackColor = true;
-            this.settings_save_button.Click += new System.EventHandler(this.settings_save_button_Click);
-            // 
-            // input_refresh_button
-            // 
-            this.input_refresh_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
-            this.input_refresh_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_refresh_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_refresh_button.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.input_refresh_button.Location = new System.Drawing.Point(97, 1);
-            this.input_refresh_button.Name = "input_refresh_button";
-            this.input_refresh_button.Size = new System.Drawing.Size(26, 27);
-            this.input_refresh_button.TabIndex = 13;
-            this.input_refresh_button.UseVisualStyleBackColor = true;
-            this.input_refresh_button.Click += new System.EventHandler(this.input_refresh_button_Click);
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label16.Location = new System.Drawing.Point(6, 97);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(122, 25);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Images folder";
             // 
             // Managment
             // 
@@ -1051,6 +1116,9 @@ namespace ngx_docs_managment_application
             this.groupBox17.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
+            this.images_tabPage.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1137,5 +1205,11 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.CheckBox preview_show_title_checkBox;
         private System.Windows.Forms.CheckBox preview_show_picture_checkBox;
         private System.Windows.Forms.Button input_refresh_button;
+        private System.Windows.Forms.TabPage images_tabPage;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox images_favicon_textBox;
+        private System.Windows.Forms.Label label15;
     }
 }
