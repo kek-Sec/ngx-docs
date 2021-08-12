@@ -19,9 +19,10 @@ import { ClipboardModule } from 'ngx-clipboard';
 //ngx-toastr
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { HomeTwoComponent } from './@landings/home-two/home-two.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent],
+  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent],
   imports: [
     FormsModule,
     BrowserAnimationsModule, // required animations module
