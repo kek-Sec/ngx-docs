@@ -24,6 +24,13 @@
         <p class="Tags">Url: {{selected_entry.url }}</p>
         <hr class="my-4">
     </div>
+    <div *ngIf="has_album">
+        <hr class="my-4">
+        <button type="button" [routerLink]="['/album', id]"
+            class="show_album btn btn-md btn-success  mx-auto d-block">Show
+            album</button>
+        <hr class="my-4">
+    </div>
     <a class="btn btn-info back-btn btn-lg" href="#" role="button">Back</a>
     <a class="btn btn-success copy-btn btn-lg" (click)="copy()" href="#" role="button">Copy</a>
 

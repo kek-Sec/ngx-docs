@@ -16,6 +16,7 @@ export class DetailedPageTwoComponent implements OnInit {
 
   has_url: boolean;
   has_tags: boolean;
+  has_album: boolean;
   pretty_tags: string;
 
   selected_entry: Content_model;
@@ -33,10 +34,11 @@ export class DetailedPageTwoComponent implements OnInit {
       this.id = +params['id'];
       this.parser.parse();
       this.selected_entry = this.parser.content[this.id];
-      console.log(this.id);
 
       this.has_url = this.selected_entry.url != undefined;
       this.has_tags = this.selected_entry.tags != undefined;
+      this.has_album = this.selected_entry.album != undefined;
+
 
       if (this.has_tags) { this.pretty_tags = JSON.stringify(this.selected_entry.tags); }
     });
