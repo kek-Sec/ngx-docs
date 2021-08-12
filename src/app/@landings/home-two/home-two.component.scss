@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
 .bg {
     background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
@@ -17,4 +19,35 @@
     min-height: 100vh;
     width: 100%;
     position: absolute;
+    font-family: "Inconsolata", monospace;
+}
+
+input {
+    margin-top: 5vh;
+    margin-left: 4vh;
+    margin-right: 4vh;
+    margin-bottom: 8vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+    content: "";
+    height: 6vh;
+    position: absolute;
+    width: 100%;
+    font-size: 150% !important;
+}
+input:focus {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+}
+
+.data-container {
+    margin-left: 4vh;
+    margin-right: 4vh;
+    margin-bottom: 4vh;
+    border: 2px dotted #a4a4a4;
+    border-radius: 40px 40px 40px 40px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
 }
