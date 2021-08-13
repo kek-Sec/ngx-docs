@@ -9,6 +9,7 @@ import { DetailedPageComponent } from './@core/detailed-page-one/detailed-page.c
 import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
 import { HomeTwoComponent } from './@landings/home-two/home-two.component';
 import { AlbumPageComponent } from './@core/album-page/album-page.component';
+import { DetailedPageThreeComponent } from './@core/detailed-page-three/detailed-page-three.component';
 
 //ngx-bootstrap-multiselect
 import { NgxBootstrapMultiselectModule } from 'ngx-bootstrap-multiselect';
@@ -28,7 +29,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 //pagination
 import { NgxPaginationModule } from 'ngx-pagination';
-import { DetailedPageThreeComponent } from './@core/detailed-page-three/detailed-page-three.component';
+
+//font-awesome
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent],
@@ -43,6 +47,7 @@ import { DetailedPageThreeComponent } from './@core/detailed-page-three/detailed
     BrowserModule,
     CarouselModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

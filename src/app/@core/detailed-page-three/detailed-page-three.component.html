@@ -32,13 +32,11 @@
             <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
             </span>
-            <span class="button-text">Back home</span>
+            <span [routerLink]="['/']" class="button-text">Back home</span>
         </button>
-        <button class="copy">
-            <span class="circle" aria-hidden="true">
-                <span class="icon key"></span>
-            </span>
-            <span class="button-text">Back home</span>
-        </button>
+        <a class="btn btn-success copy-btn btn-lg" (click)="copy()" role="button">
+            <fa-icon [icon]="faCopy"></fa-icon>
+        </a>
+
     </div>
 </div>

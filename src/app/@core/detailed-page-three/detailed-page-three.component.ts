@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { ClipboardService } from 'ngx-clipboard';
 import { ToastrService } from 'ngx-toastr';
 import { Content_model } from 'src/app/@Models/Content_model';
@@ -20,6 +21,7 @@ export class DetailedPageThreeComponent implements OnInit {
   has_tags: boolean;
   has_album: boolean;
   pretty_tags: string;
+  faCopy = faCopy;
 
   constructor(
     private route: ActivatedRoute,
