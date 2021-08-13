@@ -1,1 +1,44 @@
-<p>detailed-page-three works!</p>
+<div class="bg">
+    <div class="alert alert-info" role="alert">
+        <h2 class="display-4 text-center"> {{ selected_entry.Title }}
+        </h2>
+        <h5 class="description text-center"> {{ selected_entry.Description }}
+        </h5>
+        <hr class="my-4">
+        <img src="{{ selected_entry.image }}" class="img-fluid mx-auto d-block" alt="Entry image">
+        <hr class="my-4">
+        <ul class="list-group">
+            <div *ngFor="let item of selected_entry.items">
+                <li class="list-group-item list-group-item-light" style="margin-bottom: 1vh;" [innerHTML]="item"></li>
+            </div>
+        </ul>
+        <hr class="my-4">
+        <div *ngIf="has_tags">
+            <p class="Tags">Tags: {{pretty_tags}} </p>
+            <hr class="my-4">
+        </div>
+        <div *ngIf="has_url">
+            <hr class="my-4">
+            <button type="button" class="open-url btn btn-md  mx-auto d-block">Open url</button>
+            <hr class="my-4">
+        </div>
+        <div *ngIf="has_album">
+            <hr class="my-4">
+            <button type="button" [routerLink]="['/album', id]" class="open-album btn btn-md   mx-auto d-block">Open
+                album</button>
+            <hr class="my-4">
+        </div>
+        <button class="back-home">
+            <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">Back home</span>
+        </button>
+        <button class="copy">
+            <span class="circle" aria-hidden="true">
+                <span class="icon key"></span>
+            </span>
+            <span class="button-text">Back home</span>
+        </button>
+    </div>
+</div>

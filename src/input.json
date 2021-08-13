@@ -21,6 +21,7 @@
     "text": "This is the text for this header item.....",
     "image": "assets/images/default.png",
     "items": ["1235","1521421"],
+    "url": "https://test.com",
     "album": ["assets/images/default.png","assets/images/default.png","assets/images/default.png"]
   },
   {
