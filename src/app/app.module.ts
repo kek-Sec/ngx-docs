@@ -28,9 +28,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 
 //pagination
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DetailedPageThreeComponent } from './@core/detailed-page-three/detailed-page-three.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent],
+  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent],
   imports: [
     NgxPaginationModule,
     FormsModule,
