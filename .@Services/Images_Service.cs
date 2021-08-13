@@ -38,7 +38,7 @@ namespace ngx_docs_managment_application._Services
                     }
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("IMAGE_SERVICE|Set_Images_Folder", e.Message);
             }
@@ -74,11 +74,12 @@ namespace ngx_docs_managment_application._Services
                     MessageBox.Show("Successfully saved", "Favicon file", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Logger_Service.Add("IMAGE_SERVICE|Set_Favicon", e.Message);
             }
         }
-            
+
     }
 }

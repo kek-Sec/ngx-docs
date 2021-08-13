@@ -25,7 +25,8 @@ namespace ngx_docs_managment_application._Forms
                 IList<Input_Model> ret = input_arr.ToObject<IList<Input_Model>>();
 
                 return ret;
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_PARSER|parse", e.Message);
                 return null;

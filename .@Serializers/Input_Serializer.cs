@@ -20,9 +20,9 @@ namespace ngx_docs_managment_application._Serializers
                 JArray json = (JArray)JToken.FromObject(input_list);
                 return json.ToString();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Logger_Service.Add("INPUT_SERIALIZER|Serialize",e.Message);
+                Logger_Service.Add("INPUT_SERIALIZER|Serialize", e.Message);
                 return null;
             }
         }

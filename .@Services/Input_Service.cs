@@ -35,7 +35,7 @@ namespace ngx_docs_managment_application._Controllers
                 var json = serializer.Serialize(input_collection);
                 File.WriteAllText(filepath, json);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_SERVICE|UpdateEntry", e.Message);
             }
@@ -55,7 +55,7 @@ namespace ngx_docs_managment_application._Controllers
                 var json = serializer.Serialize(input_collection);
                 File.WriteAllText(filepath, json);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_SERVICE|DeleteEntry", e.Message);
             }
@@ -74,7 +74,7 @@ namespace ngx_docs_managment_application._Controllers
                 var json = serializer.Serialize(input_collection);
                 File.WriteAllText(filepath, json);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_SERVICE|AddEntry", e.Message);
 

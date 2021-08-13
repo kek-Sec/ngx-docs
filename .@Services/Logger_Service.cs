@@ -10,7 +10,7 @@ namespace ngx_docs_managment_application._Services
 {
     class Logger_Service
     {
-        public static void Add(string title,string content)
+        public static void Add(string title, string content)
         {
             MessageBox.Show("Error occured, check logs...");
             FormattableString log_entry = $"[{title}]-[{DateTime.Now.ToString("MM-dd-HH-mm")}]----> {content}\n";

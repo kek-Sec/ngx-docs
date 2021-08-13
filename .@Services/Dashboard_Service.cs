@@ -31,7 +31,7 @@ namespace ngx_docs_managment_application._Controllers
 
                 return true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("DASHBOARD_SERVICE|VerifyProjectFolder", e.Message);
                 return false;

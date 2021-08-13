@@ -24,7 +24,8 @@ namespace ngx_docs_managment_application._Forms
                         MessageBox.Show("Successfully saved", "Project directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Logger_Service.Add("SETTINGS_SERVICE|LoadKeysFolder", e.Message);
             }

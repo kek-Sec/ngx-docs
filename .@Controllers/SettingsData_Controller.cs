@@ -45,11 +45,12 @@ namespace ngx_docs_managment_application._Forms
                 items_count.Value = setting.preview_items_count;
                 description_length.Value = setting.preview_description_text_length;
                 column_count.Value = setting.preview_number_of_columns;
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Logger_Service.Add("SETTINGSDATA_CONTROLLER|UpdateSettingsDataView", e.Message);
             }
-           
+
         }
 
 
@@ -74,7 +75,7 @@ namespace ngx_docs_managment_application._Forms
 
                 ss.Save(settings);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("SETTINGSDATA_CONTROLLER|SaveSettings", e.Message);
             }

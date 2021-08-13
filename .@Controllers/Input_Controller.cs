@@ -29,7 +29,7 @@ namespace ngx_docs_managment_application._Controllers
                     input_lbx.Items.Add(s.Title);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER", e.Message);
                 return;
@@ -48,7 +48,7 @@ namespace ngx_docs_managment_application._Controllers
                 if (index < 0) { return; }
                 lbx.Items.RemoveAt(index);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER|RemoveDataFromListBox", e.Message);
             }
@@ -67,7 +67,7 @@ namespace ngx_docs_managment_application._Controllers
                 lbx.Items.Add(inp.Text);
                 inp.Clear();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER|AddDataToListBox", e.Message);
             }
@@ -111,11 +111,11 @@ namespace ngx_docs_managment_application._Controllers
                 input.UpdateEntry(index, new_entry);
                 return;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER|UpdateEntry", e.Message);
             }
-           
+
         }
 
         /// <summary>
@@ -129,7 +129,8 @@ namespace ngx_docs_managment_application._Controllers
                 if (index == -1) { return; }
                 if (!ConfirmAction("Delete entry")) { return; }
                 input.DeleteEntry(index);
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER|DeleteEntry", e.Message);
             }
@@ -178,7 +179,7 @@ namespace ngx_docs_managment_application._Controllers
                 description.Text = "";
                 return;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER|AddEntry", e.Message);
             }
@@ -226,7 +227,7 @@ namespace ngx_docs_managment_application._Controllers
                 }
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("INPUT_CONTROLLER|SetSelectedItem", e.Message);
             }

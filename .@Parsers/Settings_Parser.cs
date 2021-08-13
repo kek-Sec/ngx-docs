@@ -25,7 +25,7 @@ namespace ngx_docs_managment_application._Forms
 
                 return ret;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("SETTINGS_PARSER|parse", e.Message);
                 return null;

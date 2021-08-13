@@ -43,7 +43,7 @@ namespace ngx_docs_managment_application._Forms
 
                 MessageBox.Show("Saved settings...");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Logger_Service.Add("SETTINGSDATA_SERVICE|Save", e.Message);
                 return;
