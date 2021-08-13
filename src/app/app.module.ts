@@ -26,10 +26,13 @@ import { ToastrModule } from 'ngx-toastr';
 //carousel
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
+//pagination
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent],
   imports: [
+    NgxPaginationModule,
     FormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added

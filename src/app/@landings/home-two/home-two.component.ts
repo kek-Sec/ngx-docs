@@ -18,8 +18,8 @@ import { Settings_model } from 'src/app/@Models/Settings_model';
 })
 export class HomeTwoComponent implements OnInit {
   _settings_item: Array<Settings_model>;
-  content: Array<Content_model>;
 
+  content: Array<Content_model>;
   to_print: Array<Content_model>;
 
   gridColumns = 4;
@@ -34,6 +34,9 @@ export class HomeTwoComponent implements OnInit {
 
   // Text configuration
   myTexts: IMultiSelectTexts = multiselect_model.Texts;
+
+  //Pagination
+  page: number = 1;
 
   constructor(
     private parser: ParserService,
