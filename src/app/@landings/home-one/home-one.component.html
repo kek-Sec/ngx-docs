@@ -10,7 +10,7 @@
   <div class="data-container">
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
       <div [fxFlex]="100 / gridColumns + '%'" fxFlex.xs="100%" fxFlex.md="50%" fxFlex.sm="33%"
-        *ngFor="let p of to_print; let i = index">
+        *ngFor="let p of to_print| paginate: { itemsPerPage: gridColumns * 4, currentPage: page };let i=index;">
         <div class="card border-primary text-center mb-3">
           <div *ngIf="_settings_item[0].preview_show_title">
             <div style="font-weight: bold; text-transform: uppercase" class="card-header">
@@ -49,4 +49,6 @@
       </div>
     </div>
   </div>
+  <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
 </div>

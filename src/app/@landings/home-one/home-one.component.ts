@@ -36,6 +36,9 @@ export class HomeOneComponent implements OnInit {
   // Text configuration
   myTexts: IMultiSelectTexts = multiselect_model.Texts;
 
+  page: number = 1;
+
+
   constructor(
     private parser: ParserService,
     private search: SearchService,
