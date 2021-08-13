@@ -1,9 +1,6 @@
 ﻿using ngx_docs_managment_application._Models;
+using ngx_docs_managment_application._Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ngx_docs_managment_application._Forms
@@ -30,43 +27,57 @@ namespace ngx_docs_managment_application._Forms
         /// <param name="column_count"></param>
         public void UpdateSettingsDataView(CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
         {
-            var setting = ss.settings_model[0];
+            try
+            {
+                var setting = ss.settings_model[0];
 
-            show_picture.Checked = setting.preview_show_picture;
-            show_title.Checked = setting.preview_show_title;
-            show_description.Checked = setting.preview_show_description;
-            show_text.Checked = setting.preview_show_text;
-            show_items.Checked = setting.preview_show_items;
-            show_url.Checked = setting.preview_show_url;
-            show_tags.Checked = setting.preview_show_tags;
-            show_album.Checked = setting.preview_show_album;
+                show_picture.Checked = setting.preview_show_picture;
+                show_title.Checked = setting.preview_show_title;
+                show_description.Checked = setting.preview_show_description;
+                show_text.Checked = setting.preview_show_text;
+                show_items.Checked = setting.preview_show_items;
+                show_url.Checked = setting.preview_show_url;
+                show_tags.Checked = setting.preview_show_tags;
+                show_album.Checked = setting.preview_show_album;
 
-            text_length.Value = setting.preview_text_length;
-            item_length.Value = setting.preview_item_text_length;
-            items_count.Value = setting.preview_items_count;
-            description_length.Value = setting.preview_description_text_length;
-            column_count.Value = setting.preview_number_of_columns;
+                text_length.Value = setting.preview_text_length;
+                item_length.Value = setting.preview_item_text_length;
+                items_count.Value = setting.preview_items_count;
+                description_length.Value = setting.preview_description_text_length;
+                column_count.Value = setting.preview_number_of_columns;
+            }catch(Exception e)
+            {
+                Logger_Service.Add("SETTINGSDATA_CONTROLLER|UpdateSettingsDataView", e.Message);
+            }
+           
         }
 
 
         public void SaveSettings(CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
         {
-            Settings_Model settings = new Settings_Model();
-            settings.preview_show_picture = show_picture.Checked;
-            settings.preview_show_title = show_title.Checked;
-            settings.preview_show_description = show_description.Checked;
-            settings.preview_show_text = show_text.Checked;
-            settings.preview_show_items = show_items.Checked;
-            settings.preview_show_url = show_url.Checked;
-            settings.preview_show_album = show_album.Checked;
-            settings.preview_show_tags = show_tags.Checked;
-            settings.preview_description_text_length = (int)description_length.Value;
-            settings.preview_item_text_length = (int)item_length.Value;
-            settings.preview_items_count = (int)items_count.Value;
-            settings.preview_text_length = (int)text_length.Value;
-            settings.preview_number_of_columns = (int)column_count.Value;
+            try
+            {
+                Settings_Model settings = new Settings_Model();
+                settings.preview_show_picture = show_picture.Checked;
+                settings.preview_show_title = show_title.Checked;
+                settings.preview_show_description = show_description.Checked;
+                settings.preview_show_text = show_text.Checked;
+                settings.preview_show_items = show_items.Checked;
+                settings.preview_show_url = show_url.Checked;
+                settings.preview_show_album = show_album.Checked;
+                settings.preview_show_tags = show_tags.Checked;
+                settings.preview_description_text_length = (int)description_length.Value;
+                settings.preview_item_text_length = (int)item_length.Value;
+                settings.preview_items_count = (int)items_count.Value;
+                settings.preview_text_length = (int)text_length.Value;
+                settings.preview_number_of_columns = (int)column_count.Value;
 
-            ss.Save(settings);
+                ss.Save(settings);
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("SETTINGSDATA_CONTROLLER|SaveSettings", e.Message);
+            }
         }
     }
 }

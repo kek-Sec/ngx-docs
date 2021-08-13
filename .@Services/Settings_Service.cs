@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using ngx_docs_managment_application._Services;
+using System;
+using System.Windows.Forms;
 
 namespace ngx_docs_managment_application._Forms
 {
@@ -10,15 +12,21 @@ namespace ngx_docs_managment_application._Forms
         /// </summary>
         public void LoadKeysFolder()
         {
-            using (var fbd = new FolderBrowserDialog())
+            try
             {
-                DialogResult result = fbd.ShowDialog();
-
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                using (var fbd = new FolderBrowserDialog())
                 {
-                    UpdateSetting("project_path", fbd.SelectedPath);
-                    MessageBox.Show("Successfully saved", "Project directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = fbd.ShowDialog();
+
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                    {
+                        UpdateSetting("project_path", fbd.SelectedPath);
+                        MessageBox.Show("Successfully saved", "Project directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+            }catch(Exception e)
+            {
+                Logger_Service.Add("SETTINGS_SERVICE|LoadKeysFolder", e.Message);
             }
         }
 

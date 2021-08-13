@@ -1,5 +1,6 @@
 ﻿using ngx_docs_managment_application._Models;
 using ngx_docs_managment_application._Serializers;
+using ngx_docs_managment_application._Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,7 +24,7 @@ namespace ngx_docs_managment_application._Forms
             }
             catch (Exception e)
             {
-                Console.Write("error -> " + e.Message.ToString());
+                Logger_Service.Add("SETTINGSDATA_SERVICE|Constructor", e.Message);
             }
         }
 
@@ -44,6 +45,7 @@ namespace ngx_docs_managment_application._Forms
             }
             catch(Exception e)
             {
+                Logger_Service.Add("SETTINGSDATA_SERVICE|Save", e.Message);
                 return;
             }
 

@@ -55,7 +55,7 @@
     <Compile Include=".%40Controllers\SettingsData_Controller.cs" />
     <Compile Include=".%40Serializers\Input_Serializer.cs" />
     <Compile Include=".%40Serializers\Settings_Serializer.cs" />
-    <Compile Include=".%40Serializers\Theming_Serializer.cs" />
+    <Compile Include=".%40Serializers\Generator_Serializer.cs" />
     <Compile Include=".%40Services\Generator_Service.cs" />
     <Compile Include=".%40Services\Images_Service.cs" />
     <Compile Include=".%40Services\Logger_Service.cs" />
@@ -84,7 +84,7 @@
     </Compile>
     <Compile Include=".%40Parsers\Settings_Parser.cs" />
     <Compile Include=".%40Services\Settings_Service.cs" />
-    <Compile Include=".%40Parsers\Theming_Parser.cs" />
+    <Compile Include=".%40Parsers\Generator_Parser.cs" />
     <Compile Include=".%40Services\Validator_Service.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

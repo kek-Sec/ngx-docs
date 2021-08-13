@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ngx_docs_managment_application._Serializers
 {
-    class Theming_Serializer
+    class Generator_Serializer
     {
     }
 }

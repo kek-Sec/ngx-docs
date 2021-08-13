@@ -50,7 +50,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER|RemoveDataFromListBox", e.Message);
             }
         }
 
@@ -69,7 +69,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER|AddDataToListBox", e.Message);
             }
         }
 
@@ -113,7 +113,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER|UpdateEntry", e.Message);
             }
            
         }
@@ -124,9 +124,16 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="index">The index of the item to delete</param>
         public void DeleteEntry(int index)
         {
-            if (index == -1) { return; }
-            if (!ConfirmAction("Delete entry")) { return; }
-            input.DeleteEntry(index);
+            try
+            {
+                if (index == -1) { return; }
+                if (!ConfirmAction("Delete entry")) { return; }
+                input.DeleteEntry(index);
+            }catch(Exception e)
+            {
+                Logger_Service.Add("INPUT_CONTROLLER|DeleteEntry", e.Message);
+            }
+
         }
 
         /// <summary>
@@ -173,7 +180,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER|AddEntry", e.Message);
             }
         }
 
@@ -221,7 +228,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER|SetSelectedItem", e.Message);
             }
 
         }
@@ -242,7 +249,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch (Exception e)
             {
-                Logger_Service.Add("INPUT_CONTROLLER", e.Message);
+                Logger_Service.Add("INPUT_CONTROLLER|FillInputListbox", e.Message);
             }
         }
 

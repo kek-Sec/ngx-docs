@@ -1,10 +1,8 @@
 ﻿using ngx_docs_managment_application._Forms;
+using ngx_docs_managment_application._Services;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ngx_docs_managment_application._Controllers
 {
@@ -19,15 +17,25 @@ namespace ngx_docs_managment_application._Controllers
         /// <returns>True if folder exists false if folder does not exist</returns>
         public bool VerifyProjectFolder()
         {
-            string folder_path = settings.getSetting("project_path");
+            try
+            {
 
-            if (string.IsNullOrEmpty(folder_path)) { return false; }
 
-            if (string.IsNullOrWhiteSpace(folder_path)) { return false; }
+                string folder_path = settings.getSetting("project_path");
 
-            if (!Directory.Exists(folder_path)) { return false; }
+                if (string.IsNullOrEmpty(folder_path)) { return false; }
 
-            return true;
+                if (string.IsNullOrWhiteSpace(folder_path)) { return false; }
+
+                if (!Directory.Exists(folder_path)) { return false; }
+
+                return true;
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("DASHBOARD_SERVICE|VerifyProjectFolder", e.Message);
+                return false;
+            }
         }
     }
 }

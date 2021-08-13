@@ -25,15 +25,22 @@ namespace ngx_docs_managment_application._Services
         /// </summary>
         public void Set_Images_Folder()
         {
-            using (var fbd = new FolderBrowserDialog())
+            try
             {
-                DialogResult result = fbd.ShowDialog();
-
-                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                using (var fbd = new FolderBrowserDialog())
                 {
-                    images_path = fbd.SelectedPath;
-                    MessageBox.Show("Successfully saved", "Images directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = fbd.ShowDialog();
+
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                    {
+                        images_path = fbd.SelectedPath;
+                        MessageBox.Show("Successfully saved", "Images directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
+            }
+            catch(Exception e)
+            {
+                Logger_Service.Add("IMAGE_SERVICE|Set_Images_Folder", e.Message);
             }
         }
 
@@ -42,29 +49,36 @@ namespace ngx_docs_managment_application._Services
         /// </summary>
         public void Set_Favicon()
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog
+            try
             {
-                //InitialDirectory = @"C:\",
-                Title = "Browse favicon",
+                OpenFileDialog openFileDialog1 = new OpenFileDialog
+                {
+                    //InitialDirectory = @"C:\",
+                    Title = "Browse favicon",
 
-                CheckFileExists = true,
-                CheckPathExists = true,
+                    CheckFileExists = true,
+                    CheckPathExists = true,
 
-                DefaultExt = "txt",
-                Filter = "ico files (*.ico)|*.ico",
-                FilterIndex = 2,
-                RestoreDirectory = true,
+                    DefaultExt = "txt",
+                    Filter = "ico files (*.ico)|*.ico",
+                    FilterIndex = 2,
+                    RestoreDirectory = true,
 
-                ReadOnlyChecked = true,
-                ShowReadOnly = true
-            };
+                    ReadOnlyChecked = true,
+                    ShowReadOnly = true
+                };
 
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    favicon_path = openFileDialog1.FileName;
+                    MessageBox.Show("Successfully saved", "Favicon file", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }catch(Exception e)
             {
-                favicon_path = openFileDialog1.FileName;
-                MessageBox.Show("Successfully saved", "Favicon file", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                Logger_Service.Add("IMAGE_SERVICE|Set_Favicon", e.Message);
             }
         }
+            
     }
 }

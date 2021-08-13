@@ -1,4 +1,5 @@
 ﻿using ngx_docs_managment_application._Forms;
+using ngx_docs_managment_application._Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -20,19 +21,26 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="status">The status label</param>
         public void UpdateProjectFolderLabel(Label status)
         {
-            bool ok = ds.VerifyProjectFolder();
-            if (ok)
+            try
             {
-                status.ForeColor = Color.LightSeaGreen;
-                status.Text = "Verified!";
-                return;
-            }
+                bool ok = ds.VerifyProjectFolder();
+                if (ok)
+                {
+                    status.ForeColor = Color.LightSeaGreen;
+                    status.Text = "Verified!";
+                    return;
+                }
 
-            while (!ds.VerifyProjectFolder())
+                while (!ds.VerifyProjectFolder())
+                {
+                    MessageBox.Show("Project folder not found!");
+                    settings.LoadKeysFolder();
+                }
+            }catch(Exception e)
             {
-                MessageBox.Show("Project folder not found!");
-                settings.LoadKeysFolder();
+                Logger_Service.Add("Dashboard_Controller|UpdateProjectFolderLabel", e.Message);
             }
+           
         }
 
     }

@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using ngx_docs_managment_application._Models;
+using ngx_docs_managment_application._Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +27,7 @@ namespace ngx_docs_managment_application._Forms
             }
             catch(Exception e)
             {
+                Logger_Service.Add("SETTINGS_PARSER|parse", e.Message);
                 return null;
             }
         }

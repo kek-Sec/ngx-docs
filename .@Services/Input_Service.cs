@@ -1,6 +1,7 @@
 ﻿using ngx_docs_managment_application._Forms;
 using ngx_docs_managment_application._Models;
 using ngx_docs_managment_application._Serializers;
+using ngx_docs_managment_application._Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -36,7 +37,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-                return;
+                Logger_Service.Add("INPUT_SERVICE|UpdateEntry", e.Message);
             }
 
         }
@@ -56,7 +57,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
-
+                Logger_Service.Add("INPUT_SERVICE|DeleteEntry", e.Message);
             }
         }
 
@@ -75,6 +76,7 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch(Exception e)
             {
+                Logger_Service.Add("INPUT_SERVICE|AddEntry", e.Message);
 
             }
         }
@@ -91,7 +93,8 @@ namespace ngx_docs_managment_application._Controllers
             }
             catch (Exception e)
             {
-                Console.Write("error -> " + e.Message.ToString());
+                Logger_Service.Add("INPUT_SERVICE|LoadData", e.Message);
+
             }
         }
     }
