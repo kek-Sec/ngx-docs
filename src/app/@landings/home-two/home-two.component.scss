@@ -79,3 +79,11 @@ input:focus {
 img {
     max-height: 15vh;
 }
+
+pagination-controls {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    padding-left: 0;
+    font-size: 125%;
+}
