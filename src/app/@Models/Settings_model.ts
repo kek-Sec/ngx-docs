@@ -16,4 +16,5 @@ export class Settings_model {
 
   //flex layout settings
   preview_number_of_columns?: number = 4;
+
 }
