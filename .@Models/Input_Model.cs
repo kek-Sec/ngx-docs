@@ -7,6 +7,7 @@ namespace ngx_docs_managment_application._Models
 
     class Input_Model
     {
+        public int id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string text { get; set; }

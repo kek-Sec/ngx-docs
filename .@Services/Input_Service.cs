@@ -69,7 +69,9 @@ namespace ngx_docs_managment_application._Controllers
         {
             try
             {
+               
                 input_collection.Add(input);
+            
                 var filepath = settings.getSetting("project_path") + "\\src\\input.json";
                 var json = serializer.Serialize(input_collection);
                 File.WriteAllText(filepath, json);
