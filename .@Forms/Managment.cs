@@ -21,6 +21,7 @@ namespace ngx_docs_managment_application
         readonly Input_Controller ic = new Input_Controller();
         readonly SettingsData_Controller sdc = new SettingsData_Controller();
         readonly Images_Controller imgc = new Images_Controller();
+        readonly Generator_Controller ggc = new Generator_Controller();
         public Managment()
         {
             InitializeComponent();
@@ -140,6 +141,11 @@ namespace ngx_docs_managment_application
         private void dashboard_generate_settings_button_Click(object sender, EventArgs e)
         {
             dc.generateSettingsButton();
+        }
+
+        private void serve_button_Click(object sender, EventArgs e)
+        {
+            ggc.doServe();
         }
     }
 }

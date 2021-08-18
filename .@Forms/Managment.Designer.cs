@@ -1147,6 +1147,7 @@ namespace ngx_docs_managment_application
             this.serve_button.Text = "Serve";
             this.serve_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.serve_button.UseVisualStyleBackColor = true;
+            this.serve_button.Click += new System.EventHandler(this.serve_button_Click);
             // 
             // groupBox17
             // 

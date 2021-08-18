@@ -65,7 +65,7 @@
     <Compile Include=".%40Controllers\Input_Controller.cs" />
     <Compile Include=".%40Controllers\MainForm_Controller.cs" />
     <Compile Include=".%40Controllers\Settings_Controller.cs" />
-    <Compile Include=".%40Controllers\Geneator_Controller.cs" />
+    <Compile Include=".%40Controllers\Generator_Controller.cs" />
     <Compile Include=".%40Models\Input_Model.cs" />
     <Compile Include=".%40Models\Settings_Model.cs" />
     <Compile Include=".%40Models\Theming_Model.cs" />
