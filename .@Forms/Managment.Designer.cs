@@ -107,7 +107,6 @@ namespace ngx_docs_managment_application
             this.preview_show_picture_checkBox = new System.Windows.Forms.CheckBox();
             this.settings_save_button = new System.Windows.Forms.Button();
             this.images_tabPage = new System.Windows.Forms.TabPage();
-            this.images_save_button = new System.Windows.Forms.Button();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -984,7 +983,6 @@ namespace ngx_docs_managment_application
             // 
             // images_tabPage
             // 
-            this.images_tabPage.Controls.Add(this.images_save_button);
             this.images_tabPage.Controls.Add(this.groupBox18);
             this.images_tabPage.Location = new System.Drawing.Point(4, 29);
             this.images_tabPage.Name = "images_tabPage";
@@ -992,19 +990,6 @@ namespace ngx_docs_managment_application
             this.images_tabPage.TabIndex = 4;
             this.images_tabPage.Text = "Images";
             this.images_tabPage.UseVisualStyleBackColor = true;
-            // 
-            // images_save_button
-            // 
-            this.images_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
-            this.images_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.images_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.images_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.images_save_button.Location = new System.Drawing.Point(882, 416);
-            this.images_save_button.Name = "images_save_button";
-            this.images_save_button.Size = new System.Drawing.Size(172, 152);
-            this.images_save_button.TabIndex = 12;
-            this.images_save_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.images_save_button.UseVisualStyleBackColor = true;
             // 
             // groupBox18
             // 
@@ -1147,7 +1132,6 @@ namespace ngx_docs_managment_application
             this.serve_button.Text = "Serve";
             this.serve_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.serve_button.UseVisualStyleBackColor = true;
-            this.serve_button.Click += new System.EventHandler(this.serve_button_Click);
             // 
             // groupBox17
             // 
@@ -1405,6 +1389,5 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.Button dashboard_generate_settings_button;
         private System.Windows.Forms.Button dashboard_generate_input_button;
-        private System.Windows.Forms.Button images_save_button;
     }
 }

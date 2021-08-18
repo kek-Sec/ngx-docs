@@ -1,6 +1,7 @@
 ﻿using ngx_docs_managment_application._Forms;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace ngx_docs_managment_application._Services
 
                     if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                     {
-                        images_path = fbd.SelectedPath;
+                        DirectoryCopy(fbd.SelectedPath, images_path, true);
                         MessageBox.Show("Successfully saved", "Images directory", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -70,7 +71,8 @@ namespace ngx_docs_managment_application._Services
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    favicon_path = openFileDialog1.FileName;
+                    File.Copy(openFileDialog1.FileName,favicon_path);
+                    
                     MessageBox.Show("Successfully saved", "Favicon file", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -80,6 +82,40 @@ namespace ngx_docs_managment_application._Services
                 Logger_Service.Add("IMAGE_SERVICE|Set_Favicon", e.Message);
             }
         }
+        private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
+        {
+            // Get the subdirectories for the specified directory.
+            DirectoryInfo dir = new DirectoryInfo(sourceDirName);
 
+            if (!dir.Exists)
+            {
+                throw new DirectoryNotFoundException(
+                    "Source directory does not exist or could not be found: "
+                    + sourceDirName);
+            }
+
+            DirectoryInfo[] dirs = dir.GetDirectories();
+
+            // If the destination directory doesn't exist, create it.       
+            Directory.CreateDirectory(destDirName);
+
+            // Get the files in the directory and copy them to the new location.
+            FileInfo[] files = dir.GetFiles();
+            foreach (FileInfo file in files)
+            {
+                string tempPath = Path.Combine(destDirName, file.Name);
+                file.CopyTo(tempPath, false);
+            }
+
+            // If copying subdirectories, copy them and their contents to new location.
+            if (copySubDirs)
+            {
+                foreach (DirectoryInfo subdir in dirs)
+                {
+                    string tempPath = Path.Combine(destDirName, subdir.Name);
+                    DirectoryCopy(subdir.FullName, tempPath, copySubDirs);
+                }
+            }
+        }
     }
 }

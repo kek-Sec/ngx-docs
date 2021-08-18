@@ -143,9 +143,9 @@ namespace ngx_docs_managment_application
             dc.generateSettingsButton();
         }
 
-        private void serve_button_Click(object sender, EventArgs e)
+        private void images_save_button_Click(object sender, EventArgs e)
         {
-            ggc.doServe();
+
         }
     }
 }
