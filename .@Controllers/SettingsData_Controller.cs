@@ -7,7 +7,7 @@ namespace ngx_docs_managment_application._Forms
 {
     class SettingsData_Controller
     {
-        SettingsData_Service ss = new SettingsData_Service();
+        readonly SettingsData_Service ss = new SettingsData_Service();
 
         /// <summary>
         /// Update Settings data view
@@ -53,7 +53,22 @@ namespace ngx_docs_managment_application._Forms
 
         }
 
-
+        /// <summary>
+        /// Save settings 
+        /// </summary>
+        /// <param name="show_picture"></param>
+        /// <param name="show_title"></param>
+        /// <param name="show_description"></param>
+        /// <param name="show_text"></param>
+        /// <param name="show_items"></param>
+        /// <param name="show_url"></param>
+        /// <param name="show_album"></param>
+        /// <param name="show_tags"></param>
+        /// <param name="description_length"></param>
+        /// <param name="text_length"></param>
+        /// <param name="item_length"></param>
+        /// <param name="items_count"></param>
+        /// <param name="column_count"></param>
         public void SaveSettings(CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
         {
             try

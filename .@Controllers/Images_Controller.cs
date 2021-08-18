@@ -1,9 +1,5 @@
 ﻿using ngx_docs_managment_application._Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ngx_docs_managment_application._Controllers
 {
@@ -11,11 +7,18 @@ namespace ngx_docs_managment_application._Controllers
     {
         Images_Service img = new Images_Service();
 
+        /// <summary>
+        /// Set favicon button handler
+        /// </summary>
         public void Favicon_btn()
         {
             img.Set_Favicon();
         }
 
+
+        /// <summary>
+        /// Set images folder button handler
+        /// </summary>
         public void ImagesFolder_btn()
         {
             img.Set_Images_Folder();

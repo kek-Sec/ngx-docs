@@ -5,6 +5,7 @@ namespace ngx_docs_managment_application._Models
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
 
+    //Model that describes input.json entities
     class Input_Model
     {
         public int id { get; set; }

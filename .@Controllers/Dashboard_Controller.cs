@@ -1,19 +1,15 @@
 ﻿using ngx_docs_managment_application._Forms;
 using ngx_docs_managment_application._Services;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ngx_docs_managment_application._Controllers
 {
     class Dashboard_Controller
     {
-        Dashboard_Service ds = new Dashboard_Service();
-        Settings_Service settings = new Settings_Service();
+        readonly Dashboard_Service ds = new Dashboard_Service();
+        readonly Settings_Service settings = new Settings_Service();
 
         /// <summary>
         /// Updates the label that states the status of the project folder directory
@@ -44,11 +40,17 @@ namespace ngx_docs_managment_application._Controllers
 
         }
 
+        /// <summary>
+        /// Generate sample input button handler
+        /// </summary>
         public void generateInputButton()
         {
             ds.GenerateSampleInput();
         }
 
+        /// <summary>
+        /// Generate sample settings button handler
+        /// </summary>
         public void generateSettingsButton()
         {
             ds.GenerateSampleSettings();

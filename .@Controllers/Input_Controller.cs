@@ -254,6 +254,11 @@ namespace ngx_docs_managment_application._Controllers
             }
         }
 
+        /// <summary>
+        /// Helper function to show a confirmation message box
+        /// </summary>
+        /// <param name="title">The messagebox title</param>
+        /// <returns></returns>
         private bool ConfirmAction(string title) => (MessageBox.Show("Confirm action", title,
    MessageBoxButtons.YesNo, MessageBoxIcon.Question,
    MessageBoxDefaultButton.Button1) == DialogResult.Yes);

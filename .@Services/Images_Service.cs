@@ -1,10 +1,6 @@
 ﻿using ngx_docs_managment_application._Forms;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ngx_docs_managment_application._Services
@@ -60,7 +56,7 @@ namespace ngx_docs_managment_application._Services
                     CheckFileExists = true,
                     CheckPathExists = true,
 
-                    DefaultExt = "txt",
+                    DefaultExt = "ico",
                     Filter = "ico files (*.ico)|*.ico",
                     FilterIndex = 2,
                     RestoreDirectory = true,
@@ -71,8 +67,8 @@ namespace ngx_docs_managment_application._Services
 
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    File.Copy(openFileDialog1.FileName,favicon_path);
-                    
+                    File.Copy(openFileDialog1.FileName, favicon_path);
+
                     MessageBox.Show("Successfully saved", "Favicon file", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
@@ -82,6 +78,14 @@ namespace ngx_docs_managment_application._Services
                 Logger_Service.Add("IMAGE_SERVICE|Set_Favicon", e.Message);
             }
         }
+
+
+        /// <summary>
+        /// Helper utility for copying directories 
+        /// </summary>
+        /// <param name="sourceDirName">Source directory</param>
+        /// <param name="destDirName">Destination directory</param>
+        /// <param name="copySubDirs">boolean whether to copy sub directories</param>
         private static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs)
         {
             // Get the subdirectories for the specified directory.

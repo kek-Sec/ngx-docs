@@ -9,6 +9,7 @@ namespace ngx_docs_managment_application._Models
 {
     [JsonObject(ItemNullValueHandling = NullValueHandling.Ignore)]
 
+    ///Model that desrcibes the settings.json entities
     class Settings_Model
     {
         public bool preview_show_picture { get; set; }
