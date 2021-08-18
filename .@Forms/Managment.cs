@@ -20,6 +20,7 @@ namespace ngx_docs_managment_application
         readonly Settings_Controller sc = new Settings_Controller();
         readonly Input_Controller ic = new Input_Controller();
         readonly SettingsData_Controller sdc = new SettingsData_Controller();
+        readonly Images_Controller imgc = new Images_Controller();
         public Managment()
         {
             InitializeComponent();
@@ -119,6 +120,16 @@ namespace ngx_docs_managment_application
         private void input_refresh_button_Click(object sender, EventArgs e)
         {
             ic.UpdateInput(input_listbox);
+        }
+
+        private void images_favicon_textBox_Click(object sender, EventArgs e)
+        {
+            imgc.Favicon_btn();
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            imgc.ImagesFolder_btn();
         }
     }
 }
