@@ -131,5 +131,15 @@ namespace ngx_docs_managment_application
         {
             imgc.ImagesFolder_btn();
         }
+
+        private void dashboard_generate_input_button_Click(object sender, EventArgs e)
+        {
+            dc.generateInputButton();
+        }
+
+        private void dashboard_generate_settings_button_Click(object sender, EventArgs e)
+        {
+            dc.generateSettingsButton();
+        }
     }
 }

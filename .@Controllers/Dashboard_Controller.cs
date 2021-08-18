@@ -44,5 +44,15 @@ namespace ngx_docs_managment_application._Controllers
 
         }
 
+        public void generateInputButton()
+        {
+            ds.GenerateSampleInput();
+        }
+
+        public void generateSettingsButton()
+        {
+            ds.GenerateSampleSettings();
+        }
+
     }
 }

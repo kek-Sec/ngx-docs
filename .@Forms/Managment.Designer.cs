@@ -32,8 +32,8 @@ namespace ngx_docs_managment_application
             this.managment_tabControl = new System.Windows.Forms.TabControl();
             this.dashboard_tabPage = new System.Windows.Forms.TabPage();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dashboard_generate_settings_button = new System.Windows.Forms.Button();
+            this.dashboard_generate_input_button = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dashboard_project_path_status_label = new System.Windows.Forms.Label();
@@ -107,6 +107,7 @@ namespace ngx_docs_managment_application
             this.preview_show_picture_checkBox = new System.Windows.Forms.CheckBox();
             this.settings_save_button = new System.Windows.Forms.Button();
             this.images_tabPage = new System.Windows.Forms.TabPage();
+            this.images_save_button = new System.Windows.Forms.Button();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -190,8 +191,8 @@ namespace ngx_docs_managment_application
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.button2);
-            this.groupBox22.Controls.Add(this.button1);
+            this.groupBox22.Controls.Add(this.dashboard_generate_settings_button);
+            this.groupBox22.Controls.Add(this.dashboard_generate_input_button);
             this.groupBox22.Location = new System.Drawing.Point(3, 401);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(1051, 167);
@@ -199,27 +200,29 @@ namespace ngx_docs_managment_application
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Helpers";
             // 
-            // button2
+            // dashboard_generate_settings_button
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(155, 39);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(143, 122);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Generate sample settings.json";
-            this.button2.UseVisualStyleBackColor = true;
+            this.dashboard_generate_settings_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dashboard_generate_settings_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_generate_settings_button.Location = new System.Drawing.Point(155, 39);
+            this.dashboard_generate_settings_button.Name = "dashboard_generate_settings_button";
+            this.dashboard_generate_settings_button.Size = new System.Drawing.Size(143, 122);
+            this.dashboard_generate_settings_button.TabIndex = 1;
+            this.dashboard_generate_settings_button.Text = "Generate sample settings.json";
+            this.dashboard_generate_settings_button.UseVisualStyleBackColor = true;
+            this.dashboard_generate_settings_button.Click += new System.EventHandler(this.dashboard_generate_settings_button_Click);
             // 
-            // button1
+            // dashboard_generate_input_button
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(6, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 122);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Generate sample input.json";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dashboard_generate_input_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.dashboard_generate_input_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_generate_input_button.Location = new System.Drawing.Point(6, 40);
+            this.dashboard_generate_input_button.Name = "dashboard_generate_input_button";
+            this.dashboard_generate_input_button.Size = new System.Drawing.Size(143, 122);
+            this.dashboard_generate_input_button.TabIndex = 0;
+            this.dashboard_generate_input_button.Text = "Generate sample input.json";
+            this.dashboard_generate_input_button.UseVisualStyleBackColor = true;
+            this.dashboard_generate_input_button.Click += new System.EventHandler(this.dashboard_generate_input_button_Click);
             // 
             // groupBox2
             // 
@@ -981,6 +984,7 @@ namespace ngx_docs_managment_application
             // 
             // images_tabPage
             // 
+            this.images_tabPage.Controls.Add(this.images_save_button);
             this.images_tabPage.Controls.Add(this.groupBox18);
             this.images_tabPage.Location = new System.Drawing.Point(4, 29);
             this.images_tabPage.Name = "images_tabPage";
@@ -988,6 +992,19 @@ namespace ngx_docs_managment_application
             this.images_tabPage.TabIndex = 4;
             this.images_tabPage.Text = "Images";
             this.images_tabPage.UseVisualStyleBackColor = true;
+            // 
+            // images_save_button
+            // 
+            this.images_save_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.save;
+            this.images_save_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.images_save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.images_save_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.images_save_button.Location = new System.Drawing.Point(882, 416);
+            this.images_save_button.Name = "images_save_button";
+            this.images_save_button.Size = new System.Drawing.Size(172, 152);
+            this.images_save_button.TabIndex = 12;
+            this.images_save_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.images_save_button.UseVisualStyleBackColor = true;
             // 
             // groupBox18
             // 
@@ -1385,7 +1402,8 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.GroupBox groupBox21;
         private System.Windows.Forms.RichTextBox generator_logger_richTextBox;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button dashboard_generate_settings_button;
+        private System.Windows.Forms.Button dashboard_generate_input_button;
+        private System.Windows.Forms.Button images_save_button;
     }
 }
