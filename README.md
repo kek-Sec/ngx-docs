@@ -1,7 +1,7 @@
-<p align="center">
+<div align="center">
     <h1>ngx-docs</h1>
     <h3><i>easy,responsive,fast,friendly</i></h3>
-</p>
+</div>
 A ready to implement boilerplate **angular 12** knowledge base search tool. 
 
 
