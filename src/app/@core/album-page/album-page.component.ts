@@ -11,7 +11,7 @@ import { ParserService } from 'src/app/@Services/parser.service';
 })
 export class AlbumPageComponent implements OnInit {
 
-  //carousel options
+  //default carousel options
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: false,

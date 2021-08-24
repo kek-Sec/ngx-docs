@@ -20,6 +20,7 @@ export class HomeTwoComponent implements OnInit {
   _settings_item: Array<Settings_model>;
 
   content: Array<Content_model>;
+  
   to_print: Array<Content_model>;
 
   gridColumns = 4;
@@ -45,9 +46,13 @@ export class HomeTwoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    //parse input.json
     this.content = this.parser.parse();
+    //set to_print collection
     this.to_print = this.content;
+    //parse settings.json
     this._settings_item = this.settings.parse();
+    //set grid columns from settings file
     this.gridColumns = this._settings_item[0].preview_number_of_columns as number;
 
   }

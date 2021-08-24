@@ -67,7 +67,7 @@ export class SearchService {
         continue;
       }
 
-      //By tags
+      //By tags -- needs re work
       if (dataset[i].tags == undefined) {
         continue;
       }
@@ -77,6 +77,8 @@ export class SearchService {
         continue;
       }
     }
+
+    //show success toast
     this.toastr.success('', 'Fetched [' + to_return.length + ']', {
       positionClass: 'toast-bottom-left',
       progressBar: true,

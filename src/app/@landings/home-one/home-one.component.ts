@@ -17,8 +17,7 @@ import { Settings_model } from 'src/app/@Models/Settings_model';
   styleUrls: ['./home-one.component.scss'],
 })
 export class HomeOneComponent implements OnInit {
-
-  _settings_item: Array<Settings_model>;  //should be changed to object not array
+  _settings_item: Array<Settings_model>; //should be changed to object not array
   content: Array<Content_model>;
 
   to_print: Array<Content_model>;
@@ -36,21 +35,25 @@ export class HomeOneComponent implements OnInit {
   // Text configuration
   myTexts: IMultiSelectTexts = multiselect_model.Texts;
 
+  //used for pagination
   page: number = 1;
-
 
   constructor(
     private parser: ParserService,
     private search: SearchService,
     private settings: SettingsParserService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
+    //parse input.json
     this.content = this.parser.parse();
+    //set to_print collection
     this.to_print = this.content;
+    //parse settings.json
     this._settings_item = this.settings.parse();
-    this.gridColumns = this._settings_item[0].preview_number_of_columns as number;
-
+    //set grid columns from settings file
+    this.gridColumns = this._settings_item[0]
+      .preview_number_of_columns as number;
   }
 
   /**
