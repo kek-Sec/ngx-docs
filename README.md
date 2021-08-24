@@ -1,5 +1,6 @@
-# ngx-docs
-
+<p align="center">
+    # ngx-docs
+</p>
 A ready to implement boilerplate **angular 12** knowledge base search tool. 
 
 
