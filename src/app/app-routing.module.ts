@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlbumPageComponent } from './@core/album-page/album-page.component';
-import { DetailedPageComponent } from './@core/detailed-page-one/detailed-page.component';
 import { DetailedPageThreeComponent } from './@core/detailed-page-three/detailed-page-three.component';
 import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
 import { HomeOneComponent } from './@landings/home-one/home-one.component';

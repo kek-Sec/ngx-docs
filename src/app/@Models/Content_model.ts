@@ -1,4 +1,6 @@
+
 export class Content_model {
+  id: Number;
   Title: string;
   Description: string;
   text: string;

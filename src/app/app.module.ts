@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeOneComponent } from './@landings/home-one/home-one.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DetailedPageComponent } from './@core/detailed-page-one/detailed-page.component';
 import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
 import { HomeTwoComponent } from './@landings/home-two/home-two.component';
 import { AlbumPageComponent } from './@core/album-page/album-page.component';
@@ -35,7 +34,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeOneComponent, DetailedPageComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent],
+  declarations: [AppComponent, HomeOneComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent],
   imports: [
     NgxPaginationModule,
     FormsModule,

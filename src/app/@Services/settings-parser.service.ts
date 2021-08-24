@@ -13,15 +13,14 @@ export class SettingsParserService {
   /**
    * Parses the local settings.json file
    *
-   *
-   *
    * @returns Settings_model array
    *
    * @services
    */
   parse(): Array<Settings_model> {
-    this.content = plainToClass(Settings_model, this.DocJson as []);
-    return this.content;
+
+      this.content = plainToClass(Settings_model, this.DocJson as []);
+      return this.content;
   }
 
   constructor() { }
