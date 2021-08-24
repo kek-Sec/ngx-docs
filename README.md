@@ -1,27 +1,22 @@
-# NgxDocs
+# ngx-docs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0-next.2.
+A ready to implement boilerplate **angular 12** knowledge base search tool. 
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Demo
 
-## Code scaffolding
+The project's documentation is built using this template, play with it live here
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## input.json accepted values
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+| Variable          | Type     |Optional?|Example|Note|
+| ----------------- | -------- |--------|--------|----|
+| id | Integer |**False**|"id":**1**|Auto-filled by the ngx-docs managment application
+| Title |string |**False**|"Title":**"Entry title"**| The title displayed on every card
+| Description |string| **False** | "Description":**"A little story"**|The description displayed under the card image
+| text |string | **False** | "text":**"this is an entry about..."**|The main text of the entry
+| image|string | **False**| "image":**"assets/images/default.png"**|The image displayed on the card
+| items|string[]| **False**|  "items": **["a","b","c"]**|The items are displayed as list items
+| tags |string[]| **True**| "tags":**["easy","searching"]**|The tags are mainly used in optimizing your searches
+| url  |string| **True**| "url":**"google.com"**|If your entry has a relative url you can include it here
+| album| string[]| **True**| "album":**["assets/images/1.png","assets/images/2.png"]**|If your entry has more than one iamge you can include them here
