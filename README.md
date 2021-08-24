@@ -1,9 +1,16 @@
 <div align="center">
     <h1>ngx-docs</h1>
     <h3><i>easy,responsive,fast,friendly</i></h3>
-    <p>A ready to implement boilerplate <b>angular</b> 12 knowledge base search tool. </p>
+    <p>A ready to implement <b>angular 12</b> knowledge base template. </p>
 </div>
 
+## Features
+
+- 3 Landing pages
+- 2 detailed pages
+- .net application for generating input & managing your project
+
+  
 
 ## Demo
 
