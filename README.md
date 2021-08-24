@@ -1,7 +1,9 @@
 <div align="center">
+  <img src="https://i.imgur.com/HeGpqsy.png" alt="Italian Trulli">
     <h1>ngx-docs</h1>
     <h3><i>easy,responsive,fast,friendly</i></h3>
     <p>A ready to implement <b>angular 12</b> knowledge base template. </p>
+ 
 </div>
 
 ## Features
@@ -9,7 +11,8 @@
 - 3 Landing pages
 - 2 detailed pages
 - .net application for generating input & managing your project
-
+- ngx-owl-carousel template page
+- ngx-toastr, ngx-clipboard, angular-flexbox
   
 
 ## Demo
@@ -29,3 +32,15 @@ The project's documentation is built using this template, play with it live here
 | tags |string[]| **True**| "tags":**["easy","searching"]**|The tags are mainly used in optimizing your searches
 | url  |string| **True**| "url":**"google.com"**|If your entry has a relative url you can include it here
 | album| string[]| **True**| "album":**["assets/images/1.png","assets/images/2.png"]**|If your entry has more than one iamge you can include them here
+
+
+
+
+## Contributing
+
+Contributions are always welcome!
+
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
