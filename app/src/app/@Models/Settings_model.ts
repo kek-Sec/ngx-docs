@@ -4,9 +4,9 @@ export class Settings_model {
   preview_show_description?: boolean = true;
   preview_show_text?: boolean = true;
   preview_show_items?: boolean = true;
-  preview_show_url?: boolean = false;
-  preview_show_album?: boolean = false;
-  preview_show_tags?: boolean = false;
+  preview_show_url?: boolean = false;   //not implemented
+  preview_show_album?: boolean = false; //not implemented
+  preview_show_tags?: boolean = false;  //not implemented
 
   //preview settings
   preview_description_text_length?: number = 15;
