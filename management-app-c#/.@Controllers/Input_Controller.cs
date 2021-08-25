@@ -199,7 +199,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="tags">Tags listbox</param>
         /// <param name="items">Items listbox</param>
         /// <param name="album">Album listbox</param>
-        public void SetSelectedItem(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
+        public void SetSelectedItem(int index,Label id_label, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
         {
             try
             {
@@ -210,6 +210,7 @@ namespace ngx_docs_managment_application._Controllers
                 text.Text = inpt.text;
                 picture.Text = inpt.image;
                 url.Text = inpt.url;
+                id_label.Text = inpt.id.ToString();
 
                 //clear listboxes
                 items.Items.Clear();

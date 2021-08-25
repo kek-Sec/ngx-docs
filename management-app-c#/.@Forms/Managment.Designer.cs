@@ -128,6 +128,8 @@ namespace ngx_docs_managment_application
             this.home_three_checkBox = new System.Windows.Forms.CheckBox();
             this.home_two_checkBox = new System.Windows.Forms.CheckBox();
             this.home_one_checkBox = new System.Windows.Forms.CheckBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.input_id_label = new System.Windows.Forms.Label();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox22.SuspendLayout();
@@ -316,6 +318,8 @@ namespace ngx_docs_managment_application
             // 
             // groupBox8
             // 
+            this.groupBox8.Controls.Add(this.input_id_label);
+            this.groupBox8.Controls.Add(this.label18);
             this.groupBox8.Controls.Add(this.input_edit_button);
             this.groupBox8.Controls.Add(this.input_remove_button);
             this.groupBox8.Controls.Add(this.input_add_button);
@@ -1223,6 +1227,26 @@ namespace ngx_docs_managment_application
             this.home_one_checkBox.Text = "Home 1";
             this.home_one_checkBox.UseVisualStyleBackColor = true;
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.label18.Location = new System.Drawing.Point(767, 23);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 25);
+            this.label18.TabIndex = 13;
+            this.label18.Text = "Entry id:";
+            // 
+            // input_id_label
+            // 
+            this.input_id_label.AutoSize = true;
+            this.input_id_label.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
+            this.input_id_label.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.input_id_label.Location = new System.Drawing.Point(854, 23);
+            this.input_id_label.Name = "input_id_label";
+            this.input_id_label.Size = new System.Drawing.Size(0, 25);
+            this.input_id_label.TabIndex = 14;
+            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1245,6 +1269,7 @@ namespace ngx_docs_managment_application
             this.input_tabPage.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1389,5 +1414,7 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.Button dashboard_generate_settings_button;
         private System.Windows.Forms.Button dashboard_generate_input_button;
+        private System.Windows.Forms.Label input_id_label;
+        private System.Windows.Forms.Label label18;
     }
 }
