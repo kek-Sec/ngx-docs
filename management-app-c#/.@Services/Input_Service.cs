@@ -30,6 +30,7 @@ namespace ngx_docs_managment_application._Controllers
         {
             try
             {
+                input.id = index;
                 input_collection[index] = input;
                 var filepath = settings.getSetting("project_path") + "\\src\\input.json";
                 var json = serializer.Serialize(input_collection);
@@ -69,7 +70,8 @@ namespace ngx_docs_managment_application._Controllers
         {
             try
             {
-
+                int id = input_collection.Count;
+                input.id = id;
                 input_collection.Add(input);
 
                 var filepath = settings.getSetting("project_path") + "\\src\\input.json";

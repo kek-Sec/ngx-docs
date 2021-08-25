@@ -90,19 +90,20 @@ namespace ngx_docs_managment_application._Controllers
             try
             {
                 if (!ConfirmAction("Update entry")) { return; }
-                bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
+                bool validate_input = validator.ValidateTextBox(title);
                 if (!validate_input) { MessageBox.Show("Fields missing"); return; }
 
                 Input_Model new_entry = new Input_Model();
                 new_entry.Title = title.Text;
-                new_entry.Description = description.Text;
-                new_entry.text = text.Text;
-                new_entry.image = picture.Text;
 
-                foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
+                
 
                 //optional fields
+                if (description.Text.Length > 0) { new_entry.Description = description.Text; }
+                if (text.Text.Length > 0) { new_entry.text = text.Text; }
+                if (picture.Text.Length >0) { new_entry.image = picture.Text; }
                 if (url.Text.Length > 0) { new_entry.url = url.Text; }
+                if (items.Items.Count > 0) { new_entry.items = new List<string>(); foreach (string s in items.Items) {  new_entry.items.Add(s); } }
                 if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
                 if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
 
@@ -153,18 +154,19 @@ namespace ngx_docs_managment_application._Controllers
             try
             {
                 if (!ConfirmAction("Add entry")) { return; }
-                bool validate_input = items.Items.Count > 0 && validator.ValidateTextBox(title) && validator.ValidateTextBox(description) && validator.ValidateTextBox(text) && validator.ValidateTextBox(picture);
+                bool validate_input = validator.ValidateTextBox(title);
                 if (!validate_input) { MessageBox.Show("Fields missing"); return; }
                 Input_Model new_entry = new Input_Model();
                 new_entry.Title = title.Text;
-                new_entry.Description = description.Text;
-                new_entry.text = text.Text;
-                new_entry.image = picture.Text;
 
-                foreach (string s in items.Items) { new_entry.items = new List<string>(); new_entry.items.Add(s); }
+
 
                 //optional fields
+                if (description.Text.Length > 0) { new_entry.Description = description.Text; }
+                if (text.Text.Length > 0) { new_entry.text = text.Text; }
+                if (picture.Text.Length > 0) { new_entry.image = picture.Text; }
                 if (url.Text.Length > 0) { new_entry.url = url.Text; }
+                if (items.Items.Count > 0) { new_entry.items = new List<string>(); foreach (string s in items.Items) { new_entry.items.Add(s); } }
                 if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
                 if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
 
