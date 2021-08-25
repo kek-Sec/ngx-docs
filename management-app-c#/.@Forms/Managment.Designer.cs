@@ -127,6 +127,7 @@ namespace ngx_docs_managment_application
             this.home_three_checkBox = new System.Windows.Forms.CheckBox();
             this.home_two_checkBox = new System.Windows.Forms.CheckBox();
             this.home_one_checkBox = new System.Windows.Forms.CheckBox();
+            this.settings_data_refresh_button = new System.Windows.Forms.Button();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox22.SuspendLayout();
@@ -694,6 +695,7 @@ namespace ngx_docs_managment_application
             // 
             // settings_tabPage
             // 
+            this.settings_tabPage.Controls.Add(this.settings_data_refresh_button);
             this.settings_tabPage.Controls.Add(this.groupBox14);
             this.settings_tabPage.Controls.Add(this.groupBox10);
             this.settings_tabPage.Controls.Add(this.groupBox9);
@@ -1214,6 +1216,20 @@ namespace ngx_docs_managment_application
             this.home_one_checkBox.Text = "Home 1";
             this.home_one_checkBox.UseVisualStyleBackColor = true;
             // 
+            // settings_data_refresh_button
+            // 
+            this.settings_data_refresh_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
+            this.settings_data_refresh_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settings_data_refresh_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.settings_data_refresh_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.settings_data_refresh_button.Location = new System.Drawing.Point(878, 253);
+            this.settings_data_refresh_button.Name = "settings_data_refresh_button";
+            this.settings_data_refresh_button.Size = new System.Drawing.Size(172, 152);
+            this.settings_data_refresh_button.TabIndex = 12;
+            this.settings_data_refresh_button.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.settings_data_refresh_button.UseVisualStyleBackColor = true;
+            this.settings_data_refresh_button.Click += new System.EventHandler(this.settings_data_refresh_button_Click);
+            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1378,5 +1394,6 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.Label input_id_label;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TabPage generator_tabPage;
+        private System.Windows.Forms.Button settings_data_refresh_button;
     }
 }

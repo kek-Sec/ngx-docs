@@ -29,7 +29,7 @@ namespace ngx_docs_managment_application._Forms
         {
             try
             {
-                if(ss.settings_model is null) { return; }
+                if(ss.settings_model is null) { ss.RefreshData(); return; }
 
                 var setting = ss.settings_model[0];
 

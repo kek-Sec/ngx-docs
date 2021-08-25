@@ -17,6 +17,11 @@ namespace ngx_docs_managment_application._Forms
 
         public SettingsData_Service()
         {
+            RefreshData();
+        }
+
+        public void RefreshData()
+        {
             try
             {
                 var filepath = settings.getSetting("project_path") + "\\src\\settings.json";
