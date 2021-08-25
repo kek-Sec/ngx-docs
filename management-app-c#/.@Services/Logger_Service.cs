@@ -12,9 +12,11 @@ namespace ngx_docs_managment_application._Services
     {
         public static void Add(string title, string content)
         {
-            MessageBox.Show("Error occured, check logs...");
+            string strPath = Environment.GetFolderPath(
+                         System.Environment.SpecialFolder.DesktopDirectory);
+            //MessageBox.Show("Error occured, check logs...");
             FormattableString log_entry = $"[{title}]-[{DateTime.Now.ToString("MM-dd-HH-mm")}]----> {content}\n";
-            File.AppendAllText("log.txt", log_entry.ToString());
+            File.AppendAllText(strPath + "\\log.txt", log_entry.ToString());
         }
     }
 }

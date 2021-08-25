@@ -246,6 +246,8 @@ namespace ngx_docs_managment_application._Controllers
         {
             try
             {
+                if(input.input_collection is null) { return; }
+
                 foreach (Input_Model im in input.input_collection)
                 {
                     input_listbox.Items.Add(im.Title);

@@ -30,6 +30,10 @@ namespace ngx_docs_managment_application._Controllers
 
                 if (!Directory.Exists(folder_path)) { return false; }
 
+                if(!File.Exists(folder_path + "\\package.json")){ return false; }
+
+                Logger_Service.Add("DASHBOARD_SERVICE|VerifyProjectFolder", "Folder verified!");
+
                 return true;
             }
             catch (Exception e)

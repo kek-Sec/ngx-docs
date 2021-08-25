@@ -31,6 +31,8 @@ namespace ngx_docs_managment_application._Controllers
                 {
                     MessageBox.Show("Project folder not found!");
                     settings.LoadKeysFolder();
+                    status.ForeColor = Color.LightSeaGreen;
+                    status.Text = "Verified!";
                 }
             }
             catch (Exception e)

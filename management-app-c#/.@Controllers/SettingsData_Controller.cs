@@ -29,6 +29,8 @@ namespace ngx_docs_managment_application._Forms
         {
             try
             {
+                if(ss.settings_model is null) { return; }
+
                 var setting = ss.settings_model[0];
 
                 show_picture.Checked = setting.preview_show_picture;
