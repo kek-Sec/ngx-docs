@@ -54,13 +54,15 @@ export class SearchService {
       }
 
       //By description
-      if (dataset[i].Description.toUpperCase().includes(txt) && filters[2]) {
+      let desc = dataset[i].Description as string;
+      if (desc.toUpperCase().includes(txt) && filters[2]) {
         to_return.push(dataset[i]);
         continue;
       }
 
       //By content
-      let content = dataset[i].items.join(' ').toUpperCase();
+      let items = dataset[i].items as string[];
+      let content = items.join(' ').toUpperCase();
 
       if (content.includes(txt) && filters[3]) {
         to_return.push(dataset[i]);
