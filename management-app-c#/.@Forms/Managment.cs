@@ -37,6 +37,9 @@ namespace ngx_docs_managment_application
          */
         private void Managment_Load(object sender, EventArgs e)
         {
+            //disable unimplemented tab
+            managment_tabControl.TabPages.Remove(generator_tabPage);
+
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
             ic.FillInputListbox(input_listbox);
             sdc.UpdateSettingsDataView(preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
