@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DetailedPageTwoComponent } from './detailed-page-two.component';
+import { DetailedPageOneComponent } from './detailed-page-one.component';
 
-describe('DetailedPageTwoComponent', () => {
-  let component: DetailedPageTwoComponent;
-  let fixture: ComponentFixture<DetailedPageTwoComponent>;
+describe('DetailedPageOneComponent', () => {
+  let component: DetailedPageOneComponent;
+  let fixture: ComponentFixture<DetailedPageOneComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetailedPageTwoComponent ]
+      declarations: [ DetailedPageOneComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DetailedPageTwoComponent);
+    fixture = TestBed.createComponent(DetailedPageOneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,6 +1,6 @@
 [
   {
-    "preview_show_picture": false,
+    "preview_show_picture": true,
     "preview_show_title": true,
     "preview_show_description": true,
     "preview_show_text": false,
