@@ -42,7 +42,7 @@ namespace ngx_docs_managment_application
 
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
             ic.FillInputListbox(input_listbox);
-            sdc.UpdateSettingsDataView(preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
+            sdc.UpdateSettingsDataView(preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
 
         }
 
@@ -60,7 +60,7 @@ namespace ngx_docs_managment_application
                 return;
             }
 
-            ic.SetSelectedItem(indx,input_id_label, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_tags_listbox, input_items_listbox, input_album_listbox);
+            ic.SetSelectedItem(indx,input_id_label, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_code_listbox, input_tags_listbox, input_items_listbox, input_album_listbox);
         }
 
         private void input_item_add_button_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace ngx_docs_managment_application
 
         private void settings_save_button_Click(object sender, EventArgs e)
         {
-            sdc.SaveSettings(preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
+            sdc.SaveSettings(preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
 
         }
 
@@ -101,12 +101,12 @@ namespace ngx_docs_managment_application
 
         private void input_add_button_Click(object sender, EventArgs e)
         {
-            ic.AddEntry(input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_tags_listbox, input_items_listbox, input_album_listbox);
+            ic.AddEntry(input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_code_listbox, input_tags_listbox, input_items_listbox, input_album_listbox);
         }
 
         private void input_edit_button_Click(object sender, EventArgs e)
         {
-            ic.UpdateEntry(input_listbox.SelectedIndex, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_tags_listbox, input_items_listbox, input_album_listbox);
+            ic.UpdateEntry(input_listbox.SelectedIndex, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox,input_code_listbox, input_tags_listbox, input_items_listbox, input_album_listbox);
         }
 
         private void input_remove_button_Click(object sender, EventArgs e)
@@ -142,8 +142,18 @@ namespace ngx_docs_managment_application
 
         private void settings_data_refresh_button_Click(object sender, EventArgs e)
         {
-            sdc.UpdateSettingsDataView(preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
+            sdc.UpdateSettingsDataView(preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
             Console.WriteLine("e");
+        }
+
+        private void input_code_add_button_Click(object sender, EventArgs e)
+        {
+            ic.AddDataToListBox(input_code_listbox, input_code_textbox);
+        }
+
+        private void input_code_remove_button_Click(object sender, EventArgs e)
+        {
+            ic.RemoveDataFromListBox(input_code_listbox, input_code_listbox.SelectedIndex);
         }
     }
 }

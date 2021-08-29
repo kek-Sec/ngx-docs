@@ -25,7 +25,7 @@ namespace ngx_docs_managment_application._Forms
         /// <param name="item_length"></param>
         /// <param name="items_count"></param>
         /// <param name="column_count"></param>
-        public void UpdateSettingsDataView(CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
+        public void UpdateSettingsDataView(CheckBox show_code,CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
         {
             try
             {
@@ -33,6 +33,7 @@ namespace ngx_docs_managment_application._Forms
 
                 var setting = ss.settings_model[0];
 
+                show_code.Checked = setting.preview_show_code;
                 show_picture.Checked = setting.preview_show_picture;
                 show_title.Checked = setting.preview_show_title;
                 show_description.Checked = setting.preview_show_description;
@@ -71,11 +72,12 @@ namespace ngx_docs_managment_application._Forms
         /// <param name="item_length"></param>
         /// <param name="items_count"></param>
         /// <param name="column_count"></param>
-        public void SaveSettings(CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
+        public void SaveSettings(CheckBox show_code,CheckBox show_picture, CheckBox show_title, CheckBox show_description, CheckBox show_text, CheckBox show_items, CheckBox show_url, CheckBox show_album, CheckBox show_tags, NumericUpDown description_length, NumericUpDown text_length, NumericUpDown item_length, NumericUpDown items_count, NumericUpDown column_count)
         {
             try
             {
                 Settings_Model settings = new Settings_Model();
+                settings.preview_show_code = show_code.Checked;
                 settings.preview_show_picture = show_picture.Checked;
                 settings.preview_show_title = show_title.Checked;
                 settings.preview_show_description = show_description.Checked;

@@ -85,7 +85,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="tags">Tags listbox</param>
         /// <param name="items">Items listbox</param>
         /// <param name="album">Album listbox</param>
-        public void UpdateEntry(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
+        public void UpdateEntry(int index, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url,ListBox code, ListBox tags, ListBox items, ListBox album)
         {
             try
             {
@@ -103,6 +103,7 @@ namespace ngx_docs_managment_application._Controllers
                 if (text.Text.Length > 0) { new_entry.text = text.Text; }
                 if (picture.Text.Length >0) { new_entry.image = picture.Text; }
                 if (url.Text.Length > 0) { new_entry.url = url.Text; }
+                if (code.Items.Count > 0) { new_entry.code = new List<string>(); foreach (string s in code.Items) { new_entry.code.Add(s); } }
                 if (items.Items.Count > 0) { new_entry.items = new List<string>(); foreach (string s in items.Items) {  new_entry.items.Add(s); } }
                 if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
                 if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
@@ -149,7 +150,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="tags">Tags listbox</param>
         /// <param name="items">Items listbox</param>
         /// <param name="album">Album listbox</param>
-        public void AddEntry(TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
+        public void AddEntry(TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url,ListBox code, ListBox tags, ListBox items, ListBox album)
         {
             try
             {
@@ -166,6 +167,7 @@ namespace ngx_docs_managment_application._Controllers
                 if (text.Text.Length > 0) { new_entry.text = text.Text; }
                 if (picture.Text.Length > 0) { new_entry.image = picture.Text; }
                 if (url.Text.Length > 0) { new_entry.url = url.Text; }
+                if (code.Items.Count > 0) { new_entry.code = new List<string>(); foreach(string s in code.Items) { new_entry.code.Add(s); } }
                 if (items.Items.Count > 0) { new_entry.items = new List<string>(); foreach (string s in items.Items) { new_entry.items.Add(s); } }
                 if (tags.Items.Count > 0) { new_entry.tags = new List<string>(); foreach (string s in tags.Items) { new_entry.tags.Add(s); } }
                 if (album.Items.Count > 0) { new_entry.album = new List<string>(); foreach (string s in album.Items) { new_entry.album.Add(s); } }
@@ -199,7 +201,7 @@ namespace ngx_docs_managment_application._Controllers
         /// <param name="tags">Tags listbox</param>
         /// <param name="items">Items listbox</param>
         /// <param name="album">Album listbox</param>
-        public void SetSelectedItem(int index,Label id_label, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url, ListBox tags, ListBox items, ListBox album)
+        public void SetSelectedItem(int index,Label id_label, TextBox title, TextBox description, TextBox text, TextBox picture, TextBox url,ListBox code, ListBox tags, ListBox items, ListBox album)
         {
             try
             {
@@ -216,8 +218,18 @@ namespace ngx_docs_managment_application._Controllers
                 items.Items.Clear();
                 tags.Items.Clear();
                 album.Items.Clear();
+                code.Items.Clear();
 
-                foreach (string i in inpt.items) { items.Items.Add(i); }
+                if (inpt.items is object)
+                {
+                    foreach (string i in inpt.items) { items.Items.Add(i); }
+                }
+
+                if (inpt.code is object)
+                {
+                    foreach(string i in inpt.code) { code.Items.Add(i); }
+                }
+
 
                 if (inpt.tags is object)
                 {

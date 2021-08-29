@@ -70,7 +70,7 @@ namespace ngx_docs_managment_application._Controllers
         {
             try
             {
-                int id = input_collection.Count;
+                int id = input_collection[input_collection.Count-1].id;
                 input.id = id;
                 input_collection.Add(input);
 

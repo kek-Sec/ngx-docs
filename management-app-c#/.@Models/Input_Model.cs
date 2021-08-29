@@ -13,6 +13,7 @@ namespace ngx_docs_managment_application._Models
         public string Description { get; set; }
         public string text { get; set; }
         public string image { get; set; }
+        public IList<string> code { get; set; }
         public IList<string> items { get; set; }
         public IList<string> tags { get; set; }
         public string url { get; set; }

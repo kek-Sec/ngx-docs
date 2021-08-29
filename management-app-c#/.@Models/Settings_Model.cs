@@ -16,6 +16,8 @@ namespace ngx_docs_managment_application._Models
         public bool preview_show_title { get; set; }
         public bool preview_show_description { get; set; }
         public bool preview_show_text { get; set; }
+
+        public bool preview_show_code { get; set; }
         public bool preview_show_items { get; set; }
         public bool preview_show_url { get; set; }
         public bool preview_show_album { get; set; }
