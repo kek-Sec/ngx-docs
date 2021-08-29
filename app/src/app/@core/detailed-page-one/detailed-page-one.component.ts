@@ -25,7 +25,6 @@ export class DetailedPageOneComponent implements OnInit {
   has_tags: boolean;
   has_album: boolean;
   has_items: boolean;
-  pretty_tags: string;
   faCopy = faCopy;
 
   constructor(
@@ -51,8 +50,8 @@ export class DetailedPageOneComponent implements OnInit {
       this.has_album = this.selected_entry.album != undefined;
       this.has_code = this.selected_entry.code != undefined;
       this.has_items = this.selected_entry.items != undefined;
-
-      if (this.has_tags) { this.pretty_tags = JSON.stringify(this.selected_entry.tags); }
+      
+    
     });
   }
 
