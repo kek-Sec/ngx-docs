@@ -5,6 +5,7 @@ export class Content_model {
   Description?: string;
   text?: string;
   image?: string;
+  code?: string[];
   items?: string[];
   tags?: string[];
   url?: string;

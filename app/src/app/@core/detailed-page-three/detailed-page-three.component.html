@@ -7,9 +7,17 @@
         <hr class="my-4">
         <img src="{{ selected_entry.image }}" class="img-fluid mx-auto d-block" alt="Entry image">
         <hr class="my-4">
-        <ul class="list-group">
+        <ul *ngIf="has_items" class="list-group">
             <div *ngFor="let item of selected_entry.items">
-                <li class="list-group-item list-group-item-light" style="margin-bottom: 1vh;" [innerHTML]="item"></li>
+                <li class="items list-group-item list-group-item-light" style="margin-bottom: 1vh;" [innerHTML]="item"></li>
+            </div>
+        </ul>
+        <hr class="my-4">
+        <ul *ngIf="has_code" class="list-group">
+            <div *ngFor="let code of selected_entry.code">
+                <li class="code list-group-item list-group-item-light" style="margin-bottom: 1vh;">
+                    <pre><code [highlight]="code"></code></pre>
+                </li>
             </div>
         </ul>
         <hr class="my-4">

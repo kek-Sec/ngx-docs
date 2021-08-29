@@ -17,9 +17,11 @@ export class DetailedPageThreeComponent implements OnInit {
   selected_entry: Content_model;
   id: number;
 
+  has_code: boolean;
   has_url: boolean;
   has_tags: boolean;
   has_album: boolean;
+  has_items: boolean;
   pretty_tags: string;
   faCopy = faCopy;
 
@@ -38,7 +40,8 @@ export class DetailedPageThreeComponent implements OnInit {
       this.has_url = this.selected_entry.url != undefined;
       this.has_tags = this.selected_entry.tags != undefined;
       this.has_album = this.selected_entry.album != undefined;
-
+      this.has_code = this.selected_entry.code != undefined;
+      this.has_items = this.selected_entry.items != undefined;
 
       if (this.has_tags) { this.pretty_tags = JSON.stringify(this.selected_entry.tags); }
     });
