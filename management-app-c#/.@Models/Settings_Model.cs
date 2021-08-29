@@ -12,11 +12,11 @@ namespace ngx_docs_managment_application._Models
     ///Model that desrcibes the settings.json entities
     class Settings_Model
     {
+        //PREVIEW
         public bool preview_show_picture { get; set; }
         public bool preview_show_title { get; set; }
         public bool preview_show_description { get; set; }
         public bool preview_show_text { get; set; }
-
         public bool preview_show_code { get; set; }
         public bool preview_show_items { get; set; }
         public bool preview_show_url { get; set; }
@@ -24,9 +24,22 @@ namespace ngx_docs_managment_application._Models
         public bool preview_show_tags { get; set; }
         public int preview_description_text_length { get; set; }
         public int preview_text_length { get; set; }
-
         public int preview_item_text_length { get; set; }
         public int preview_items_count { get; set; }
         public int preview_number_of_columns { get; set; }
+
+        //DETAILED
+        public bool detailed_show_picture { get; set; }
+        public bool detailed_show_title { get; set; }
+        public bool detailed_show_description { get; set; }
+        public bool detailed_show_text { get; set; }
+        public bool detailed_show_code { get; set; }
+        public bool detailed_show_items { get; set; }
+        public bool detailed_show_url { get; set; }
+        public bool detailed_show_album { get; set; }
+        public bool detailed_show_tags { get; set; }
+        public int detailed_description_text_length { get; set; }
+        public int detailed_text_length { get; set; }
+
     }
 }

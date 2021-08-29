@@ -42,7 +42,7 @@ namespace ngx_docs_managment_application
 
             dc.UpdateProjectFolderLabel(dashboard_project_path_status_label);
             ic.FillInputListbox(input_listbox);
-            sdc.UpdateSettingsDataView(preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
+            sdc.UpdateSettingsDataView(detailed_show_code_checkbox, detailed_show_picture_checkbox, detailed_show_title_checkbox, detailed_show_description_checkbox, detailed_show_text_checkbox, detailed_show_items_checkbox, detailed_show_url_checkbox, detailed_show_album_checkbox, detailed_show_tags_checkbox, preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
 
         }
 
@@ -75,7 +75,7 @@ namespace ngx_docs_managment_application
 
         private void settings_save_button_Click(object sender, EventArgs e)
         {
-            sdc.SaveSettings(preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
+            sdc.SaveSettings(detailed_show_code_checkbox, detailed_show_picture_checkbox, detailed_show_title_checkbox, detailed_show_description_checkbox, detailed_show_text_checkbox, detailed_show_items_checkbox, detailed_show_url_checkbox, detailed_show_album_checkbox, detailed_show_tags_checkbox, preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
 
         }
 
@@ -142,7 +142,7 @@ namespace ngx_docs_managment_application
 
         private void settings_data_refresh_button_Click(object sender, EventArgs e)
         {
-            sdc.UpdateSettingsDataView(preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
+            sdc.UpdateSettingsDataView(detailed_show_code_checkbox, detailed_show_picture_checkbox, detailed_show_title_checkbox, detailed_show_description_checkbox, detailed_show_text_checkbox, detailed_show_items_checkbox, detailed_show_url_checkbox, detailed_show_album_checkbox, detailed_show_tags_checkbox, preview_show_code_checkbox,preview_show_picture_checkBox, preview_show_title_checkBox, preview_show_description_checkBox, preview_show_text_checkBox, preview_show_items_checkBox, preview_show_url_checkBox, preview_show_album_checkBox, preview_show_tags_checkBox, preview_description_text_length_numericUpDown, preview_text_length_numericUpDown, preview_item_text_length_numericUpDown, preview_items_count_numericUpDown, preview_number_of_columns_numericUpDown);
             Console.WriteLine("e");
         }
 

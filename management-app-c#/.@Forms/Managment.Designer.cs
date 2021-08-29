@@ -141,7 +141,7 @@ namespace ngx_docs_managment_application
             this.detailed_show_tags_checkbox = new System.Windows.Forms.CheckBox();
             this.detailed_show_album_checkbox = new System.Windows.Forms.CheckBox();
             this.detailed_show_url_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_page_show_items_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_items_checkbox = new System.Windows.Forms.CheckBox();
             this.detailed_show_text_checkbox = new System.Windows.Forms.CheckBox();
             this.detailed_show_description_checkbox = new System.Windows.Forms.CheckBox();
             this.detailed_show_title_checkbox = new System.Windows.Forms.CheckBox();
@@ -1351,7 +1351,7 @@ namespace ngx_docs_managment_application
             this.groupBox24.Controls.Add(this.detailed_show_description_checkbox);
             this.groupBox24.Controls.Add(this.detailed_show_url_checkbox);
             this.groupBox24.Controls.Add(this.detailed_show_text_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_page_show_items_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_items_checkbox);
             this.groupBox24.Location = new System.Drawing.Point(647, 9);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(245, 552);
@@ -1403,16 +1403,16 @@ namespace ngx_docs_managment_application
             this.detailed_show_url_checkbox.Text = "detailed_show_url";
             this.detailed_show_url_checkbox.UseVisualStyleBackColor = true;
             // 
-            // detailed_page_show_items_checkbox
+            // detailed_show_items_checkbox
             // 
-            this.detailed_page_show_items_checkbox.AutoSize = true;
-            this.detailed_page_show_items_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_page_show_items_checkbox.Location = new System.Drawing.Point(6, 172);
-            this.detailed_page_show_items_checkbox.Name = "detailed_page_show_items_checkbox";
-            this.detailed_page_show_items_checkbox.Size = new System.Drawing.Size(193, 29);
-            this.detailed_page_show_items_checkbox.TabIndex = 23;
-            this.detailed_page_show_items_checkbox.Text = "detailed_show_items";
-            this.detailed_page_show_items_checkbox.UseVisualStyleBackColor = true;
+            this.detailed_show_items_checkbox.AutoSize = true;
+            this.detailed_show_items_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_items_checkbox.Location = new System.Drawing.Point(6, 172);
+            this.detailed_show_items_checkbox.Name = "detailed_show_items_checkbox";
+            this.detailed_show_items_checkbox.Size = new System.Drawing.Size(193, 29);
+            this.detailed_show_items_checkbox.TabIndex = 23;
+            this.detailed_show_items_checkbox.Text = "detailed_show_items";
+            this.detailed_show_items_checkbox.UseVisualStyleBackColor = true;
             // 
             // detailed_show_text_checkbox
             // 
@@ -1644,6 +1644,6 @@ namespace ngx_docs_managment_application
         private System.Windows.Forms.CheckBox detailed_show_description_checkbox;
         private System.Windows.Forms.CheckBox detailed_show_url_checkbox;
         private System.Windows.Forms.CheckBox detailed_show_text_checkbox;
-        private System.Windows.Forms.CheckBox detailed_page_show_items_checkbox;
+        private System.Windows.Forms.CheckBox detailed_show_items_checkbox;
     }
 }
