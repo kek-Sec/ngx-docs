@@ -32,12 +32,16 @@ import { NgxPaginationModule } from 'ngx-pagination';
 //font-awesome
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+//highlight-js
+import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
+
 
 @NgModule({
   declarations: [AppComponent, HomeOneComponent, DetailedPageTwoComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent],
   imports: [
     NgxPaginationModule,
     FormsModule,
+    HighlightModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     NgxBootstrapMultiselectModule,
@@ -48,7 +52,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     FontAwesomeModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        fullLibraryLoader: () => import('highlight.js')
+      }
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

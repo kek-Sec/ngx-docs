@@ -4,6 +4,7 @@
       "preview_show_title": true,
       "preview_show_description": true,
       "preview_show_text": true,
+      "preview_show_code": true,
       "preview_show_items": true,
       "preview_show_url": false,
       "preview_show_album": false,
