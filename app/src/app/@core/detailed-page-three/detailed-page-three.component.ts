@@ -4,7 +4,9 @@ import { faCopy } from '@fortawesome/free-solid-svg-icons';
 import { ClipboardService } from 'ngx-clipboard';
 import { ToastrService } from 'ngx-toastr';
 import { Content_model } from 'src/app/@Models/Content_model';
+import { Settings_model } from 'src/app/@Models/Settings_model';
 import { ParserService } from 'src/app/@Services/parser.service';
+import { SettingsParserService } from 'src/app/@Services/settings-parser.service';
 
 @Component({
   selector: 'app-detailed-page-three',
@@ -12,7 +14,8 @@ import { ParserService } from 'src/app/@Services/parser.service';
   styleUrls: ['./detailed-page-three.component.scss']
 })
 export class DetailedPageThreeComponent implements OnInit {
-
+  
+  _settings_item: Array<Settings_model>;
   private sub: any;
   selected_entry: Content_model;
   id: number;
@@ -26,6 +29,7 @@ export class DetailedPageThreeComponent implements OnInit {
   faCopy = faCopy;
 
   constructor(
+    private settings:SettingsParserService,
     private route: ActivatedRoute,
     private parser: ParserService,
     private _clipboardService: ClipboardService,
@@ -33,6 +37,10 @@ export class DetailedPageThreeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
+    //parse settings.json
+    this._settings_item = this.settings.parse();
+
     this.sub = this.route.params.subscribe((params) => {
       this.id = +params['id'];
       this.parser.parse();

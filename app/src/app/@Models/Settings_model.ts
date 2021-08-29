@@ -5,6 +5,7 @@ export class Settings_model {
   preview_show_title?: boolean = true;
   preview_show_description?: boolean = true;
   preview_show_text?: boolean = true;
+  preview_show_code?: boolean = true;
   preview_show_items?: boolean = true;
   preview_show_url?: boolean = false;   //not implemented
   preview_show_album?: boolean = false; //not implemented
@@ -19,6 +20,7 @@ export class Settings_model {
   detailed_show_title?: boolean = true;
   detailed_show_description?: boolean = true;
   detailed_show_text?: boolean = true;
+  detailed_show_code?: boolean = true;
   detailed_show_items?: boolean = true;
   detailed_show_url?: boolean = false;  
   detailed_show_album?: boolean = false;

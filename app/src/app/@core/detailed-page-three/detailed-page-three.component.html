@@ -1,19 +1,19 @@
 <div class="bg">
     <div class="alert alert-info" role="alert">
-        <h2 class="display-4 text-center"> {{ selected_entry.Title }}
+        <h2 *ngIf="_settings_item[0].detailed_show_title" class="display-4 text-center"> {{ selected_entry.Title }}
         </h2>
-        <h5 class="description text-center"> {{ selected_entry.Description }}
+        <h5 *ngIf="_settings_item[0].detailed_show_description" class="description text-center"> {{ selected_entry.Description }}
         </h5>
         <hr class="my-4">
-        <img src="{{ selected_entry.image }}" class="img-fluid mx-auto d-block" alt="Entry image">
+        <img *ngIf="_settings_item[0].detailed_show_picture" src="{{ selected_entry.image }}" class="img-fluid mx-auto d-block" alt="Entry image">
         <hr class="my-4">
-        <ul *ngIf="has_items" class="list-group">
+        <ul *ngIf="has_items && _settings_item[0].detailed_show_items" class="list-group">
             <div *ngFor="let item of selected_entry.items">
                 <li class="items list-group-item list-group-item-light" style="margin-bottom: 1vh;" [innerHTML]="item"></li>
             </div>
         </ul>
         <hr class="my-4">
-        <ul *ngIf="has_code" class="list-group">
+        <ul *ngIf="has_code && _settings_item[0].detailed_show_code" class="list-group">
             <div *ngFor="let code of selected_entry.code">
                 <li class="code list-group-item list-group-item-light" style="margin-bottom: 1vh;">
                     <pre><code [highlight]="code"></code></pre>
@@ -21,16 +21,16 @@
             </div>
         </ul>
         <hr class="my-4">
-        <div *ngIf="has_tags">
+        <div *ngIf="has_tags && _settings_item[0].detailed_show_tags">
             <p class="Tags">Tags: {{pretty_tags}} </p>
             <hr class="my-4">
         </div>
-        <div *ngIf="has_url">
+        <div *ngIf="has_url && _settings_item[0].detailed_show_url">
             <hr class="my-4">
             <button type="button" class="open-url btn btn-md  mx-auto d-block">Open url</button>
             <hr class="my-4">
         </div>
-        <div *ngIf="has_album">
+        <div *ngIf="has_album && _settings_item[0].detailed_show_album">
             <hr class="my-4">
             <button type="button" [routerLink]="['/album', id]" class="open-album btn btn-md   mx-auto d-block">Open
                 album</button>
