@@ -15,6 +15,13 @@ import { SettingsParserService } from 'src/app/@Services/settings-parser.service
 })
 export class DetailedPageOneComponent implements OnInit {
 
+/** 
+ * @todo fix album button routerlink
+ * @todo add home button
+*/
+
+
+
   _settings_item: Array<Settings_model>;
   private sub: any;
   selected_entry: Content_model;
