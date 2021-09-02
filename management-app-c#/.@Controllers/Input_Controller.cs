@@ -111,6 +111,8 @@ namespace ngx_docs_managment_application._Controllers
 
                 //call service
                 input.UpdateEntry(index, new_entry);
+                input.LoadData();
+
                 return;
             }
             catch (Exception e)

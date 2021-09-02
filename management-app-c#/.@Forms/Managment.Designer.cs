@@ -42,6 +42,12 @@ namespace ngx_docs_managment_application
             this.input_tabPage = new System.Windows.Forms.TabPage();
             this.input_refresh_button = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.input_code_remove_button = new System.Windows.Forms.Button();
+            this.input_code_add_button = new System.Windows.Forms.Button();
+            this.input_code_textbox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.input_code_listbox = new System.Windows.Forms.ListBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.input_id_label = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -79,14 +85,26 @@ namespace ngx_docs_managment_application
             this.label2 = new System.Windows.Forms.Label();
             this.input_listbox = new System.Windows.Forms.ListBox();
             this.settings_tabPage = new System.Windows.Forms.TabPage();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.detailed_show_code_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_picture_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_tags_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_title_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_album_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_description_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_url_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_text_checkbox = new System.Windows.Forms.CheckBox();
+            this.detailed_show_items_checkbox = new System.Windows.Forms.CheckBox();
             this.settings_data_refresh_button = new System.Windows.Forms.Button();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.preview_items_count_numericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.preview_show_code_checkbox = new System.Windows.Forms.CheckBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.preview_number_of_columns_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.preview_items_count_numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label13 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.preview_item_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
@@ -94,9 +112,9 @@ namespace ngx_docs_managment_application
             this.preview_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.preview_description_text_length_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label10 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.preview_show_tags_checkBox = new System.Windows.Forms.CheckBox();
             this.preview_show_album_checkBox = new System.Windows.Forms.CheckBox();
             this.preview_show_url_checkBox = new System.Windows.Forms.CheckBox();
@@ -128,24 +146,6 @@ namespace ngx_docs_managment_application
             this.home_three_checkBox = new System.Windows.Forms.CheckBox();
             this.home_two_checkBox = new System.Windows.Forms.CheckBox();
             this.home_one_checkBox = new System.Windows.Forms.CheckBox();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.input_code_remove_button = new System.Windows.Forms.Button();
-            this.input_code_add_button = new System.Windows.Forms.Button();
-            this.input_code_textbox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.input_code_listbox = new System.Windows.Forms.ListBox();
-            this.preview_show_code_checkbox = new System.Windows.Forms.CheckBox();
-            this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.detailed_show_code_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_tags_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_album_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_url_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_items_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_text_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_description_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_title_checkbox = new System.Windows.Forms.CheckBox();
-            this.detailed_show_picture_checkbox = new System.Windows.Forms.CheckBox();
             this.managment_tabControl.SuspendLayout();
             this.dashboard_tabPage.SuspendLayout();
             this.groupBox22.SuspendLayout();
@@ -153,24 +153,26 @@ namespace ngx_docs_managment_application
             this.groupBox1.SuspendLayout();
             this.input_tabPage.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox19.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.settings_tabPage.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.preview_items_count_numericUpDown)).BeginInit();
+            this.groupBox24.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_number_of_columns_numericUpDown)).BeginInit();
+            this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_items_count_numericUpDown)).BeginInit();
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_item_text_length_numericUpDown)).BeginInit();
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_text_length_numericUpDown)).BeginInit();
             this.groupBox11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).BeginInit();
-            this.groupBox9.SuspendLayout();
             this.images_tabPage.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.generator_tabPage.SuspendLayout();
@@ -178,8 +180,6 @@ namespace ngx_docs_managment_application
             this.groupBox20.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
-            this.groupBox19.SuspendLayout();
-            this.groupBox24.SuspendLayout();
             this.SuspendLayout();
             // 
             // managment_tabControl
@@ -334,6 +334,72 @@ namespace ngx_docs_managment_application
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.input_code_remove_button);
+            this.groupBox19.Controls.Add(this.input_code_add_button);
+            this.groupBox19.Controls.Add(this.input_code_textbox);
+            this.groupBox19.Controls.Add(this.label17);
+            this.groupBox19.Controls.Add(this.input_code_listbox);
+            this.groupBox19.Location = new System.Drawing.Point(469, 12);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(223, 422);
+            this.groupBox19.TabIndex = 12;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Code";
+            // 
+            // input_code_remove_button
+            // 
+            this.input_code_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
+            this.input_code_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_code_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_code_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_code_remove_button.Location = new System.Drawing.Point(142, 145);
+            this.input_code_remove_button.Name = "input_code_remove_button";
+            this.input_code_remove_button.Size = new System.Drawing.Size(75, 65);
+            this.input_code_remove_button.TabIndex = 9;
+            this.input_code_remove_button.UseVisualStyleBackColor = true;
+            this.input_code_remove_button.Click += new System.EventHandler(this.input_code_remove_button_Click);
+            // 
+            // input_code_add_button
+            // 
+            this.input_code_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
+            this.input_code_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.input_code_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.input_code_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.input_code_add_button.Location = new System.Drawing.Point(7, 145);
+            this.input_code_add_button.Name = "input_code_add_button";
+            this.input_code_add_button.Size = new System.Drawing.Size(75, 65);
+            this.input_code_add_button.TabIndex = 8;
+            this.input_code_add_button.UseVisualStyleBackColor = true;
+            this.input_code_add_button.Click += new System.EventHandler(this.input_code_add_button_Click);
+            // 
+            // input_code_textbox
+            // 
+            this.input_code_textbox.Location = new System.Drawing.Point(6, 47);
+            this.input_code_textbox.Multiline = true;
+            this.input_code_textbox.Name = "input_code_textbox";
+            this.input_code_textbox.Size = new System.Drawing.Size(211, 94);
+            this.input_code_textbox.TabIndex = 7;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(0, 24);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(43, 20);
+            this.label17.TabIndex = 6;
+            this.label17.Text = "input";
+            // 
+            // input_code_listbox
+            // 
+            this.input_code_listbox.FormattingEnabled = true;
+            this.input_code_listbox.ItemHeight = 20;
+            this.input_code_listbox.Location = new System.Drawing.Point(6, 213);
+            this.input_code_listbox.Name = "input_code_listbox";
+            this.input_code_listbox.Size = new System.Drawing.Size(211, 204);
+            this.input_code_listbox.TabIndex = 0;
+            // 
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.input_id_label);
@@ -352,7 +418,7 @@ namespace ngx_docs_managment_application
             this.input_id_label.AutoSize = true;
             this.input_id_label.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
             this.input_id_label.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.input_id_label.Location = new System.Drawing.Point(854, 23);
+            this.input_id_label.Location = new System.Drawing.Point(1108, 26);
             this.input_id_label.Name = "input_id_label";
             this.input_id_label.Size = new System.Drawing.Size(0, 25);
             this.input_id_label.TabIndex = 14;
@@ -729,6 +795,123 @@ namespace ngx_docs_managment_application
             this.settings_tabPage.Text = "Settings data";
             this.settings_tabPage.UseVisualStyleBackColor = true;
             // 
+            // groupBox24
+            // 
+            this.groupBox24.Controls.Add(this.detailed_show_code_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_picture_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_tags_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_title_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_album_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_description_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_url_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_text_checkbox);
+            this.groupBox24.Controls.Add(this.detailed_show_items_checkbox);
+            this.groupBox24.Location = new System.Drawing.Point(647, 9);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(245, 552);
+            this.groupBox24.TabIndex = 13;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Detailed page";
+            // 
+            // detailed_show_code_checkbox
+            // 
+            this.detailed_show_code_checkbox.AutoSize = true;
+            this.detailed_show_code_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_code_checkbox.Location = new System.Drawing.Point(6, 207);
+            this.detailed_show_code_checkbox.Name = "detailed_show_code_checkbox";
+            this.detailed_show_code_checkbox.Size = new System.Drawing.Size(189, 29);
+            this.detailed_show_code_checkbox.TabIndex = 27;
+            this.detailed_show_code_checkbox.Text = "detailed_show_code";
+            this.detailed_show_code_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_picture_checkbox
+            // 
+            this.detailed_show_picture_checkbox.AutoSize = true;
+            this.detailed_show_picture_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_picture_checkbox.Location = new System.Drawing.Point(6, 32);
+            this.detailed_show_picture_checkbox.Name = "detailed_show_picture_checkbox";
+            this.detailed_show_picture_checkbox.Size = new System.Drawing.Size(204, 29);
+            this.detailed_show_picture_checkbox.TabIndex = 19;
+            this.detailed_show_picture_checkbox.Text = "detailed_show_picture";
+            this.detailed_show_picture_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_tags_checkbox
+            // 
+            this.detailed_show_tags_checkbox.AutoSize = true;
+            this.detailed_show_tags_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_tags_checkbox.Location = new System.Drawing.Point(6, 312);
+            this.detailed_show_tags_checkbox.Name = "detailed_show_tags_checkbox";
+            this.detailed_show_tags_checkbox.Size = new System.Drawing.Size(184, 29);
+            this.detailed_show_tags_checkbox.TabIndex = 26;
+            this.detailed_show_tags_checkbox.Text = "detailed_show_tags";
+            this.detailed_show_tags_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_title_checkbox
+            // 
+            this.detailed_show_title_checkbox.AutoSize = true;
+            this.detailed_show_title_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_title_checkbox.Location = new System.Drawing.Point(6, 67);
+            this.detailed_show_title_checkbox.Name = "detailed_show_title_checkbox";
+            this.detailed_show_title_checkbox.Size = new System.Drawing.Size(179, 29);
+            this.detailed_show_title_checkbox.TabIndex = 20;
+            this.detailed_show_title_checkbox.Text = "detailed_show_title";
+            this.detailed_show_title_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_album_checkbox
+            // 
+            this.detailed_show_album_checkbox.AutoSize = true;
+            this.detailed_show_album_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_album_checkbox.Location = new System.Drawing.Point(6, 277);
+            this.detailed_show_album_checkbox.Name = "detailed_show_album_checkbox";
+            this.detailed_show_album_checkbox.Size = new System.Drawing.Size(200, 29);
+            this.detailed_show_album_checkbox.TabIndex = 25;
+            this.detailed_show_album_checkbox.Text = "detailed_show_album";
+            this.detailed_show_album_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_description_checkbox
+            // 
+            this.detailed_show_description_checkbox.AutoSize = true;
+            this.detailed_show_description_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_description_checkbox.Location = new System.Drawing.Point(6, 102);
+            this.detailed_show_description_checkbox.Name = "detailed_show_description_checkbox";
+            this.detailed_show_description_checkbox.Size = new System.Drawing.Size(238, 29);
+            this.detailed_show_description_checkbox.TabIndex = 21;
+            this.detailed_show_description_checkbox.Text = "detailed_show_description";
+            this.detailed_show_description_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_url_checkbox
+            // 
+            this.detailed_show_url_checkbox.AutoSize = true;
+            this.detailed_show_url_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_url_checkbox.Location = new System.Drawing.Point(6, 242);
+            this.detailed_show_url_checkbox.Name = "detailed_show_url_checkbox";
+            this.detailed_show_url_checkbox.Size = new System.Drawing.Size(170, 29);
+            this.detailed_show_url_checkbox.TabIndex = 24;
+            this.detailed_show_url_checkbox.Text = "detailed_show_url";
+            this.detailed_show_url_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_text_checkbox
+            // 
+            this.detailed_show_text_checkbox.AutoSize = true;
+            this.detailed_show_text_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_text_checkbox.Location = new System.Drawing.Point(6, 137);
+            this.detailed_show_text_checkbox.Name = "detailed_show_text_checkbox";
+            this.detailed_show_text_checkbox.Size = new System.Drawing.Size(179, 29);
+            this.detailed_show_text_checkbox.TabIndex = 22;
+            this.detailed_show_text_checkbox.Text = "detailed_show_text";
+            this.detailed_show_text_checkbox.UseVisualStyleBackColor = true;
+            // 
+            // detailed_show_items_checkbox
+            // 
+            this.detailed_show_items_checkbox.AutoSize = true;
+            this.detailed_show_items_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.detailed_show_items_checkbox.Location = new System.Drawing.Point(6, 172);
+            this.detailed_show_items_checkbox.Name = "detailed_show_items_checkbox";
+            this.detailed_show_items_checkbox.Size = new System.Drawing.Size(193, 29);
+            this.detailed_show_items_checkbox.TabIndex = 23;
+            this.detailed_show_items_checkbox.Text = "detailed_show_items";
+            this.detailed_show_items_checkbox.UseVisualStyleBackColor = true;
+            // 
             // settings_data_refresh_button
             // 
             this.settings_data_refresh_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.repeat_1;
@@ -743,32 +926,35 @@ namespace ngx_docs_managment_application
             this.settings_data_refresh_button.UseVisualStyleBackColor = true;
             this.settings_data_refresh_button.Click += new System.EventHandler(this.settings_data_refresh_button_Click);
             // 
-            // groupBox14
+            // groupBox9
             // 
-            this.groupBox14.Controls.Add(this.preview_items_count_numericUpDown);
-            this.groupBox14.Controls.Add(this.label13);
-            this.groupBox14.Location = new System.Drawing.Point(0, 213);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(404, 65);
-            this.groupBox14.TabIndex = 5;
-            this.groupBox14.TabStop = false;
+            this.groupBox9.Controls.Add(this.preview_show_code_checkbox);
+            this.groupBox9.Controls.Add(this.groupBox10);
+            this.groupBox9.Controls.Add(this.preview_show_tags_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_album_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_url_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_items_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_text_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_description_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_title_checkBox);
+            this.groupBox9.Controls.Add(this.preview_show_picture_checkBox);
+            this.groupBox9.Location = new System.Drawing.Point(7, 8);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(617, 553);
+            this.groupBox9.TabIndex = 0;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Preview settings";
             // 
-            // preview_items_count_numericUpDown
+            // preview_show_code_checkbox
             // 
-            this.preview_items_count_numericUpDown.Location = new System.Drawing.Point(277, 23);
-            this.preview_items_count_numericUpDown.Name = "preview_items_count_numericUpDown";
-            this.preview_items_count_numericUpDown.Size = new System.Drawing.Size(46, 27);
-            this.preview_items_count_numericUpDown.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.label13.Location = new System.Drawing.Point(6, 23);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(179, 25);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "preview_items_count:";
+            this.preview_show_code_checkbox.AutoSize = true;
+            this.preview_show_code_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.preview_show_code_checkbox.Location = new System.Drawing.Point(6, 195);
+            this.preview_show_code_checkbox.Name = "preview_show_code_checkbox";
+            this.preview_show_code_checkbox.Size = new System.Drawing.Size(187, 29);
+            this.preview_show_code_checkbox.TabIndex = 18;
+            this.preview_show_code_checkbox.Text = "preview_show_code";
+            this.preview_show_code_checkbox.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
@@ -809,6 +995,33 @@ namespace ngx_docs_managment_application
             this.label14.Size = new System.Drawing.Size(244, 25);
             this.label14.TabIndex = 0;
             this.label14.Text = "preview_number_of_columns:";
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.preview_items_count_numericUpDown);
+            this.groupBox14.Controls.Add(this.label13);
+            this.groupBox14.Location = new System.Drawing.Point(0, 213);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(404, 65);
+            this.groupBox14.TabIndex = 5;
+            this.groupBox14.TabStop = false;
+            // 
+            // preview_items_count_numericUpDown
+            // 
+            this.preview_items_count_numericUpDown.Location = new System.Drawing.Point(277, 23);
+            this.preview_items_count_numericUpDown.Name = "preview_items_count_numericUpDown";
+            this.preview_items_count_numericUpDown.Size = new System.Drawing.Size(46, 27);
+            this.preview_items_count_numericUpDown.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
+            this.label13.Location = new System.Drawing.Point(6, 23);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(179, 25);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "preview_items_count:";
             // 
             // groupBox13
             // 
@@ -875,6 +1088,15 @@ namespace ngx_docs_managment_application
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             // 
+            // groupBox23
+            // 
+            this.groupBox23.Location = new System.Drawing.Point(353, 0);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(365, 550);
+            this.groupBox23.TabIndex = 13;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "groupBox23";
+            // 
             // preview_description_text_length_numericUpDown
             // 
             this.preview_description_text_length_numericUpDown.Location = new System.Drawing.Point(277, 23);
@@ -891,25 +1113,6 @@ namespace ngx_docs_managment_application
             this.label10.Size = new System.Drawing.Size(265, 25);
             this.label10.TabIndex = 0;
             this.label10.Text = "preview_description_text_length:";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.preview_show_code_checkbox);
-            this.groupBox9.Controls.Add(this.groupBox10);
-            this.groupBox9.Controls.Add(this.preview_show_tags_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_album_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_url_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_items_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_text_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_description_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_title_checkBox);
-            this.groupBox9.Controls.Add(this.preview_show_picture_checkBox);
-            this.groupBox9.Location = new System.Drawing.Point(7, 8);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(617, 553);
-            this.groupBox9.TabIndex = 0;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Preview settings";
             // 
             // preview_show_tags_checkBox
             // 
@@ -1255,209 +1458,6 @@ namespace ngx_docs_managment_application
             this.home_one_checkBox.Text = "Home 1";
             this.home_one_checkBox.UseVisualStyleBackColor = true;
             // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.input_code_remove_button);
-            this.groupBox19.Controls.Add(this.input_code_add_button);
-            this.groupBox19.Controls.Add(this.input_code_textbox);
-            this.groupBox19.Controls.Add(this.label17);
-            this.groupBox19.Controls.Add(this.input_code_listbox);
-            this.groupBox19.Location = new System.Drawing.Point(469, 12);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(223, 422);
-            this.groupBox19.TabIndex = 12;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "Code";
-            // 
-            // input_code_remove_button
-            // 
-            this.input_code_remove_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.garbage_2;
-            this.input_code_remove_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_code_remove_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_code_remove_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_code_remove_button.Location = new System.Drawing.Point(142, 145);
-            this.input_code_remove_button.Name = "input_code_remove_button";
-            this.input_code_remove_button.Size = new System.Drawing.Size(75, 65);
-            this.input_code_remove_button.TabIndex = 9;
-            this.input_code_remove_button.UseVisualStyleBackColor = true;
-            this.input_code_remove_button.Click += new System.EventHandler(this.input_code_remove_button_Click);
-            // 
-            // input_code_add_button
-            // 
-            this.input_code_add_button.BackgroundImage = global::ngx_docs_managment_application.Properties.Resources.add_2;
-            this.input_code_add_button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.input_code_add_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.input_code_add_button.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.input_code_add_button.Location = new System.Drawing.Point(7, 145);
-            this.input_code_add_button.Name = "input_code_add_button";
-            this.input_code_add_button.Size = new System.Drawing.Size(75, 65);
-            this.input_code_add_button.TabIndex = 8;
-            this.input_code_add_button.UseVisualStyleBackColor = true;
-            this.input_code_add_button.Click += new System.EventHandler(this.input_code_add_button_Click);
-            // 
-            // input_code_textbox
-            // 
-            this.input_code_textbox.Location = new System.Drawing.Point(6, 47);
-            this.input_code_textbox.Multiline = true;
-            this.input_code_textbox.Name = "input_code_textbox";
-            this.input_code_textbox.Size = new System.Drawing.Size(211, 94);
-            this.input_code_textbox.TabIndex = 7;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(0, 24);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(43, 20);
-            this.label17.TabIndex = 6;
-            this.label17.Text = "input";
-            // 
-            // input_code_listbox
-            // 
-            this.input_code_listbox.FormattingEnabled = true;
-            this.input_code_listbox.ItemHeight = 20;
-            this.input_code_listbox.Location = new System.Drawing.Point(6, 213);
-            this.input_code_listbox.Name = "input_code_listbox";
-            this.input_code_listbox.Size = new System.Drawing.Size(211, 204);
-            this.input_code_listbox.TabIndex = 0;
-            // 
-            // preview_show_code_checkbox
-            // 
-            this.preview_show_code_checkbox.AutoSize = true;
-            this.preview_show_code_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.preview_show_code_checkbox.Location = new System.Drawing.Point(6, 195);
-            this.preview_show_code_checkbox.Name = "preview_show_code_checkbox";
-            this.preview_show_code_checkbox.Size = new System.Drawing.Size(187, 29);
-            this.preview_show_code_checkbox.TabIndex = 18;
-            this.preview_show_code_checkbox.Text = "preview_show_code";
-            this.preview_show_code_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // groupBox23
-            // 
-            this.groupBox23.Location = new System.Drawing.Point(353, 0);
-            this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(365, 550);
-            this.groupBox23.TabIndex = 13;
-            this.groupBox23.TabStop = false;
-            this.groupBox23.Text = "groupBox23";
-            // 
-            // groupBox24
-            // 
-            this.groupBox24.Controls.Add(this.detailed_show_code_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_picture_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_tags_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_title_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_album_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_description_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_url_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_text_checkbox);
-            this.groupBox24.Controls.Add(this.detailed_show_items_checkbox);
-            this.groupBox24.Location = new System.Drawing.Point(647, 9);
-            this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(245, 552);
-            this.groupBox24.TabIndex = 13;
-            this.groupBox24.TabStop = false;
-            this.groupBox24.Text = "Detailed page";
-            // 
-            // detailed_show_code_checkbox
-            // 
-            this.detailed_show_code_checkbox.AutoSize = true;
-            this.detailed_show_code_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_code_checkbox.Location = new System.Drawing.Point(6, 207);
-            this.detailed_show_code_checkbox.Name = "detailed_show_code_checkbox";
-            this.detailed_show_code_checkbox.Size = new System.Drawing.Size(189, 29);
-            this.detailed_show_code_checkbox.TabIndex = 27;
-            this.detailed_show_code_checkbox.Text = "detailed_show_code";
-            this.detailed_show_code_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_tags_checkbox
-            // 
-            this.detailed_show_tags_checkbox.AutoSize = true;
-            this.detailed_show_tags_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_tags_checkbox.Location = new System.Drawing.Point(6, 312);
-            this.detailed_show_tags_checkbox.Name = "detailed_show_tags_checkbox";
-            this.detailed_show_tags_checkbox.Size = new System.Drawing.Size(184, 29);
-            this.detailed_show_tags_checkbox.TabIndex = 26;
-            this.detailed_show_tags_checkbox.Text = "detailed_show_tags";
-            this.detailed_show_tags_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_album_checkbox
-            // 
-            this.detailed_show_album_checkbox.AutoSize = true;
-            this.detailed_show_album_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_album_checkbox.Location = new System.Drawing.Point(6, 277);
-            this.detailed_show_album_checkbox.Name = "detailed_show_album_checkbox";
-            this.detailed_show_album_checkbox.Size = new System.Drawing.Size(200, 29);
-            this.detailed_show_album_checkbox.TabIndex = 25;
-            this.detailed_show_album_checkbox.Text = "detailed_show_album";
-            this.detailed_show_album_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_url_checkbox
-            // 
-            this.detailed_show_url_checkbox.AutoSize = true;
-            this.detailed_show_url_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_url_checkbox.Location = new System.Drawing.Point(6, 242);
-            this.detailed_show_url_checkbox.Name = "detailed_show_url_checkbox";
-            this.detailed_show_url_checkbox.Size = new System.Drawing.Size(170, 29);
-            this.detailed_show_url_checkbox.TabIndex = 24;
-            this.detailed_show_url_checkbox.Text = "detailed_show_url";
-            this.detailed_show_url_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_items_checkbox
-            // 
-            this.detailed_show_items_checkbox.AutoSize = true;
-            this.detailed_show_items_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_items_checkbox.Location = new System.Drawing.Point(6, 172);
-            this.detailed_show_items_checkbox.Name = "detailed_show_items_checkbox";
-            this.detailed_show_items_checkbox.Size = new System.Drawing.Size(193, 29);
-            this.detailed_show_items_checkbox.TabIndex = 23;
-            this.detailed_show_items_checkbox.Text = "detailed_show_items";
-            this.detailed_show_items_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_text_checkbox
-            // 
-            this.detailed_show_text_checkbox.AutoSize = true;
-            this.detailed_show_text_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_text_checkbox.Location = new System.Drawing.Point(6, 137);
-            this.detailed_show_text_checkbox.Name = "detailed_show_text_checkbox";
-            this.detailed_show_text_checkbox.Size = new System.Drawing.Size(179, 29);
-            this.detailed_show_text_checkbox.TabIndex = 22;
-            this.detailed_show_text_checkbox.Text = "detailed_show_text";
-            this.detailed_show_text_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_description_checkbox
-            // 
-            this.detailed_show_description_checkbox.AutoSize = true;
-            this.detailed_show_description_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_description_checkbox.Location = new System.Drawing.Point(6, 102);
-            this.detailed_show_description_checkbox.Name = "detailed_show_description_checkbox";
-            this.detailed_show_description_checkbox.Size = new System.Drawing.Size(238, 29);
-            this.detailed_show_description_checkbox.TabIndex = 21;
-            this.detailed_show_description_checkbox.Text = "detailed_show_description";
-            this.detailed_show_description_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_title_checkbox
-            // 
-            this.detailed_show_title_checkbox.AutoSize = true;
-            this.detailed_show_title_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_title_checkbox.Location = new System.Drawing.Point(6, 67);
-            this.detailed_show_title_checkbox.Name = "detailed_show_title_checkbox";
-            this.detailed_show_title_checkbox.Size = new System.Drawing.Size(179, 29);
-            this.detailed_show_title_checkbox.TabIndex = 20;
-            this.detailed_show_title_checkbox.Text = "detailed_show_title";
-            this.detailed_show_title_checkbox.UseVisualStyleBackColor = true;
-            // 
-            // detailed_show_picture_checkbox
-            // 
-            this.detailed_show_picture_checkbox.AutoSize = true;
-            this.detailed_show_picture_checkbox.Font = new System.Drawing.Font("Nirmala UI", 13.25F);
-            this.detailed_show_picture_checkbox.Location = new System.Drawing.Point(6, 32);
-            this.detailed_show_picture_checkbox.Name = "detailed_show_picture_checkbox";
-            this.detailed_show_picture_checkbox.Size = new System.Drawing.Size(204, 29);
-            this.detailed_show_picture_checkbox.TabIndex = 19;
-            this.detailed_show_picture_checkbox.Text = "detailed_show_picture";
-            this.detailed_show_picture_checkbox.UseVisualStyleBackColor = true;
-            // 
             // Managment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -1479,6 +1479,8 @@ namespace ngx_docs_managment_application
             this.groupBox1.PerformLayout();
             this.input_tabPage.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -1490,13 +1492,17 @@ namespace ngx_docs_managment_application
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.settings_tabPage.ResumeLayout(false);
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.preview_items_count_numericUpDown)).EndInit();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_number_of_columns_numericUpDown)).EndInit();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.preview_items_count_numericUpDown)).EndInit();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_item_text_length_numericUpDown)).EndInit();
@@ -1506,8 +1512,6 @@ namespace ngx_docs_managment_application
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.preview_description_text_length_numericUpDown)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
             this.images_tabPage.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
@@ -1518,10 +1522,6 @@ namespace ngx_docs_managment_application
             this.groupBox17.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox19.PerformLayout();
-            this.groupBox24.ResumeLayout(false);
-            this.groupBox24.PerformLayout();
             this.ResumeLayout(false);
 
         }

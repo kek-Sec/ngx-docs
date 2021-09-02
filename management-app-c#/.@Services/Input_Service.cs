@@ -70,8 +70,9 @@ namespace ngx_docs_managment_application._Controllers
         {
             try
             {
-                int id = input_collection[input_collection.Count-1].id;
+                int id = input_collection.Count;
                 input.id = id;
+                Console.WriteLine(id);
                 input_collection.Add(input);
 
                 var filepath = settings.getSetting("project_path") + "\\src\\input.json";
