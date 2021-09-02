@@ -8,11 +8,11 @@
 
 ## Features
 
-- 3 Landing pages
-- 2 detailed pages
+- 2 Landing pages
+- 3 detailed pages
 - .net application for generating input & managing your project
 - ngx-owl-carousel template page
-- ngx-toastr, ngx-clipboard, angular-flexbox
+- ngx-toastr, ngx-clipboard, angular-flexbox ,highlight-js
   
 
 ## Demo
