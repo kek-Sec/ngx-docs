@@ -8,11 +8,11 @@
 
 ## Features
 
-- 3 Landing pages
-- 2 detailed pages
+- 2 Landing pages
+- 3 detailed pages
 - .net application for generating input & managing your project
 - ngx-owl-carousel template page
-- ngx-toastr, ngx-clipboard, angular-flexbox
+- ngx-toastr, ngx-clipboard, angular-flexbox ,highlight-js
   
 
 ## Demo
@@ -28,6 +28,7 @@ The project's documentation is built using this template, play with it live here
 | Description |string| **True** | "Description":**"A little story"**|The description displayed under the card image
 | text |string | **True** | "text":**"this is an entry about..."**|The main text of the entry
 | image|string | **True**| "image":**"assets/images/default.png"**|The image displayed on the card
+| code|string[]| **True**|  "code": **["int a=5;","public void main(){}"]**|The code blocks 
 | items|string[]| **True**|  "items": **["a","b","c"]**|The items are displayed as list items
 | tags |string[]| **True**| "tags":**["easy","searching"]**|The tags are mainly used in optimizing your searches
 | url  |string| **True**| "url":**"google.com"**|If your entry has a relative url you can include it here
