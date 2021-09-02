@@ -34,7 +34,7 @@ The project's documentation is built using this template, play with it live here
 | url  |string| **True**| "url":**"google.com"**|If your entry has a relative url you can include it here
 | album| string[]| **True**| "album":**["assets/images/1.png","assets/images/2.png"]**|If your entry has more than one iamge you can include them here
 
-##### Sample json
+##### Sample input.json
 ```json
 [
   {
@@ -139,9 +139,38 @@ The project's documentation is built using this template, play with it live here
 | detailed_show_tags |boolean | **True** | Show tags on detailed page? |true
 | preview_number_of_columns |Number | **True** | Number of columns in home page |4
 
-
-
-
+###Sample settings.json
+```json
+[
+  {
+    "preview_show_picture": true,
+    "preview_show_title": true,
+    "preview_show_description": true,
+    "preview_show_text": false,
+    "preview_show_code": true,
+    "preview_show_items": false,
+    "preview_show_url": false,
+    "preview_show_album": false,
+    "preview_show_tags": false,
+    "preview_description_text_length": 50,
+    "preview_text_length": 15,
+    "preview_item_text_length": 5,
+    "preview_items_count": 2,
+    "preview_number_of_columns": 4,
+    "detailed_show_picture": true,
+    "detailed_show_title": true,
+    "detailed_show_description": true,
+    "detailed_show_text": true,
+    "detailed_show_code": true,
+    "detailed_show_items": true,
+    "detailed_show_url": true,
+    "detailed_show_album": true,
+    "detailed_show_tags": true,
+    "detailed_description_text_length": 0,
+    "detailed_text_length": 0
+  }
+]
+```
 
 ## Contributing
 
