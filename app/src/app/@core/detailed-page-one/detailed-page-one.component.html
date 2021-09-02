@@ -46,7 +46,7 @@
       <hr />
       <div class="BUTTON-GROUP" style="text-align: center;">
         <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button *ngIf="has_url && _settings_item[0].detailed_show_url" type="button" class="btn btn-lg btn-outline-success">URL</button>
+            <button *ngIf="has_url && _settings_item[0].detailed_show_url" type="button" (click)="goToLink()" class="btn btn-lg btn-outline-success">URL</button>
             <button type="button" (click)="copy()" class="btn btn-lg btn-success copy-btn">  <fa-icon [icon]="faCopy"></fa-icon></button>
             <button *ngIf="has_album && _settings_item[0].detailed_show_album" type="button" class="btn btn-lg btn-outline-success">ALBUM</button>
           </div>

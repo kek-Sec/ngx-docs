@@ -62,6 +62,10 @@ export class DetailedPageOneComponent implements OnInit {
     });
   }
 
+
+  goToLink() {
+    window.open(this.selected_entry.url, "_blank");
+  }
   /**
    *
    * @summary Copy object to clipboard

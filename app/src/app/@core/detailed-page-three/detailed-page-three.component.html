@@ -27,7 +27,7 @@
         </div>
         <div *ngIf="has_url && _settings_item[0].detailed_show_url">
             <hr class="my-4">
-            <button type="button" class="open-url btn btn-md  mx-auto d-block">Open url</button>
+            <button type="button" (click)="goToLink()" class="open-url btn btn-md  mx-auto d-block">Open url</button>
             <hr class="my-4">
         </div>
         <div *ngIf="has_album && _settings_item[0].detailed_show_album">
