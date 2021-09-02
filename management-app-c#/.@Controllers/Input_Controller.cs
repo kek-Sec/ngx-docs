@@ -180,6 +180,7 @@ namespace ngx_docs_managment_application._Controllers
                 picture.Text = "assets/images/default.PNG";
                 items.Items.Clear();
                 album.Items.Clear();
+                code.Items.Clear();
                 tags.Items.Clear();
                 text.Text = "";
                 description.Text = "";
