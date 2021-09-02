@@ -102,16 +102,21 @@ namespace ngx_docs_managment_application
         private void input_add_button_Click(object sender, EventArgs e)
         {
             ic.AddEntry(input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox, input_code_listbox, input_tags_listbox, input_items_listbox, input_album_listbox);
+            ic.UpdateInput(input_listbox);
         }
 
         private void input_edit_button_Click(object sender, EventArgs e)
         {
             ic.UpdateEntry(input_listbox.SelectedIndex, input_title_textBox, input_description_textBox, input_text_textBox, input_thumbnail_textBox, input_url_textBox,input_code_listbox, input_tags_listbox, input_items_listbox, input_album_listbox);
+            ic.UpdateInput(input_listbox);
+
         }
 
         private void input_remove_button_Click(object sender, EventArgs e)
         {
             ic.DeleteEntry(input_listbox.SelectedIndex);
+            ic.UpdateInput(input_listbox);
+
         }
 
         private void input_refresh_button_Click(object sender, EventArgs e)
