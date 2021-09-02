@@ -1,0 +1,56 @@
+<div class="bg">
+  <div class="container">
+    <div class="alert alert-info" role="alert">
+      <h2 *ngIf="_settings_item[0].detailed_show_title">{{selected_entry.Title}}</h2>
+      <div *ngIf="has_tags && _settings_item[0].detailed_show_tags"  class="tags">
+          <div *ngFor="let tag of selected_entry.tags" class="tag-for">
+            <span class="post-tag">{{tag}}</span>
+          </div>
+        
+      </div>
+    
+      
+      <hr />
+      <p *ngIf="_settings_item[0].detailed_show_description" class="lead">
+        {{selected_entry.Description}}
+      </p>
+      <hr />
+      <div *ngIf="has_items && _settings_item[0].detailed_show_items" class="items">
+        <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Text</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of selected_entry.items;let i=index;">
+              <tr>
+                <th style="width: 10%" scope="row">{{i}}</th>
+                <td [innerHTML]="item" colspan="5"></td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+      <hr />
+      <div class="code">
+        <ul *ngIf="has_code && _settings_item[0].detailed_show_code" class="list-group">
+            <div *ngFor="let code of selected_entry.code">
+                <li class="code list-group-item list-group-item-light" style="margin-bottom: 1vh;">
+                    <pre><code [highlight]="code"></code></pre>
+                </li>
+            </div>
+        </ul>
+      </div>
+      <hr />
+      <img *ngIf="_settings_item[0].detailed_show_picture" src="{{ selected_entry.image }}" class="img-fluid mx-auto d-block" alt="Entry image">
+      <hr />
+      <div class="BUTTON-GROUP" style="text-align: center;">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <button *ngIf="has_url && _settings_item[0].detailed_show_url" type="button" (click)="goToLink()" class="btn btn-lg btn-outline-success">URL</button>
+            <button type="button" (click)="copy()" class="btn btn-lg btn-success copy-btn">  <fa-icon [icon]="faCopy"></fa-icon></button>
+            <button *ngIf="has_album && _settings_item[0].detailed_show_album" type="button" class="btn btn-lg btn-outline-success">ALBUM</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -30,8 +30,7 @@ export class ParserService {
       error_entry.Description = 'Input.json contains errors!';
       error_entry.text = 'Please see the documentation at https://github.com/kek-Sec/ngx-docs';
       error_entry.image = 'none';
-      error_entry.items = new String[1]();
-      error_entry.items[0] = 'https://github.com/kek-Sec/ngx-docs';
+      error_entry.items = ['https://github.com/kek-Sec/ngx-docs'];
 
       error_content.push(error_entry);
 

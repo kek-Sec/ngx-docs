@@ -5,6 +5,9 @@
     "Description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     "image": "assets/images/default.png",
+    "code": [
+      " #include <stdio.h>\r\nvoid displayNumbers(int num[2][2]);\r\n\r\nint main() {\r\n  int num[2][2];\r\n  printf(\"Enter 4 numbers:\\n\");\r\n  for (int i = 0; i < 2; ++i) {\r\n    for (int j = 0; j < 2; ++j) {\r\n      scanf(\"%d\", &num[i][j]);\r\n    }\r\n  }\r\n\r\n  // pass multi-dimensional array to a function\r\n  displayNumbers(num);\r\n\r\n  return 0;\r\n}\r\n\r\nvoid displayNumbers(int num[2][2]) {\r\n  printf(\"Displaying:\\n\");\r\n  for (int i = 0; i < 2; ++i) {\r\n    for (int j = 0; j < 2; ++j) {\r\n      printf(\"%d\\n\", num[i][j]);\r\n    }\r\n  }\r\n}"
+    ],
     "items": [
       " It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
     ],
@@ -129,16 +132,5 @@
       "Mauris lacinia, sem ut tempor sodales, mi leo vulputate neque, ut cursus massa quam vitae dui. Vestibulum nec erat risus. Praesent gravida convallis interdum. In et auctor odio. Donec bibendum, felis a pharetra scelerisque, metus nulla elementum nibh, id suscipit tortor turpis quis tellus. Integer rutrum dui sit amet neque lacinia rhoncus. Morbi tortor arcu, ornare at nulla et, vulputate consequat mauris. Nunc ultricies pretium dui sed egestas. Aenean pulvinar commodo neque, vitae pharetra arcu lobortis ac. Duis non finibus diam. Vestibulum vehicula nisi ut urna laoreet dapibus. Proin accumsan scelerisque mauris, a interdum mi efficitur tristique. Praesent mauris leo, ornare nec sapien et, mattis suscipit leo. Phasellus at nisl lacus. Cras ornare aliquam odio quis lobortis.\r\n\r\n"
     ],
     "url": "https://www.lipsum.com/"
-  },
-  {
-    "id": 9,
-    "Title": "a",
-    "Description": "a",
-    "text": "a",
-    "image": "a",
-    "items": [
-      "a"
-    ],
-    "url": "a"
   }
 ]

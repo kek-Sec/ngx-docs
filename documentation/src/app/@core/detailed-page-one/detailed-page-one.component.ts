@@ -9,11 +9,18 @@ import { ParserService } from 'src/app/@Services/parser.service';
 import { SettingsParserService } from 'src/app/@Services/settings-parser.service';
 
 @Component({
-  selector: 'app-detailed-page-two',
-  templateUrl: './detailed-page-two.component.html',
-  styleUrls: ['./detailed-page-two.component.scss']
+  selector: 'app-detailed-page-one',
+  templateUrl: './detailed-page-one.component.html',
+  styleUrls: ['./detailed-page-one.component.scss']
 })
-export class DetailedPageTwoComponent implements OnInit {
+export class DetailedPageOneComponent implements OnInit {
+
+/** 
+ * @todo fix album button routerlink
+ * @todo add home button
+*/
+
+
 
   _settings_item: Array<Settings_model>;
   private sub: any;
@@ -25,16 +32,16 @@ export class DetailedPageTwoComponent implements OnInit {
   has_tags: boolean;
   has_album: boolean;
   has_items: boolean;
-  pretty_tags: string;
   faCopy = faCopy;
 
   constructor(
-    private settings: SettingsParserService,
+    private settings:SettingsParserService,
     private route: ActivatedRoute,
     private parser: ParserService,
     private _clipboardService: ClipboardService,
     private toastr: ToastrService
   ) { }
+
 
   ngOnInit(): void {
 
@@ -50,15 +57,15 @@ export class DetailedPageTwoComponent implements OnInit {
       this.has_album = this.selected_entry.album != undefined;
       this.has_code = this.selected_entry.code != undefined;
       this.has_items = this.selected_entry.items != undefined;
-
-      if (this.has_tags) { this.pretty_tags = JSON.stringify(this.selected_entry.tags); }
+      
+    
     });
   }
+
 
   goToLink() {
     window.open(this.selected_entry.url, "_blank");
   }
-
   /**
    *
    * @summary Copy object to clipboard

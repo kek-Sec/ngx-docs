@@ -1,3 +1,19 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.post-tag {
+  font-size: 80%;
+  color: gray;
+  margin-left: 1vh;
+  text-transform: uppercase;
+  padding: 0.1ch 0.5ch;
+  border-radius: 0.2rem;
+  border: 1px solid gray;
+  text-decoration: none;
+}
+
 .bg {
   background-image: url("../../../assets/images/bg.png");
   -webkit-background-size: repeat;
@@ -12,8 +28,21 @@
   font-family: "Nirmala UI", monospace;
 }
 
+td {
+  padding-left: 0vh;
+}
+
+.code {
+  text-align: left;
+  justify-content: left;
+}
+
+img {
+  width: 60%;
+}
+
 .alert {
-  background-image: url("../../../assets/images/geometry2.png");
+  background-image: url("../../../assets/images/geometry.png");
   background-size: repeat;
   margin-left: 2vh;
   margin-right: 2vh;
@@ -29,21 +58,18 @@
   -moz-box-shadow: 10px 24px 70px -7px rgba(0, 0, 0, 0.75);
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+h2 {
+  text-align: left;
+  margin-left: 1vh;
+  font-weight: 550;
 }
 
-.title{
-    text-align: center;
-    color: #727272;
-    font-weight: 600;
-}
-
-.tags{
-    margin-top: 1vh;
-    display: flex;
-    justify-content: center;
+.lead {
+  font-size: 130%;
+  text-align: left;
+  font-weight: 300;
+  margin-left: 1vh;
+  word-spacing: 2%;
 }
 
 hr {
@@ -53,28 +79,13 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.post-tag {
-  font-size: 100%;
-  color: gray;
-  margin-left: 1vh;
-  text-transform: uppercase;
-  padding: 0.1ch 0.5ch;
-  border-radius: 0.2rem;
-  border: 1px solid gray;
-  text-decoration: none;
-}
-
-.description{
-    text-align: center;
-    color: #292929;
-}
-
 @media screen and (max-width: 999px) {
   .alert {
     width: 100%;
   }
 }
 
-.BUTTON-GROUP{
-    margin-top: 2vh;
+.tags{
+    display: flex;
+    justify-content: left;
 }
