@@ -139,7 +139,7 @@ The project's documentation is built using this template, play with it live here
 | detailed_show_tags |boolean | **True** | Show tags on detailed page? |true
 | preview_number_of_columns |Number | **True** | Number of columns in home page |4
 
-###Sample settings.json
+### Sample settings.json
 ```json
 [
   {
