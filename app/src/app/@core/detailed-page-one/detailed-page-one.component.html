@@ -2,7 +2,7 @@
   <div class="container">
     <div class="alert alert-info" role="alert">
       <h2 *ngIf="_settings_item[0].detailed_show_title">This is the title</h2>
-      <div *ngIf="has_tags"  class="tags">
+      <div *ngIf="has_tags && _settings_item[0].detailed_show_tags"  class="tags">
           <div *ngFor="let tag of selected_entry.tags" class="tag-for">
             <span class="post-tag">{{tag}}</span>
           </div>
