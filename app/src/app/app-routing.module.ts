@@ -9,7 +9,7 @@ import { HomeTwoComponent } from './@landings/home-two/home-two.component';
 const routes: Routes = [
   { path: '', component: HomeTwoComponent },
   { path: 'view/undefined', redirectTo: '', pathMatch: 'full' },
-  { path: 'view/:id', component: DetailedPageOneComponent },
+  { path: 'view/:id', component: DetailedPageThreeComponent },
   { path: 'album/undefined', redirectTo: '', pathMatch: 'full' },
   { path: 'album/:id', component: AlbumPageComponent },
 
