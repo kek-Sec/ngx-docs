@@ -68,3 +68,13 @@ hr {
     text-align: center;
     color: #292929;
 }
+
+@media screen and (max-width: 999px) {
+  .alert {
+    width: 100%;
+  }
+}
+
+.BUTTON-GROUP{
+    margin-top: 2vh;
+}
