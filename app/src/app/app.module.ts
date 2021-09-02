@@ -34,10 +34,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 //highlight-js
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { DetailedPageOneComponent } from './@core/detailed-page-one/detailed-page-one.component';
+import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-page-two.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeOneComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent, DetailedPageOneComponent],
+  declarations: [AppComponent, HomeOneComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent, DetailedPageOneComponent, DetailedPageTwoComponent],
   imports: [
     NgxPaginationModule,
     FormsModule,
