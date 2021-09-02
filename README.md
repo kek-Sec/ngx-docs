@@ -111,6 +111,37 @@ The project's documentation is built using this template, play with it live here
 ]
 ```
 
+## settings.json accepted values
+
+| Variable          | Type     |Optional?|Note|Default|
+| ----------------- | -------- |--------|----|--------|
+| preview_show_picture | boolean |**True**| Show image on home page? | true
+| preview_show_title |boolean |**True**|Show title on home page?| true
+| preview_show_description |boolean| **True** | Show description on home page?| true
+| preview_show_text |boolean | **True** | Show text on home page? |true
+| preview_show_code |boolean | **True**| Show code on home page? |NOT IMPLEMENTED
+| preview_show_items|boolean| **True**| Show items on home page? | true
+| preview_show_url|boolean| **True**| Show url on home page? | NOT IMPLEMENTED
+| preview_show_album|boolean| **True**| Show album on home page? | NOT IMPLEMENTED
+| preview_show_tags|boolean| **True**| Show tags on home page? | NOT IMPLEMENTED
+| preview_description_text_length|Number| **True**| Description length on home page| 15
+| preview_text_length|Number| **True**| Text length on home page| 15
+| preview_item_text_length|Number| **True**| Items text length on home page| 4
+| preview_items_count|Number| **True**| Items count on home page| 3
+| detailed_show_picture |boolean | **True** | Show image on detailed page? |true
+| detailed_show_title |boolean | **True** | Show title on detailed page? |true
+| detailed_show_description |boolean | **True** | Show description on detailed page? |true
+| detailed_show_text |boolean | **True** | Show text on detailed page? |true
+| detailed_show_code |boolean | **True** | Show code on detailed page? |true
+| detailed_show_items |boolean | **True** | Show items on detailed page? |true
+| detailed_show_url |boolean | **True** | Show url on detailed page? |true
+| detailed_show_album |boolean | **True** | Show album on detailed page? |true
+| detailed_show_tags |boolean | **True** | Show tags on detailed page? |true
+| preview_number_of_columns |Number | **True** | Number of columns in home page |4
+
+
+
+
 
 ## Contributing
 
