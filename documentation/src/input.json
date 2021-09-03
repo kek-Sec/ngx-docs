@@ -119,7 +119,7 @@
     "Title": "C# Managment app",
     "Description": "Bundled inside the release folder you will find an msi installer for the managment application.",
     "text": "The managment application currently only runs on machines supporting .net and can help you with the following",
-    "image": "assets/images/default.png",
+    "image": "assets/images/managment.png",
     "items": [
       "Managing entries inside input.json",
       "Managing settings inside settings.json",
@@ -132,10 +132,10 @@
     ],
     "url": "https://github.com/kek-Sec/ngx-docs",
     "album": [
-      "Screenshot_1.png",
-      "Screenshot_2.png",
-      "Screenshot_3.png",
-      "Screenshot_4.png"
+      "assets/images/Screenshot_1.png",
+      "assets/images/Screenshot_2.png",
+      "assets/images/Screenshot_3.png",
+      "assets/images/Screenshot_4.png"
     ]
   }
 ]
