@@ -3,9 +3,11 @@
     "id": 0,
     "Title": "What is ngx-docs?",
     "Description": "ngx-docs is a template application built with angular 12 that helps you create web-documentations for anything you like, hussle free!",
+    "text": "It comes pre-loaded with most of the commonly used npm packages.",
     "image": "assets/images/default.png",
     "tags": [
-      "ngx-docs"
+      "ngx-docs",
+      "intro"
     ],
     "url": "https://github.com/kek-Sec/ngx-docs"
   },
@@ -71,7 +73,11 @@
       "detailed_show_tags",
       "preview_number_of_columns"
     ],
-    "tags": ["settings", "settings.json", "options"],
+    "tags": [
+      "settings",
+      "settings.json",
+      "options"
+    ],
     "url": "https://en.wikipedia.org/wiki/JSON#Data_types"
   },
   {
@@ -107,5 +113,29 @@
       "details"
     ],
     "url": "https://github.com/kek-Sec/ngx-docs"
+  },
+  {
+    "id": 5,
+    "Title": "C# Managment app",
+    "Description": "Bundled inside the release folder you will find an msi installer for the managment application.",
+    "text": "The managment application currently only runs on machines supporting .net and can help you with the following",
+    "image": "assets/images/default.png",
+    "items": [
+      "Managing entries inside input.json",
+      "Managing settings inside settings.json",
+      "Managing project images"
+    ],
+    "tags": [
+      "c#",
+      "managment",
+      "app"
+    ],
+    "url": "https://github.com/kek-Sec/ngx-docs",
+    "album": [
+      "Screenshot_1.png",
+      "Screenshot_2.png",
+      "Screenshot_3.png",
+      "Screenshot_4.png"
+    ]
   }
 ]
