@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeOneComponent } from './@landings/home-one/home-one.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeTwoComponent } from './@landings/home-two/home-two.component';
 import { AlbumPageComponent } from './@core/album-page/album-page.component';
@@ -38,7 +37,7 @@ import { DetailedPageTwoComponent } from './@core/detailed-page-two/detailed-pag
 
 
 @NgModule({
-  declarations: [AppComponent, HomeOneComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent, DetailedPageOneComponent, DetailedPageTwoComponent],
+  declarations: [AppComponent, HomeTwoComponent, AlbumPageComponent, DetailedPageThreeComponent, DetailedPageOneComponent, DetailedPageTwoComponent],
   imports: [
     NgxPaginationModule,
     FormsModule,

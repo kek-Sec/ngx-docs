@@ -9,7 +9,7 @@
     "preview_show_url": false,
     "preview_show_album": false,
     "preview_show_tags": false,
-    "preview_description_text_length": 50,
+    "preview_description_text_length": 200,
     "preview_text_length": 15,
     "preview_item_text_length": 5,
     "preview_items_count": 2,
