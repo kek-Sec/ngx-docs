@@ -22,8 +22,6 @@
     "detailed_show_items": true,
     "detailed_show_url": true,
     "detailed_show_album": true,
-    "detailed_show_tags": true,
-    "detailed_description_text_length": 0,
-    "detailed_text_length": 0
+    "detailed_show_tags": true
   }
 ]
