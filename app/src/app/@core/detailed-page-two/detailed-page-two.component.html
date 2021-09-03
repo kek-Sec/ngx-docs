@@ -11,7 +11,7 @@
                         <fa-icon [icon]="faCopy"></fa-icon>
                     </button>
                     <button *ngIf="has_album && _settings_item[0].detailed_show_album" type="button"
-                        class="btn btn-lg btn-outline-success">ALBUM</button>
+                        [routerLink]="['/album', id]" class="btn btn-lg btn-outline-success">ALBUM</button>
                 </div>
             </div>
         </div>
