@@ -184,6 +184,7 @@ namespace ngx_docs_managment_application._Controllers
                 tags.Items.Clear();
                 text.Text = "";
                 description.Text = "";
+                title.Text = "";
                 return;
             }
             catch (Exception e)
