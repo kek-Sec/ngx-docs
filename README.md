@@ -17,7 +17,7 @@
 
 ## Demo
 
-The project's documentation is built using this template, play with it live here
+The project's documentation is built using this template, play with it live [here](https://kek-sec.github.io/ngx-docs)
 
 ## input.json accepted values
 
