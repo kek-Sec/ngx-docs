@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/kek-sec/ngx-docs/badge)](https://www.codefactor.io/repository/github/kek-sec/ngx-docs)
+
 <div align="center">
   <img src="https://i.imgur.com/1hcm2K7.png" alt="ngx-docs">
     <h1>ngx-docs</h1>
